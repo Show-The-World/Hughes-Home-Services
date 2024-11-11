@@ -1,0 +1,19 @@
+{
+  "name": "website-builder",
+  "version": "2.0.0",
+  "description": "new website builder, yay!",
+  "main": "eleventy.js",
+  "scripts": {
+    "dev": "NODE_ENV=development eleventy --serve",
+    "build": "NODE_ENV=production eleventy"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "nodemonConfig": {
+    "watch": []
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}

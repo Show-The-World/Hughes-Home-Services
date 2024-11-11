@@ -1,0 +1,302 @@
+/******************************************************************************/
+/*********************************** HEADER ***********************************/
+/******************************************************************************/
+
+
+/* Default Header Styling */
+header{
+    height: var(--s-headerHeight);
+    padding: 0 var(--s-sideMargin);
+
+    background-color: var(--c-header);
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 999;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav {
+    height: fit-content;
+}
+
+header ul {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    gap: var(--s-spacing1);
+}
+
+header li {
+    width: max-content;
+}
+
+header .logoWrapper {
+    display: flex;
+}
+
+.nav-toggle-label,
+.nav-toggle {
+    display: none;
+}
+
+@media screen and (max-width:920px) {
+    header .logoWrapper {
+        display: none;
+    }
+
+    header {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width:750px) {
+    header .logoWrapper {
+        display: block;
+    }
+
+    header {
+        justify-content: space-between;
+    }
+
+    header nav {
+        --c-accent: var(--c-accent);
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+
+        padding: calc(var(--s-spacing1) + var(--s-headerHeight)) var(--s-sideMargin);
+
+        transform: scale(1, 0);
+        transform-origin: top;
+        transition: 0.2s ease;
+
+        background-color: var(--c-accent);
+        z-index: -1;
+    }
+
+    header .--btn-nav {
+        color: var(--c-FG);
+    }
+
+    header ul {
+        grid-auto-flow: row;
+        align-items: center;
+        justify-items: end;
+    }
+
+
+    header .nav-toggle:checked+nav {
+        transform: scale(1, 1);
+    }
+
+
+    header .nav-toggle-label {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        width: calc(var(--s-headerHeight) * 0.6);
+        height: calc(var(--s-headerHeight) * 0.6);        
+        cursor: pointer;
+    }
+
+    header .nav-toggle-label span{
+        height: 10%;
+        width: 100%;
+        border-radius: 2px;
+        background-color: var(--c-BG);
+    }
+
+}
+
+
+
+/******************************************************************************/
+/*********************************** FOOTER ***********************************/
+/******************************************************************************/
+
+
+/* Default Footer Styling */
+footer{
+    padding: calc(var(--s-sectionMargin) /4) var(--s-gutterSpace);
+}
+
+
+
+
+/*******************************************************************************/
+/*********************************** LAYOUTS ***********************************/
+/*******************************************************************************/
+
+
+.-l-2Col_img_spread-1{
+    display: flex;
+    gap: var(--s-spacing1) /* Factor */;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 700px ){
+    .-l-2Col_img_spread-1{
+        flex-direction: row;
+    }
+    .-l-2Col_img_spread-1 .container{
+        flex: 1;
+    }
+    .-l-2Col_img_spread-1 .imgWrapper{
+        flex: 0.8; /* Factor */
+    }
+}
+
+
+
+
+.-l-2Col_img_spread-2{
+    display: flex;
+    gap: var(--s-spacing1) /* Factor */;
+    flex-direction: column;
+    align-items: center;
+}
+.-l-2Col_img_spread-2 > .imgWrapper {
+    align-self: stretch;
+}
+
+@media screen and (min-width: 700px ){
+    .-l-2Col_img_spread-2{
+        flex-direction: row;
+    }
+    .-l-2Col_img_spread-2 .container{
+        flex: 1;
+    }
+    .-l-2Col_img_spread-2 .imgWrapper{
+        flex: 0.85; /* Factor */
+    }
+}
+
+
+
+
+.-l-3Card-1{
+    --gapSize: var(--s-spacing4);
+    
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gapSize);
+    justify-content: space-evenly;
+}
+
+.-l-3Card-1 > .card {
+    flex: 0 1 calc(33.333% - (2 * var(--gapSize) / 3));
+    min-width: calc(var(--s-vpMin) - 20px);
+}
+
+
+
+
+
+.-l-3Card-2{    
+    display: flex;
+    gap: var(--s-spacing4);
+    flex-wrap: wrap;
+}
+
+.-l-3Card-2 > .card {
+    flex: 1;
+    min-width: calc(var(--s-vpMin) - 20px);
+}
+
+
+
+
+.-l-zigzag-1 > *:not(:last-child){
+    margin-bottom: var(--s-spacing1);
+}
+
+@media screen and (min-width:700px){
+    .-l-zigzag-1 > .card{
+        width: 65%;
+    }
+    .-l-zigzag-1 > .card:nth-child(2n){
+        margin-left: auto;
+    }
+}
+
+
+
+/*******************************************************************************/
+/************************************ CARDS ************************************/
+/*******************************************************************************/
+
+
+.-c-testimonial-1 {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--c-BG2);
+    padding: var(--s-spacing4);
+    padding-right: var(--s-spacing2);
+}
+.-c-testimonial-1 .container{
+    display: flex;
+
+    margin-bottom: var(--s-spacing4);
+}
+.-c-testimonial-1 .star{
+    margin-left: auto;
+    height: 20px;
+    width: 10%;
+    min-width: 120px;
+}
+.-c-testimonial-1 .quote{
+    width: 8%;
+    margin-top: var(--s-spacing4);
+}
+
+
+/*******************************************************************************/
+/*********************************** SPREADS ***********************************/
+/*******************************************************************************/
+
+
+.-sp-2Col_split-1{
+    display: flex;
+    gap: var(--s-spacing3);
+}
+
+
+
+.-sp-3Col_card{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.-sp-3Col_card .-sp-card{
+    flex: 1;
+    min-width: 160px;
+}
+
+@media screen and (max-width:550px){
+    .-sp-3Col_card{
+        flex-direction: column;
+    }
+}
+
+
+/*******************************************************************************/
+/************************************ OTHER ************************************/
+/*******************************************************************************/
+
+
+.-faq-1 .dropDownFaq ~ .faqInp{
+
+}

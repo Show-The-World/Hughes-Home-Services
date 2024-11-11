@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <meta name="description" content="">
+
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="/styles/layouts.css">
+    <link rel="stylesheet" href="/styles/specific_styles.css">
+    {% block links %}{% endblock %}
+
+
+    {# <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script> #}
+
+    {% block head %}{% endblock %}
+</head>
+
+
+
+<body>
+    {% if hasHeader | default(true) %}
+    <header>
+        <a href="/" class="logoWrapper logo">STW</a>
+        
+        <input  type="checkbox" id="nav-toggle" name="nav-toggle" class="nav-toggle">
+        <nav>
+            <ul>
+                <li><a href="/" class="--btn-nav">Home</a></li>
+                <li><a href="/contact" class="--btn-nav">Contact</a></li>
+            </ul>
+        </nav>
+
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+    </header>    
+    {% endif %}
+
+
+    {% block content %}{% endblock %}
+
+
+    {% if hasFooter | default(true) %}
+    {% endif %}
+
+    {# <1!-- Netlify Identity -->
+    <script>
+    if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+        if (!user) {
+            window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+            });
+        }
+        });
+    }
+    </script> #}
+</body>
+</html>
