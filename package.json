@@ -1,0 +1,23 @@
+{
+  "name": "hughes-home-services",
+  "version": "1.0.0",
+  "description": "",
+  "main": ".eleventy.js",
+  "scripts": {
+    "dev": "eleventy --serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Show-The-World/Hughes-Home-Services.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Show-The-World/Hughes-Home-Services/issues"
+  },
+  "homepage": "https://github.com/Show-The-World/Hughes-Home-Services#readme",
+  "dependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}
