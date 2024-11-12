@@ -200,6 +200,29 @@ footer{
 }
 
 
+.-l-2Col_img_spread-3{
+    display: flex;
+    gap: var(--s-spacing1) /* Factor */;
+    flex-direction: column;
+    align-items: center;
+}
+.-l-2Col_img_spread-3 > .imgWrapper {
+    align-self: stretch;
+}
+
+@media screen and (min-width: 700px ){
+    .-l-2Col_img_spread-3{
+        flex-direction: row;
+    }
+    .-l-2Col_img_spread-3 .container{
+        flex: 1;
+    }
+    .-l-2Col_img_spread-3 .imgWrapper{
+        flex: 0.5; /* Factor */
+    }
+}
+
+
 
 
 .-l-3Card-1{
@@ -302,6 +325,9 @@ footer{
     gap: var(--s-spacing3);
 
     flex: 1;
+}
+.-l-3col_spread_card_card > .cardContainer > *{
+    height: 100%;
 }
 
 .-l-3col_spread_card_card  >.spread{
