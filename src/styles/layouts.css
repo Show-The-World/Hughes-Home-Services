@@ -156,6 +156,42 @@ footer{
 /*******************************************************************************/
 
 
+.-l-hero{
+    display: flex;
+    gap: var(--s-spacing1);
+    flex-direction: column;
+}
+
+@media screen and (min-width: 700px ){
+    .-l-hero{
+        flex-direction: row;
+    }
+    .-l-hero .container{
+        flex: 1;
+    }
+    .-l-hero .imgWrapper{
+        flex: 0.8;
+    }
+}
+
+
+
+
+
+.-l-subHero{
+    display: flex;
+    justify-content: space-between;
+
+    padding-top: calc(var(--s-headerHeight));
+    padding-bottom: 0;
+
+    height: 450px;
+}
+.-l-subHero > .imgWrapper{
+    width: 40%;
+}
+
+
 .-l-2Col_img_spread-1{
     display: flex;
     gap: var(--s-spacing1) /* Factor */;
@@ -364,6 +400,9 @@ footer{
     padding: var(--s-spacing3);
     width: 50%;
     margin-top: 10%;
+
+    -webkit-box-shadow: 0px 1px 11px 1px rgba(0,0,0,0.02); 
+    box-shadow: 0px 1px 11px 1px rgba(0,0,0,0.02);
 }
 .-l-2coloverlap_container_image-left-1 .imgWrapper{
     z-index: -1;
@@ -405,6 +444,35 @@ footer{
         display: none;
     }
 }
+
+
+.-l-4Col_card-1{
+    column-count: 4;
+    column-fill: balance;
+    column-rule-style: solid;
+    column-rule-color: var(--c-BG3);
+    column-rule-width: var(--s-border1_5);
+    column-width: auto;
+}
+
+.-l-4Col_card-1 li{
+    display: flex;
+    flex-direction: column;
+    gap: var(--s-spacing4);
+    align-items: center;
+    justify-content: center;
+}
+.-l-4Col_card-1 li .icon{
+    width: 50px;
+}
+.-l-4Col_card-1 h3{
+    font-weight: 900;
+    font-size: 50px;
+}
+.-l-4Col_card-1 li > *{
+    width: fit-content;
+}
+
 
 
 /*******************************************************************************/
@@ -475,7 +543,7 @@ footer{
 .-form-1{
     display: flex;
     flex-direction: column;
-    gap: var(--s-spacing4);
+    gap: var(--s-spacing5);
 }
 
 .-form-1 .inputContainer input, .-form-1 .inputContainer textarea{
@@ -529,9 +597,6 @@ footer{
     border-bottom: solid var(--c-FG) var(--s-border1);
 }
 
-@media screen and (max-width:1800px){
-    
-}
 
     
 @keyframes rotateMenu {
