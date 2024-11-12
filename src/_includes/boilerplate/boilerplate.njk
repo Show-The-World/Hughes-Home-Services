@@ -22,22 +22,46 @@
 <body>
     {% if hasHeader | default(true) %}
     <header>
-        <a href="/" class="logoWrapper logo">STW</a>
-        
-        <input  type="checkbox" id="nav-toggle" name="nav-toggle" class="nav-toggle">
-        <nav>
-            <ul>
-                <li><a href="/" class="--btn-nav">Home</a></li>
-                <li><a href="/contact" class="--btn-nav">Contact</a></li>
+        <a class="logoWrapper" href=""><img src="/assets/logo.svg" alt="" class="icon logo"></a>
+        <input type="checkbox" name="navMenuToggle" id="navMenuToggle" class="invCheckbox">
+        <div class="container">
+            <ul class="info">
+                <li>
+                    <a href="mailto:wendallhughes58@gmail.com">
+                        <img src="/assets/icon_email.svg" alt="" class="icon">
+                        wendallhughes58@gmail.com</a>
+                </li>
+                <li>
+                    
+                    <a href="tel:+6134221991">
+                        <img src="/assets/icon_phone.svg" alt="" class="icon">
+                        (613) 422-1991</a>
+                </li>
+                <li>
+                    <address>
+                        <img src="/assets/icon_address.svg" alt="" class="icon">
+                        <span>12 Winterburn Terrace, Nepean, ON K2G 5W9</span>
+                    </address>
+                </li>
+                <li>
+                    <time datetime="Mo-Fr 09:00-18:00">
+                        <img src="/assets/icon_time.svg" alt="" class="icon">
+                        Mon-Sat: 9:00 AM - 5:00 PM</time>
+                </li>
             </ul>
-        </nav>
-
-        <label for="nav-toggle" class="nav-toggle-label">
-            <span></span>
-            <span></span>
-            <span></span>
-        </label>
-    </header>    
+            <nav>
+                <ul>
+                    <li><a href="/">About Us</a></li>
+                    <li><a href="/">Services</a></li>
+                    <li><a href="/">Gallery</a></li>
+                    <li><a href="/">Blog</a></li>
+                    <li><a href="/">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="/" class="cta -b-spec-1">Get A Quote</a>
+        </div>
+        <label class="navMenuToggle" for="navMenuToggle">X</label>
+    </header>     
     {% endif %}
 
 

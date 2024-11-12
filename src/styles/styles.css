@@ -28,19 +28,24 @@
     list-style: none;
     font-weight: 500;
     font-size: 1em;
-    display: block;
     position: relative;
     transition: ease 0.2s;
 }
+body *{
+    position: relative;
+    display: block;
+}
 body{
     min-height: 100vh;
+    overflow-x: hidden;
 }
-button, a{
+a, button, label{
     cursor: pointer;
-    width: fit-content;
+    user-select: none;
 }
-h1, h2, h3, h4, p, a, button{
+h1, h2, h3, h4, p, a, button, label{
     width: fit-content;
+    height: fit-content;
 }
 
 
@@ -50,6 +55,7 @@ h1, h2, h3, h4, p, a, button{
 *{
     color: var(--c-FG);
 }
+
 
 body{
     background-color: var(--c-BG);
@@ -71,7 +77,7 @@ img{
 :root{
     /* ----------------------------------- Sizes ----------------------------------- */
     --s-vpMin: 320px;
-    --s-headerHeight: calc((60 /16 * 1rem) + ((80 - 60) * ((100vw - 320px) / (1920 - 320))));
+    --s-headerHeight: calc((60 /16 * 1rem) + ((130 - 60) * ((100vw - 320px) / (1920 - 320))));
     --s-sideMargin: calc((10 /16 * 1rem) + ((200 - 10) * ((100vw - 320px) / (1920 - 320))));
     --s-sectionSpace: calc((150 /16 * 1rem) + ((340 - 150) * ((100vw - 320px) / (1920 - 320))));
     --s-spacing1: calc((30 /16 * 1rem) + ((80 - 30) * ((100vw - 320px) / (1920 - 320))));
@@ -80,6 +86,7 @@ img{
     --s-spacing4: calc((20 /16 * 1rem) + ((32 - 20) * ((100vw - 320px) / (1920 - 320))));
     --s-spacing5: calc((16 /16 * 1rem) + ((24 - 16) * ((100vw - 320px) / (1920 - 320))));
     --s-border1: calc((1 /16 * 1rem) + ((1.5 - 1) * ((100vw - 320px) / (1920 - 320))));
+    --s-border1_5: calc((1.5 /16 * 1rem) + ((2 - 1.5) * ((100vw - 320px) / (1920 - 320))));
     --s-border2: calc((2 /16 * 1rem) + ((3 - 2) * ((100vw - 320px) / (1920 - 320))));
     --s-border3: calc((2 /16 * 1rem) + ((5 - 2) * ((100vw - 320px) / (1920 - 320))));
 
@@ -88,55 +95,64 @@ img{
     --c-FG: #262424;
     --c-FG2: #3e3b3b;
     --c-FG3: #424242;
-    --c-BG: #FFFFFF;
+    --c-BG: #FDFDFD;
     --c-BG2: #F8F8F8;
     --c-BG3: #DDDDDD;
     --c-header: #FFFFFF;
     --c-header2: #F8F8F8;
     --c-accent: #F89C24;
+    --c-accent2: #FEB04A;
     --c-accentLight: #DDDDDD;
+    --c-accentLight2: #6E777D;
 }
 
 /* ---------------------------------- Invert Colors ---------------------------------- */
 
 .invertColor{
-    --c-FG: #FFFFFF;
+    --c-FG: #FDFDFD;
     --c-FG2: #F8F8F8;
     --c-FG3: #DDDDDD;
     --c-BG: #262424;
     --c-BG2: #3e3b3b;
     --c-BG3: #424242;
+    --c-header: #000000;
+    --c-header2: #201e1e;
 
+    --c-accentLight: #4b4848;
+    --c-accentLight2: #d9e5ec;
+}
+
+
+.invertColor .invertColor{
+    --c-FG: #262424;
+    --c-FG2: #3e3b3b;
+    --c-FG3: #424242;
+    --c-BG: #FDFDFD;
+    --c-BG2: #F8F8F8;
+    --c-BG3: #DDDDDD;
     --c-header: #FFFFFF;
     --c-header2: #F8F8F8;
-    --c-accent: #F89C24;
+    --c-accentLight: #DDDDDD;
 }
+
+
 
 
 /*******************************************************************************/
 /*********************************** BUTTONS ***********************************/
 /*******************************************************************************/
 
-.-b-1{
-    background-color: var(--c-FG);
-    color: var(--c-BG);
-    padding: 0.75em 1.1em;
+header nav li, header nav{
+    font-size: calc((16 /16 * 1rem) + ((18 - 16) * ((100vw - 320px) / (1920 - 320))));
+    font-weight: 900;
 }
-.-b-1{
-    background-color: var(--c-FG);
-    color: var(--c-BG);
-    padding: 0.8em 1.2em;
+
+header .info li *, header .info{
+    font-size: calc((14 /16 * 1rem) + ((16 - 14) * ((100vw - 320px) / (1920 - 320))));
+    font-weight: 100;
+    color: var(--c-accentLight2);
 }
-.-b-1::before{
-    position: absolute;
-    content: "";
-    --padding: 0.3em;
-    top: var(--padding);
-    bottom: var(--padding);
-    left: var(--padding);
-    right: var(--padding);
-    border: solid 0.08em var(--c-BG);
-}
+
 
 /******************************************************************************/
 /********************************* TYPOGRAPHY *********************************/
@@ -150,9 +166,20 @@ h1{
 h2{
     font-size: calc((30 /16 * 1rem) + ((48 - 30) * ((100vw - 320px) / (1920 - 320))));
 }
+.-t-h2Small{
+    font-size: 18px;
+    font-weight: 300;
+    padding-bottom: 0.2em;
+    border-bottom: solid var(--s-border2) var(--c-accent);
+}
 h3{
     font-size: calc((20 /16 * 1rem) + ((24 - 20) * ((100vw - 320px) / (1920 - 320))));
 }
+.-t-h3Small{
+    font-size: calc((16 /16 * 1rem) + ((20 - 16) * ((100vw - 320px) / (1920 - 320))));
+    font-weight: 700;
+}
+
 p{
     font-size: calc((16 /16 * 1rem) + ((20 - 16) * ((100vw - 320px) / (1920 - 320))));
 }
@@ -161,9 +188,11 @@ p{
     line-height: 1.6em;
     color: var(--c-FG2);
 }
-a, button{
-    font-size: 20px;
+a, button, label{
+    font-size: calc((16 /16 * 1rem) + ((20 - 16) * ((100vw - 320px) / (1920 - 320))));
+    height: fit-content;
 }
+
 
 
 
@@ -178,6 +207,10 @@ a, button{
 
 .section{
     padding: calc(var(--s-sectionSpace) / 2) var(--s-sideMargin);
+}
+header{
+    padding-left: var(--s-sideMargin);
+    padding-right: var(--s-sideMargin);
 }
 
 
@@ -201,7 +234,7 @@ input.invCheckbox{
 .section > h2:not(:last-child),
 .section > h3:not(:last-child),
 .section > h4:not(:last-child){
-    margin-bottom: 1em;
+    margin-bottom: 1.6em;
 }
 
 .sectionItemCenter > h1,
@@ -270,7 +303,29 @@ input.invCheckbox{
     background-color: var(--c-BG3);
 }
 
+.bgHalfContrast1, .bgHalfContrast2, .bgHalfContrast3{
+    position: relative;
+}
 
+.bgHalfContrast1::before, .bgHalfContrast2::before, .bgHalfContrast3::before{
+    position: absolute;
+    content: "";
+    background-color: var(--c-BG);
+    top: 0;
+    bottom: 50%;
+    left: 0;
+    right: 0;
+    z-index: -999;
+}
+.bgHalfContrast1::before{
+    background-color: var(--c-BG);
+}
+.bgHalfContrast2::before{
+    background-color: var(--c-BG2);
+}
+.bgHalfContrast3::before{
+    background-color: var(--c-BG3);
+}
 
 
 .spread > *:not(:last-child){
@@ -331,3 +386,4 @@ input.invCheckbox{
     height: 0.1em;
     background-color: var(--c-accent);
 }
+
