@@ -160,7 +160,13 @@ footer{
     display: flex;
     gap: var(--s-spacing1);
     flex-direction: column;
+    padding-top: calc(var(--s-headerHeight) + (var(--s-sectionSpace) / 3.5));
+    padding-bottom: 0;
 }
+.-l-hero .imgWrapper{
+    margin-top: calc(var(--s-sectionSpace) / 3.5);
+}
+
 
 @media screen and (min-width: 700px ){
     .-l-hero{
@@ -170,7 +176,7 @@ footer{
         flex: 1;
     }
     .-l-hero .imgWrapper{
-        flex: 0.8;
+        flex: 0.5;
     }
 }
 
@@ -713,6 +719,44 @@ footer{
     position: absolute;
   }
 
+  .-sp-numList{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    margin-top: var(--s-spacing3);
+    margin-bottom: var(--s-spacing3);
+  }
+
+.-sp-numList li{
+    display: flex;
+    flex-direction: column;
+}
+  
+.-sp-numList {
+    counter-reset: list-counter; /* Initialize counter */
+    list-style-type: none; /* Remove default numbering */
+    padding-left: 0; /* Optional: Remove padding */
+}
+
+.-sp-numList li {
+    position: relative;
+    margin-bottom: 20px; /* Space between items */
+}
+
+.-sp-numList li::before {
+    counter-increment: list-counter; /* Increment counter */
+    content: "0" counter(list-counter); /* Add a leading zero */
+    position: absolute;
+    left: 0; /* Adjust left as needed */
+    top: 0;
+    font-size: 1.5em; /* Adjust size to match design */
+    font-weight: bold;
+    color: var(--c-accent); /* Customize color */
+}
+
+.-sp-numList h3 {
+    margin-left: 2.5em; /* Shift the heading to align after the number */
+}
 
 
 

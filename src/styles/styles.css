@@ -391,3 +391,17 @@ input.invCheckbox{
 .-f-sideLine{
     border-right: solid var(--s-border3) var(--c-accent);
 }
+
+.-f-imageBox-1{
+    position: relative;
+}
+.-f-imageBox-1::before{
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: solid 10px var(--c-accent);
+    transform: rotate(-5deg);
+}
