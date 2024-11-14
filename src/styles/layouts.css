@@ -439,6 +439,8 @@ footer{
 }
 
 
+
+
 .-l-4Col_card-1{
     column-count: 4;
     column-fill: balance;
@@ -465,6 +467,24 @@ footer{
 .-l-4Col_card-1 li > *{
     width: fit-content;
 }
+
+
+.-l-layout6-1{
+    display: flex;
+    gap: var(--s-spacing3);
+}
+.-l-layout6-1 > *{
+    flex: 1;
+    min-width: 45%;
+    height: fit-content;
+}
+
+@media screen and (max-width:950px){
+    .-l-layout6-1{
+        flex-direction: column;
+    }
+}
+
 
 
 
@@ -502,26 +522,26 @@ footer{
 /*******************************************************************************/
 
 
-.-sp-2Col_split-1{
+.-spr-2Col_split-1{
     display: flex;
     gap: var(--s-spacing3);
 }
 
 
 
-.-sp-3Col_card{
+.-spr-3Col_card{
     display: flex;
     flex-wrap: wrap;
     margin-top: 1em;
     margin-bottom: 1em;
 }
-.-sp-3Col_card .-sp-card{
+.-spr-3Col_card .-spr-card{
     flex: 1;
     min-width: 160px;
 }
 
 @media screen and (max-width:550px){
-    .-sp-3Col_card{
+    .-spr-3Col_card{
         flex-direction: column;
     }
 }
@@ -549,44 +569,44 @@ footer{
 /*******************************************************************************/
 
 
-.-faq-1 .faqCard > p{
+.-card-spec-faq > p{
     display: none;
 }
 
-.-faq-1 .faqCard > .faqInp:checked ~ p{
+.-card-spec-faq > .faqInp:checked ~ p{
     display: block;
     animation: rotateMenu 0.2s ;
     transform-origin: top center;
 }
 
-.-faq-1 .faqCard > *{
+.-card-spec-faq > *{
     margin-bottom: var(--s-spacing5);
 }
-.-faq-1 .faqCard label{
+.-card-spec-faq label{
     display: flex;
     justify-content: space-between;
     align-items: baseline;
     width: 100%;
 }
-.-faq-1 .faqCard label h3{
+.-card-spec-faq label h3{
     overflow: hidden;
     text-wrap: nowrap;
     text-overflow: ellipsis;
     margin-right: 1em;
 }
-.-faq-1 .faqCard > .faqInp:checked ~ label h3{
+.-card-spec-faq > .faqInp:checked ~ label h3{
     overflow: visible;
     text-wrap: wrap;
 }
 
-.-faq-1 .faqCard .icon {
+.-card-spec-faq .icon {
     width: calc((15 /16 * 1rem) + ((30 - 15) * ((100vw - 320px) / (1920 - 320))));
     object-fit: contain;
 }
-.-faq-1 .faqCard > .faqInp:checked ~ label .icon{
+.-card-spec-faq > .faqInp:checked ~ label .icon{
     rotate: 180deg;
 }
-.-faq-1 .faqCard{
+.-card-spec-faq{
     border-bottom: solid var(--c-FG) var(--s-border1);
 }
 
@@ -662,7 +682,7 @@ footer{
 
 
 
-.-sp-card-design1{
+.-spr-card-spec-1{
     padding-left: 0.8em;
     padding-right: 0.5em;
     border-left: solid var(--s-border2) var(--c-accent);
@@ -670,31 +690,33 @@ footer{
     padding-top: var(--s-spacing5);
 }
 
-.-sp-card-design1 > *:not(:last-child){
+.-spr-card-spec-1 > *:not(:last-child){
     margin-bottom: var(--s-spacing5);
 }
 
-.-sp-card-design1 .icon{
+.-spr-card-spec-1 .icon{
     width: calc((20 /16 * 1rem) + ((30 - 20) * ((100vw - 320px) / (1920 - 320))));
 }
 
 
-.-sp-list-1 {
+
+
+.-spr-list-1 {
     margin-bottom: var(--s-spacing4) !important;
     margin-top: var(--s-spacing4) !important; 
 }
-.-sp-list-1 li{
+.-spr-list-1 li{
     --iconSize: 1em;
     position: relative;
     padding-left: 3em;
 }
-.-sp-list-1 li *{
+.-spr-list-1 li *{
     display: inline;
 }
-.-sp-list-1 > *:not(:last-child){
+.-spr-list-1 > *:not(:last-child){
     margin-bottom: var(--s-spacing5);
 }
-.-sp-list-1 li::before {
+.-spr-list-1 li::before {
     content: '';
     background-image: url("/assets/icon_checkmark.svg");
     background-repeat: no-repeat;
@@ -704,11 +726,11 @@ footer{
     width: 1.5em;
     height: 1.5em;
     position: absolute;
-  }
+}
 
 
 
-.-sp-numList{
+.-spr-numList{
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: var(--s-spacing5);
@@ -721,18 +743,18 @@ footer{
     padding-left: 0; /* Optional: Remove padding */
 }
 
-.-sp-numList li{
+.-spr-numList li{
     display: flex;
     flex-direction: column;
 }
-.-sp-numList li h3 {
+.-spr-numList li h3 {
     position: relative;
         
     padding-left: 2.5em; /* Shift the heading to align after the number */
     margin-bottom: 0.75em;
 }
 
-.-sp-numList li h3::before {
+.-spr-numList li h3::before {
     counter-increment: list-counter; /* Increment counter */
     content: "0" counter(list-counter); /* Add a leading zero */
     position: absolute;
@@ -744,7 +766,7 @@ footer{
 }
 
 @media screen and (max-width:500px){
-    .-sp-numList{
+    .-spr-numList{
         grid-template-columns: 1fr;
     }
 }

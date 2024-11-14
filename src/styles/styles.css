@@ -231,7 +231,12 @@ input.invCheckbox{
 .section > h2:not(:last-child),
 .section > h3:not(:last-child),
 .section > h4:not(:last-child){
-    margin-bottom: 1.6em;
+    margin-bottom: var(--s-spacing3);
+}
+
+.section > a:last-child,
+.section > button:last-child{
+    margin-top: var(--s-spacing3);
 }
 
 .sectionItemCenter > h1,
