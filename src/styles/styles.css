@@ -173,10 +173,7 @@ h2{
     border-bottom: solid var(--s-border2) var(--c-accent);
 }
 h3{
-    font-size: calc((20 /16 * 1rem) + ((24 - 20) * ((100vw - 320px) / (1920 - 320))));
-}
-.-t-h3Small{
-    font-size: calc((16 /16 * 1rem) + ((20 - 16) * ((100vw - 320px) / (1920 - 320))));
+    font-size: calc((18 /16 * 1rem) + ((20 - 18) * ((100vw - 320px) / (1920 - 320))));
     font-weight: 700;
 }
 

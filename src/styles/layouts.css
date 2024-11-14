@@ -198,20 +198,22 @@ footer{
 }
 
 
-.-l-2Col_img_spread-1{
+
+
+.-l-layout1{
     display: flex;
     gap: var(--s-spacing1) /* Factor */;
     flex-direction: column;
 }
 
 @media screen and (min-width: 700px ){
-    .-l-2Col_img_spread-1{
+    .-l-layout1{
         flex-direction: row;
     }
-    .-l-2Col_img_spread-1 .container{
+    .-l-layout1 .container{
         flex: 1;
     }
-    .-l-2Col_img_spread-1 .imgWrapper{
+    .-l-layout1 .imgWrapper{
         flex: 0.8; /* Factor */
     }
 }
@@ -219,47 +221,47 @@ footer{
 
 
 
-.-l-2Col_img_spread-2{
+.-l-layout2{
     display: flex;
     gap: var(--s-spacing1) /* Factor */;
     flex-direction: column;
     align-items: center;
 }
-.-l-2Col_img_spread-2 > .imgWrapper {
+.-l-layout2 > .imgWrapper {
     align-self: stretch;
 }
 
 @media screen and (min-width: 700px ){
-    .-l-2Col_img_spread-2{
+    .-l-layout2{
         flex-direction: row;
     }
-    .-l-2Col_img_spread-2 .container{
+    .-l-layout2 .container{
         flex: 1;
     }
-    .-l-2Col_img_spread-2 .imgWrapper{
+    .-l-layout2 .imgWrapper{
         flex: 0.85; /* Factor */
     }
 }
 
 
-.-l-2Col_img_spread-3{
+.-l-layout3{
     display: flex;
     gap: var(--s-spacing1) /* Factor */;
     flex-direction: column;
     align-items: center;
 }
-.-l-2Col_img_spread-3 > .imgWrapper {
+.-l-layout3 > .imgWrapper {
     align-self: stretch;
 }
 
 @media screen and (min-width: 700px ){
-    .-l-2Col_img_spread-3{
+    .-l-layout3{
         flex-direction: row;
     }
-    .-l-2Col_img_spread-3 .container{
+    .-l-layout3 .container{
         flex: 1;
     }
-    .-l-2Col_img_spread-3 .imgWrapper{
+    .-l-layout3 .imgWrapper{
         flex: 0.5; /* Factor */
     }
 }
@@ -267,31 +269,16 @@ footer{
 
 
 
-.-l-3Card-1{
-    --gapSize: var(--s-spacing4);
-    
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--gapSize);
-    justify-content: space-evenly;
-}
-
-.-l-3Card-1 > .card {
-    flex: 0 1 calc(33.333% - (2 * var(--gapSize) / 3));
-    min-width: calc(var(--s-vpMin) - 20px);
-}
 
 
 
-
-
-.-l-3Card-2{    
+.-l-layout4{    
     display: flex;
     gap: var(--s-spacing4);
     flex-wrap: wrap;
 }
 
-.-l-3Card-2 > .card {
+.-l-layout4 > .card {
     flex: 1;
     min-width: calc(var(--s-vpMin) - 20px);
 }
@@ -299,29 +286,29 @@ footer{
 
 
 
-.-l-zigzag-1 > *:not(:last-child){
+.-l-layout5 > *:not(:last-child){
     margin-bottom: var(--s-spacing1);
 }
 
 @media screen and (min-width:700px){
-    .-l-zigzag-1 > .card{
+    .-l-layout5 > .card{
         width: 65%;
     }
-    .-l-zigzag-1 > .card:nth-child(2n){
+    .-l-layout5 > .card:nth-child(2n){
         margin-left: auto;
     }
 }
 
 
 
-.-l-2colCard-1{
+.-l-layout6{
     display: flex;
     align-items: flex-start;
     flex-wrap: wrap;
     --spacingVal: var(--s-spacing3);
     gap: var(--spacingVal);
 }
-.-l-2colCard-1 > *{
+.-l-layout6 > *{
     flex: 1;
     min-width: 45%;
     max-width: calc(50% - (var(--spacingVal) / 2));
@@ -719,44 +706,50 @@ footer{
     position: absolute;
   }
 
-  .-sp-numList{
+
+
+.-sp-numList{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: var(--s-spacing5);
 
     margin-top: var(--s-spacing3);
     margin-bottom: var(--s-spacing3);
-  }
 
-.-sp-numList li{
-    display: flex;
-    flex-direction: column;
-}
-  
-.-sp-numList {
     counter-reset: list-counter; /* Initialize counter */
     list-style-type: none; /* Remove default numbering */
     padding-left: 0; /* Optional: Remove padding */
 }
 
-.-sp-numList li {
+.-sp-numList li{
+    display: flex;
+    flex-direction: column;
+}
+.-sp-numList li h3 {
     position: relative;
-    margin-bottom: 20px; /* Space between items */
+        
+    padding-left: 2.5em; /* Shift the heading to align after the number */
+    margin-bottom: 0.75em;
 }
 
-.-sp-numList li::before {
+.-sp-numList li h3::before {
     counter-increment: list-counter; /* Increment counter */
     content: "0" counter(list-counter); /* Add a leading zero */
     position: absolute;
     left: 0; /* Adjust left as needed */
-    top: 0;
-    font-size: 1.5em; /* Adjust size to match design */
+    top: -0.15em;
+    font-size: 1.25em; /* Adjust size to match design */
     font-weight: bold;
     color: var(--c-accent); /* Customize color */
 }
 
-.-sp-numList h3 {
-    margin-left: 2.5em; /* Shift the heading to align after the number */
+@media screen and (max-width:500px){
+    .-sp-numList{
+        grid-template-columns: 1fr;
+    }
 }
+
+
 
 
 
