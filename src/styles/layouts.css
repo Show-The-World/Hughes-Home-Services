@@ -7,7 +7,7 @@ header{
     position: fixed;
     right: 0;
     left: 0;
-    z-index: 1000;
+    z-index: 99999;
     padding-bottom: calc(var(--s-headerHeight) / 3 / 3) ;
     padding-top: calc(var(--s-headerHeight) / 3 / 3);
 
@@ -121,18 +121,64 @@ header > .container > .cta{
 }
 
 
-@media screen and (max-width:700px){
+@media screen and (max-width:699px){
+    
     header::before{
         right: 65%;
     }
 
-    header .navMenuToggle{
-        display: block;
+    header .info {
+        display: none;
     }
 
-
-    header .invCheckbox:not(:checked) ~ .container{
+    header .container{
         display: none;
+    }
+
+    header .invCheckbox:checked ~ .container{
+        display: block;
+        animation: slideLeft 0.2s;
+    }
+
+    header .navMenuToggle{
+        display: block;
+        margin-bottom: auto;
+        margin-top: auto;                                  
+    }
+
+    header .container{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        padding: var(--s-spacing4) var(--s-sideMargin);
+        background-color: var(--c-accent);
+    }
+    header nav {
+        margin-left: auto;
+        width: fit-content;
+        z-index: 100;
+    }
+    header nav ul{
+        display: flex;
+        flex-direction: column;
+        gap: var(--s-spacing5);
+    }
+    header nav ul *{
+        width: fit-content;
+    }
+    
+}
+
+
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translatex(0);
     }
 }
 
@@ -158,25 +204,30 @@ footer{
 
 .-l-hero{
     display: flex;
-    gap: var(--s-spacing1);
-    flex-direction: column;
+    gap: var(--s-sideMargin);
     padding-top: calc(var(--s-headerHeight) + (var(--s-sectionSpace) / 3.5));
     padding-bottom: 0;
 }
+.-l-hero .container{
+    flex: 1;
+}
+.-l-hero .container > *:last-child{
+    margin-bottom: var(--s-spacing1);
+}
 .-l-hero .imgWrapper{
     margin-top: calc(var(--s-sectionSpace) / 3.5);
+    flex: 0.5;
 }
 
+.-l-hero .imgWrapper img{
+    object-fit: contain;
+    object-position: bottom;
+}
 
-@media screen and (min-width: 700px ){
+@media screen and (max-width: 700px ){
     .-l-hero{
-        flex-direction: row;
-    }
-    .-l-hero .container{
-        flex: 1;
-    }
-    .-l-hero .imgWrapper{
-        flex: 0.5;
+        flex-direction: column;
+        gap: calc(var(--s-spacing1) *3);
     }
 }
 
@@ -443,30 +494,14 @@ footer{
 
 .-l-4Col_card-1{
     column-count: 4;
-    column-fill: balance;
     column-rule-style: solid;
     column-rule-color: var(--c-BG3);
     column-rule-width: var(--s-border1_5);
-    column-width: auto;
+    column-fill: balance;
 }
 
-.-l-4Col_card-1 li{
-    display: flex;
-    flex-direction: column;
-    gap: var(--s-spacing4);
-    align-items: center;
-    justify-content: center;
-}
-.-l-4Col_card-1 li .icon{
-    width: 50px;
-}
-.-l-4Col_card-1 h3{
-    font-weight: 900;
-    font-size: 50px;
-}
-.-l-4Col_card-1 li > *{
-    width: fit-content;
-}
+
+
 
 
 .-l-layout6-1{
@@ -630,6 +665,24 @@ footer{
 
 
 
+
+.-card-spec-card3 > *{
+    margin: auto;
+}
+.-card-spec-card3 > *:not(:last-child){
+    margin-bottom: var(--s-spacing5);
+}
+.-card-spec-card3 .icon{
+    width: auto;
+    height: 60px;
+}
+.-card-spec-card3 h3{
+    font-weight: 900;
+    font-size: calc((35 /16 * 1rem) + ((50 - 35) * ((100vw - 320px) / (1920 - 320))));
+}
+.-card-spec-card3 > *{
+    width: fit-content;
+}
 
 
 

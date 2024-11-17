@@ -204,6 +204,7 @@ a, button, label{
 
 .section{
     padding: calc(var(--s-sectionSpace) / 2) var(--s-sideMargin);
+    overflow-x: hidden; 
 }
 header{
     padding-left: var(--s-sideMargin);
@@ -406,4 +407,25 @@ input.invCheckbox{
     right: 0;
     border: solid 10px var(--c-accent);
     transform: rotate(-5deg);
+}
+
+
+
+.-f-imgBacksplash{
+    position: relative;
+}
+
+.-f-imgBacksplash::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    left: -50%;
+    bottom: 0;
+    /* Adjust the position as needed */
+    background-image: url('/assets/backsplash_hero.svg');
+    background-size: contain; /* or 'contain', depending on your needs */
+    background-repeat: no-repeat;
+    background-position: bottom; /* Adjust as needed */
+    z-index: -999; /* Place it behind the image */
 }
