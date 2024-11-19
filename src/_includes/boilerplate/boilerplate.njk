@@ -6,6 +6,16 @@
     <title>{{ title }}</title>
     <meta name="description" content="">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="/styles/styles.css">
     <link rel="stylesheet" href="/styles/layouts.css">
     <link rel="stylesheet" href="/styles/specific_styles.css">
@@ -22,41 +32,41 @@
 <body>
     {% if hasHeader | default(true) %}
     <header>
-        <a class="logoWrapper" href=""><img src="/assets/logo.svg" alt="" class="icon logo"></a>
+        <a class="logoWrapper" href="/"><img src="/assets/logo.svg" alt="" class="icon logo"></a>
         <input type="checkbox" name="navMenuToggle" id="navMenuToggle" class="invCheckbox">
         <div class="container">
             <ul class="info">
                 <li>
-                    <a href="mailto:wendallhughes58@gmail.com">
+                    <a class="-flare-btnIcon-inline1" href="mailto:wendallhughes58@gmail.com">
                         <img src="/assets/icon_email.svg" alt="" class="icon">
-                        wendallhughes58@gmail.com</a>
+                        <span>wendallhughes58@gmail.com</span></a>
                 </li>
                 <li>
                     
-                    <a href="tel:+6134221991">
+                    <a class="-flare-btnIcon-inline1" href="tel:+6134221991">
                         <img src="/assets/icon_phone.svg" alt="" class="icon">
-                        (613) 422-1991</a>
+                        <span>(613) 422-1991</span></a>
                 </li>
                 <li>
-                    <address>
-                        <img src="/assets/icon_address.svg" alt="" class="icon">
+                    <address class="-flare-btnIcon-inline1">
+                        <img src="/assets/icon_location.svg" alt="" class="icon">
                         <span>12 Winterburn Terrace, Nepean, ON K2G 5W9</span>
                     </address>
                 </li>
                 <li>
-                    <time datetime="Mo-Fr 09:00-18:00">
+                    <time class="-flare-btnIcon-inline1" datetime="Mo-Fr 09:00-18:00">
                         <img src="/assets/icon_time.svg" alt="" class="icon">
-                        Mon-Sat: 9:00 AM - 5:00 PM</time>
+                        <span>Mon-Sat: 9:00 AM - 5:00 PM</span></time>
                 </li>
             </ul>
             <nav>
                 <ul>
                     <li><a href="/about">About Us</a></li>
-                    <li><a href="/">Services</a></li>
+                    <li><a href="/#services">Services</a></li>
                     <li><a href="/testimonials">Testimonials</a></li>
-                    <li><a href="/">Gallery</a></li>
-                    <li><a href="/">Blog</a></li>
-                    <li><a href="/">Contact</a></li>
+                    <li><a href="/gallery">Gallery</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                    <li><a href="/contact">Contact</a></li>
                 </ul>
             </nav>
             <a href="/" class="cta -b-spec-1">Get A Quote</a>
@@ -66,10 +76,55 @@
     {% endif %}
 
 
+
+    {% if hasSubHero | default(false) %}
+    <section class="section -l-subHero invertColor bgContrast3 -u-sideMarginImgOverflow-right">
+        <div class="container">
+            <h1>{{ h1Val or title }}</h1>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/testimonials">{{ subHeroTitle or title }}</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="imgWrapper"><img src="/assets/demo3.jpg" alt=""></div>
+    </section>
+    {% endif %}
+
     {% block content %}{% endblock %}
 
 
-    {% if hasFooter | default(true) %}
+
+
+    {% if hasCTA | default(true) %}
+    <section class="section narrowSection -l-2coloverlap_container_image-left-1 bgHalfContrast1 invertColor">
+        <div class="container spread bgContrast1 invertColor">
+            <h2>Partner with Ottawa’s Trusted Home Service Experts</h2>
+            <form class="-form-1" action="">
+                <div class="inputContainer -inputContainer-1">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name">
+                </div>
+                <div class="inputContainer -inputContainer-1">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email">
+                </div>
+                <div class="inputContainer -inputContainer-1">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" name="phone" id="phone">
+                </div>
+                <div class="inputContainer -inputContainer-1">
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message"></textarea>
+                </div>
+                <button class="-b-spec-1">[CTA]</button>
+            </form>
+            <div class="imgWrapper"><img src="/assets/demo1.jpg" alt=""></div>
+        </div>
+    </section>
     {% endif %}
+
+    
 </body>
 </html>

@@ -79,7 +79,7 @@ header > .container > .cta{
 }
 
 
-@media screen and (min-width:700px){
+@media screen and (min-width:1180px){
     header::before{
         right: 70%;
     }
@@ -121,7 +121,7 @@ header > .container > .cta{
 }
 
 
-@media screen and (max-width:699px){
+@media screen and (max-width:1180px){
     
     header::before{
         right: 65%;
@@ -242,11 +242,45 @@ footer{
     padding-top: calc(var(--s-headerHeight));
     padding-bottom: 0;
 
-    height: 450px;
+    height: calc((160 /16 * 1rem) + ((450 - 160) * ((100vw - 320px) / (1920 - 320))));
+}
+
+.-l-subHero > .container{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.-l-subHero > .container nav > ul{
+    display: flex;
+    align-items: center;
+    gap: 0.8em;
+}
+.-l-subHero > .container nav > ul> li:not(:first-child)::before{
+    color: var(--c-accent);
+    font-size: 22px;
+    content: ">";
+    margin-right: 0.5em;
+}
+.-l-subHero > .container nav > ul > li{
+    display: flex;
+    align-items: center;
+}
+.-l-subHero > .container nav > ul *{
+    font-family: roboto;
 }
 .-l-subHero > .imgWrapper{
     width: 40%;
 }
+.-l-subHero > .imgWrapper img{
+    object-fit: cover;
+}
+
+
 
 
 
@@ -365,6 +399,8 @@ footer{
     max-width: calc(50% - (var(--spacingVal) / 2));
     height: fit-content;
 }
+
+
 
 
 
@@ -492,12 +528,67 @@ footer{
 
 
 
+.-l-2col-2{
+    display: flex;
+    gap: var(--s-spacing3);
+}
+.-l-2col-2 > .container{
+    flex: 1;
+}
+
+@media screen and (max-width:1000px){
+    .-l-2col-2{
+        flex-direction: column;
+    }
+}
+
+
+.-l-4Col_card-2{
+    display: flex;
+    gap: var(--s-spaci4);
+}
+
+
+
+
 .-l-4Col_card-1{
-    column-count: 4;
-    column-rule-style: solid;
-    column-rule-color: var(--c-BG3);
-    column-rule-width: var(--s-border1_5);
-    column-fill: balance;
+    display: flex;
+    justify-content: space-between;
+}
+.-l-4Col_card-1 > *{
+    flex: 1;
+}
+.-l-4Col_card-1 > *:not(:last-child){
+    border-right: solid rgba(255, 255, 255, 0.281) var(--s-border1);
+}
+
+
+
+
+.-card-spec-card3 > *{
+    margin: auto;
+}
+
+.-card-spec-card3 > *:not(:last-child){
+    margin-bottom: calc((12 /16 * 1rem) + ((26 - 12) * ((100vw - 320px) / (1920 - 320))));
+
+}
+.-card-spec-card3 .icon{
+    width: auto;
+    height: calc((24 /16 * 1rem) + ((60 - 24) * ((100vw - 320px) / (1920 - 320))));
+}
+.-card-spec-card3 h3{
+    font-weight: 500;
+    font-size: calc((10 /16 * 1rem) + ((50 - 10) * ((100vw - 320px) / (1920 - 320))));
+    text-align: center;
+}
+.-card-spec-card3 p{
+    font-size: calc((7 /16 * 1rem) + ((16 - 7) * ((100vw - 320px) / (1920 - 320))));
+    line-height: 1;
+    text-align: center;
+}
+.-card-spec-card3 > *{
+    width: fit-content;
 }
 
 
@@ -520,6 +611,18 @@ footer{
     }
 }
 
+
+
+
+.-l-gallery{
+    column-count: 3;
+    --gapSize: var(--s-spacing4);
+    column-gap: var(--gapSize);
+}
+
+.-l-gallery > img{
+    margin-bottom: var(--gapSize);
+}
 
 
 
@@ -591,12 +694,90 @@ footer{
 .-form-1{
     display: flex;
     flex-direction: column;
-    gap: var(--s-spacing5);
+    gap: calc(var(--s-spacing5) / 2);
 }
 
 .-form-1 .inputContainer input, .-form-1 .inputContainer textarea{
     width: 100%;
 }
+
+.-form-1 button{
+    width: 100%;
+}
+
+
+
+.-form-2{
+    display: flex;
+    flex-direction: column;
+    gap: var(--s-spacing3);
+}
+
+.-form-2 .inputContainer input, .-form-2 .inputContainer textarea{
+    width: 100%;
+}
+
+.-form-2 button{
+    width: 100%;
+}
+
+
+.-form-2 .group{
+    display: flex;
+    gap: var(--s-spacing5);
+}
+.-form-2 .group > *{
+    flex: 1;
+}
+
+
+
+
+.-inputContainer-1 > label{
+    margin-bottom: 0.1em;
+    font-size: 15px;
+}
+
+.-inputContainer-1 > input, .-inputContainer-1 > textarea{
+    font-size: 16px;
+    border: solid var(--s-border1) var(--c-BG3);
+    padding: 0.8em;
+}
+.-inputContainer-1 > input:focus, .-inputContainer-1 > textarea:focus{
+    border-radius: none;
+    background-color: var(--c-BG2);
+}
+
+.-inputContainer-1 > textarea{
+    resize: vertical;
+    height: 5em;
+}
+
+
+.-inputContainer-2 > label{
+    margin-bottom: 0.1em;
+    font-size: 15px;
+}
+
+.-inputContainer-2 > input, .-inputContainer-2 > textarea{
+    font-size: 16px;
+    background-color: var(--c-BG);
+    padding: 1.3em;
+
+    -webkit-box-shadow: 0px 1px 11px 1px rgba(0,0,0,0.02); 
+    box-shadow: 0px 1px 11px 1px rgba(0,0,0,0.02);
+}
+.-inputContainer-2 > input:focus, .-inputContainer-2 > textarea:focus{
+    border-radius: none;
+    background-color: var(--c-BG2);
+}
+
+.-inputContainer-2 > textarea{
+    resize: vertical;
+    height: 5em;
+}
+
+
 
 
 /*******************************************************************************/
@@ -665,24 +846,6 @@ footer{
 
 
 
-
-.-card-spec-card3 > *{
-    margin: auto;
-}
-.-card-spec-card3 > *:not(:last-child){
-    margin-bottom: var(--s-spacing5);
-}
-.-card-spec-card3 .icon{
-    width: auto;
-    height: 60px;
-}
-.-card-spec-card3 h3{
-    font-weight: 900;
-    font-size: calc((35 /16 * 1rem) + ((50 - 35) * ((100vw - 320px) / (1920 - 320))));
-}
-.-card-spec-card3 > *{
-    width: fit-content;
-}
 
 
 
@@ -857,32 +1020,13 @@ footer{
 
 
 
-.-inputContainer-1 > label{
-    margin-bottom: 0.2em;
-}
-
-.-inputContainer-1 > input, .-inputContainer-1 > textarea{
-    font-size: calc((16 /16 * 1rem) + ((20 - 16) * ((100vw - 320px) / (1920 - 320))));
-    border: solid var(--s-border1) var(--c-BG3);
-    padding: 0.8em;
-}
-.-inputContainer-1 > input:focus, .-inputContainer-1 > textarea:focus{
-    border-radius: none;
-    background-color: var(--c-BG2);
-}
-
-.-inputContainer-1 > textarea{
-    resize: vertical;
-    height: 5em;
-}
-
 
 
 .-b-spec-1{
     font-size: calc((14 /16 * 1rem) + ((15 - 14) * ((100vw - 320px) / (1920 - 320))));
     font-weight: 600;
-    padding: 0.9em 1.8em;
-    border: solid var(--s-border1_5) var(--c-accent2);
+    padding: 0.6em 1.8em;
+    border: solid var(--s-border1) var(--c-accent2);
     position: relative;
     padding-right: 4em;
 }
@@ -920,3 +1064,30 @@ footer{
     height: 1.75em;
     width: 1em;
 }
+
+
+
+.-b-spec-3{
+    font-size: calc((14 /16 * 1rem) + ((15 - 14) * ((100vw - 320px) / (1920 - 320))));
+    font-weight: 600;
+    color: var(--c-BG);
+    background-color: var(--c-accent);
+    padding: 1.2em 1.8em;
+    position: relative;
+    padding-right: 4em;
+}
+
+.-b-spec-3::after{
+    content: "";
+    position: absolute;
+    background-image: url("/assets/icon_arrow_right_white.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 1.8em;
+    height: 100%;
+    width: 1.2em;
+}
+

@@ -1,6 +1,6 @@
 ---
     title: About Us
-    hasFooter: false
+    hasSubHero: true
 ---
 {% extends "boilerplate/base.njk" %}
 
@@ -9,29 +9,17 @@
 
 
 {% block content %}
-    <section class="section -l-subHero invertColor bgContrast2 -u-sideMarginImgOverflow-right">
-        <div class="container">
-            <h1>Testimonials</h1>
-            <nav>
-                <li><a href="/">Home</a></li>
-                <li><a href="/testimonials">Testimonials</a></li>
-            </nav>
-        </div>
-        <div class="imgWrapper"><img src="/assets/demo3.jpg" alt=""></div>
-    </section>
-
-
 <section class="section -l-layout3">
     <div class="imgWrapper"><img src="/assets/demo4.jpg" alt=""> </div>
     <div class="container spread">
-        <h2 class="-f-topLine-left">Our Goal At Hughes Home Services Ottawa</h2>
+        <h2 class="">Our Goal At Hughes Home Services Ottawa</h2>
         <p>We’re passionate about helping people maintain and enjoy their homes, especially older homeowners who take pride in their properties. My vision is to enable people to stay in their homes as long as possible by providing reliable, honest, and high-quality services. We aim to become a household name in Ottawa for small to medium jobs around the house, offering more services and expanding opportunities for our staff.</p>
     </div>
 </section>
 
 
-<section class="section narrowSection sectionItemCenter">
-    <h2 class="-f-topLine-center">How Hughes Home Services Ottawa Got Started</h2>
+<section class="section narrowSection2 sectionItemCenter">
+    <h2 class="">How Hughes Home Services Ottawa Got Started</h2>
     <div class="spread -spr-2Col_split-1">
         <p>Hughes Home Services Ottawa was inspired by the early days of helping out with my father’s small general contracting
             company. As a teenager, I joined him in assisting homeowners with tasks around the house, and I saw firsthand how
@@ -45,29 +33,4 @@
 </section>
 
 
-<section class="section narrowSection -l-2coloverlap_container_image-left-1 bgHalfContrast2 invertColor">
-    <div class="container spread bgContrast1 invertColor">
-        <h2>Partner with Ottawa’s Trusted Home Service Experts</h2>
-        <form class="-form-1" action="">
-            <div class="inputContainer -inputContainer-1">
-                <label for="name">Name</label>
-                <input type="text" name="name" id="name">
-            </div>
-            <div class="inputContainer -inputContainer-1">
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email">
-            </div>
-            <div class="inputContainer -inputContainer-1">
-                <label for="phone">Phone Number</label>
-                <input type="tel" name="phone" id="phone">
-            </div>
-            <div class="inputContainer -inputContainer-1">
-                <label for="message">Message</label>
-                <textarea name="message" id="message"></textarea>
-            </div>
-            <button class="-b-spec-1">Submit</button>
-        </form>
-        <div class="imgWrapper"><img src="/assets/demo1.jpg" alt=""></div>
-    </div>
-</section>
 {% endblock %}
