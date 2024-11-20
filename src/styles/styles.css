@@ -65,7 +65,7 @@ img{
 :root{
     /* ----------------------------------- Sizes ----------------------------------- */
     --s-vpMin: 320px;
-    --s-headerHeight: calc((60 /16 * 1rem) + ((130 - 60) * ((100vw - 320px) / (1920 - 320))));
+    --s-headerHeight: calc((50 /16 * 1rem) + ((130 - 50) * ((100vw - 320px) / (1920 - 320))));
     --s-sideMargin: calc((10 /16 * 1rem) + ((200 - 10) * ((100vw - 320px) / (1920 - 320))));
     --s-sectionSpace: calc((150 /16 * 1rem) + ((340 - 150) * ((100vw - 320px) / (1920 - 320))));
     --s-spacing1: calc((30 /16 * 1rem) + ((80 - 30) * ((100vw - 320px) / (1920 - 320))));
@@ -91,6 +91,7 @@ img{
     --c-accent: #F89C24;
     --c-accent2: #FEB04A;
     --c-accent3: #df8b1d;
+    --c-accent4: #fffaf3;
     --c-accentLight: #DDDDDD;
     --c-accentLight2: #6E777D;
 }
@@ -495,5 +496,9 @@ img{
 }
 
 
-
-.-u-imgCrop-circle{border-top-left-radius: 50% 50%; border-top-right-radius: 50% 50%; border-bottom-right-radius: 50% 50%; border-bottom-left-radius: 50% 50%; }
+.-u-imgCrop-circle {
+    border-top-left-radius: 50% 50%;
+    border-top-right-radius: 50% 50%;
+    border-bottom-right-radius: 50% 50%;
+    border-bottom-left-radius: 50% 50%;
+}
