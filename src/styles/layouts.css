@@ -831,7 +831,10 @@ footer{
     height: 20px;
     width: 10%;
     min-width: 120px;
+
+    clip-path: polygon(0 0, var(--starCount) 0, var(--starCount) 100%, 0% 100%);
 }
+
 .-c-testimonial-1 .quote{
     width: 8%;
     margin-top: var(--s-spacing4);
