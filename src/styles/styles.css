@@ -90,6 +90,7 @@ img{
     --c-header2: #F8F8F8;
     --c-accent: #F89C24;
     --c-accent2: #FEB04A;
+    --c-accent3: #df8b1d;
     --c-accentLight: #DDDDDD;
     --c-accentLight2: #6E777D;
 }
@@ -190,7 +191,12 @@ a, button, label{
     font-family: titillium web, sans-serif;
 }
 
-
+.-t-smallHighlight{
+    font-size: 16px;
+    color: var(--c-accent3);
+    font-family: roboto;
+    font-weight: 700;
+}
 
 
 
@@ -218,14 +224,15 @@ input.invCheckbox{
 
 
 /* --------------- Sets the default image height across vp widths --------------- */
-.section > .imgWrapper > img{
+img{
     max-height: 80vh;
 }
 @media screen and (max-width:700px){
-    .section > .imgWrapper > img{
+    img{
         max-height: 45vh;
     }
 }
+
 
 
 .section > h1:not(:last-child),
@@ -311,8 +318,13 @@ input.invCheckbox{
 
 
 
-.blockedSection{
+.blockedSection2{
     padding: var(--s-spacing2);
+}
+
+.blockedSection5{
+    padding: var(--s-spacing5);
+    background-color: var(--c-BG2);
 }
 
 
@@ -380,7 +392,7 @@ input.invCheckbox{
     top: -0.25em;
     left: 50%;
     transform: translateX(-50%);
-    width: 30%;
+    width: 20%;
     height: 0.1em;
     background-color: var(--c-accent);
 }
@@ -415,7 +427,7 @@ input.invCheckbox{
 }
 
 
-.-f-sideLine{
+.-f-sideLine-right{
     border-right: solid var(--s-border3) var(--c-accent);
 }
 
@@ -465,3 +477,23 @@ input.invCheckbox{
     display: flex;
     gap: 1em;
 }
+
+
+.-f-textSideLine-left::before{
+    position: absolute;
+    content: "";
+    left: -0.3em;
+    width: 0.1em;
+    top: 0.2em;
+    bottom: 0.2em;
+    background-color: var(--c-accent);
+}
+
+
+.-flare-textSub{
+
+}
+
+
+
+.-u-imgCrop-circle{border-top-left-radius: 50% 50%; border-top-right-radius: 50% 50%; border-bottom-right-radius: 50% 50%; border-bottom-left-radius: 50% 50%; }
