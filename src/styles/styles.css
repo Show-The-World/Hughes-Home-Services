@@ -44,7 +44,11 @@ h1, h2, h3, h4, p, a, button, label{
     color: var(--c-FG);
 }
 
+html {
+    scroll-behavior: smooth;
+}
 
+  
 body{
     background-color: var(--c-BG);
 }
