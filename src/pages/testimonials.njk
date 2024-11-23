@@ -10,62 +10,25 @@
 
 {% block content %}
 <section class="section">
-    <div class="-l-layout5">
-        <!-- Card for Pat and Roger -->
+<div class="-l-layout5">
+    {% for testimonial in testimonials %}
         <div class="card -c-testimonial-1 -f-sideLine-right">
             <div class="container">
                 <div class="spreadSmall subContainer">
-                    <h3>Pat and Roger</h3>
-                    <div class="title">Home Services</div>
+                    <h3>{{ testimonial.name }}</h3>
+                    <div class="title">{{ testimonial.title }}</div>
                 </div>
-                <img style="--starCount: 100%;" src="/assets/review_stars.svg" alt="" class="icon star">
-            </div>
-            <p>We have used Hughes Home Services for more than 5 years. They have always been reliable and reasonably priced. They
-                are prompt to reply and make every effort to meet our needs. We have recommended them to many of our friends and family
-                who have always thanked us. They have been particularly helpful as we prepare our home for selling. We recommend them
-                highly. As they have done many jobs for us, the costs have always been fair.</p>
-            <img src="/assets/review_quote.svg" alt="" class="icon quote">
+                <img 
+                    style="--starCount: {{ testimonial.stars * 20 }}%;" 
+                    src="/assets/review_stars.svg" 
+                    alt="{{ testimonial.stars }} stars" 
+                    class="icon star">
         </div>
-
-        <!-- Card for Private User - Home Repairs and Renovations -->
-        <div class="card -c-testimonial-1 -f-sideLine-right">
-            <div class="container">
-                <div class="spreadSmall subContainer">
-                    <h3>Ottawa Home Owner</h3>
-                    <div class="title">Home Repairs And Renovations</div>
-                </div>
-                <img style="--starCount: 100%;" src="/assets/review_stars.svg" alt="" class="icon star">
-            </div>
-            <p>Prompt and efficient work, from maintenance projects (painting, caulking) to add-ons (porch design/building to safety bars and railings and new toilet installation). Interior and exterior work, including work on trees and shrubs. I love the versatility and very fair costs. There is no down-time on the job. My go-to for all home assistance.</p>
-            <img src="/assets/review_quote.svg" alt="" class="icon quote">
+        <p>{{ testimonial.content }}</p>
+        <img src="/assets/review_quote.svg" alt="quote icon" class="icon quote">
         </div>
-
-        <!-- Card for Chris -->
-        <div class="card -c-testimonial-1 -f-sideLine-right">
-            <div class="container">
-                <div class="spreadSmall subContainer">
-                    <h3>Chris</h3>
-                    <div class="title">Yard Work And Painting</div>
-                </div>
-                <img style="--starCount: 100%;" src="/assets/review_stars.svg" alt="" class="icon star">
-            </div>
-            <p>Wendall is so careful and responsible so does very good work. We have used his services several times and always been very satisfied!!</p>
-            <img src="/assets/review_quote.svg" alt="" class="icon quote">
-        </div>
-
-        <!-- Card for Private User - Kitchen Renovation -->
-        <div class="card -c-testimonial-1 -f-sideLine-right">
-            <div class="container">
-                <div class="spreadSmall subContainer">
-                    <h3>Ottawa Home Owner</h3>
-                    <div class="title">Kitchen Renovation Handyman’s Projects</div>
-                </div>
-                <img style="--starCount: 100%;" src="/assets/review_stars.svg" alt="" class="icon star">
-            </div>
-            <p>Wendall came to help install safety bars after I had knee replacement surgery. He was so helpful, courteous, organized and clean that we brought him back for gardening projects, home repairs and now our kitchen renovation. He saved our pergola badly damaged after the derecho, took care of things my 91-year-old mom needed done with kindness and patience. He is awesome.</p>
-            <img src="/assets/review_quote.svg" alt="" class="icon quote">
-        </div>
-    </div>
+    {% endfor %}
+</div>
 </section>
 
 {% endblock %}
