@@ -5,14 +5,16 @@ module.exports = function(eleventyConfig) {
   
 	eleventyConfig.addPassthroughCopy({"src/other/robot.txt": "/robot.txt"})
 
-
+  
 	return {
 		markdownTemplateEngine: 'njk',
 		dataTemplateEngine: 'njk',
 		htmlTemplateEngine: 'njk',
 
 		dir: {
-			input: 'src',
+			input: 'src/pages',
+			includes: "../_includes",
+      		data: "../_data",
 			output: 'public',
 		}
 	};
