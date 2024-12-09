@@ -926,6 +926,9 @@ footer{
 
 
 
+
+
+
 .-inputContainer-1 > label{
     margin-bottom: 0.1em;
     font-size: 15px;
@@ -971,6 +974,12 @@ footer{
 }
 
 
+
+
+
+.-card-info{
+
+}
 
 
 /*******************************************************************************/
@@ -1078,13 +1087,6 @@ footer{
     border: solid var(--s-border1_5) var(--c-accent2);
     height: fit-content;
 }
-.-c-design2 > .icon{
-    object-fit: contain;
-    width: auto;
-    height: calc((20 /16 * 1rem) + ((75 - 20) * ((100vw - 320px) / (1920 - 320))));
-    border-radius: 1000px;
-}
-
 .-c-design2 > *:not(:last-child){
     margin-bottom: var(--s-spacing4);
 }

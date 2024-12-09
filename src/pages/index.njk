@@ -118,25 +118,25 @@
     </div>
     <div class="cardContainer">
         <div class="-c-design2">
-            <img src="/assets/demo_icon2.svg" alt="" class="icon">
+            <img src="/assets/demo_icon2.svg" alt="" class="icon -icon-circlePadding">
             <h3>Room Additions and Basement Conversions</h3>
             <p>Extra space for growing families.</p>
             <a href="" class="-b-spec-2">[CTA]</a>
         </div>
         <div class="-c-design2">
-            <img src="/assets/demo_icon2.svg" alt="" class="icon">
+            <img src="/assets/demo_icon2.svg" alt="" class="icon -icon-circlePadding">
             <h3>Bathroom and Kitchen Upgrades</h3>
             <p>New vanities, backsplashes, and more.</p>
             <a href="" class="-b-spec-2">[CTA]</a>
         </div>
         <div class="-c-design2">
-            <img src="/assets/demo_icon2.svg" alt="" class="icon">
+            <img src="/assets/demo_icon2.svg" alt="" class="icon -icon-circlePadding">
             <h3>Flooring Replacement and Installations</h3>
             <p>Update any room's look</p>
             <a href="" class="-b-spec-2">[CTA]</a>
         </div>
         <div class="-c-design2">
-            <img src="/assets/demo_icon2.svg" alt="" class="icon">
+            <img src="/assets/demo_icon2.svg" alt="" class="icon -icon-circlePadding">
             <h3>Home Office Alterations</h3>
             <p>Soundproofing and privacy solutions for home offices.</p>
             <a href="" class="-b-spec-2">[CTA]</a>
@@ -241,26 +241,27 @@
 
 
 
-<section class="section invertColor bgContrast1 narrowSection">
-    <h2 class="-f-textSideLine-left"><span class="-t-smallHighlight">Testimonials</span>What Ottawa Customers Say</h2>
-    <div class="-l-layout6-1 invertColor">
-      <div class="card -c-testimonial-1 -f-sideLine-right">
-            <div class="container">
-                <div class="spreadSmall subContainer">
-                    <h3>Pat and Roger</h3>
-                    <div class="title">Home Owners</div>
-                </div>
-                <img src="/assets/review_stars.svg" alt="" class="icon star">
-            </div>
-            <p>We have used Hughes Home Services for more than 5 years. They have always been reliable and reasonably priced. They
-                are prompt to reply and make every effort to meet our needs. We have recommended them to many of our friends and family
-                who have always thanked us. They have been particularly helpful as we prepare our home for selling. We recommend them
-                highly. As they have done many jobs for us, the costs have always been fair.</p>
-            <img src="/assets/review_quote.svg" alt="" class="icon quote">
-        </div>
-    </div>
-    <a href="/testimonials" class="-b-spec-3 invertColor">More Ottawa Testimonials</a>
+
+<section class="section sectionItemCenter">
+  <h2><span class="-t-smallHighlight">FAQs</span>Frequently Asked Questions</h2>
+  <div class="-l-2colCard-2">
+    {% for container in faqContainers %}
+      <ul class="container">
+        {% for faq in container %}
+          <li class="-card-spec-faq">
+            <input type="checkbox" class="faqInp invCheckbox" id="faq{{ loop.index0 }}">
+            <label for="faq{{ loop.index0 }}">
+              <h3>{{ faq.question }}</h3>
+              <img src="/assets/icon_arrow_down.svg" alt="" class="icon">
+            </label>
+            <p>{{ faq.answer }}</p>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endfor %}
+  </div>
 </section>
+
 
 
 <section class="section bgContrast1 invertColor narrowSection">

@@ -95,7 +95,7 @@ img{
     --c-accent: #F89C24;
     --c-accent2: #FEB04A;
     --c-accent3: #df8b1d;
-    --c-accent4: #fffaf3;
+    --c-accent4: #fff8ef;
     --c-accentLight: #DDDDDD;
     --c-accentLight2: #6E777D;
 }
@@ -505,4 +505,15 @@ img{
     border-top-right-radius: 50% 50%;
     border-bottom-right-radius: 50% 50%;
     border-bottom-left-radius: 50% 50%;
+}
+
+
+.-icon-circlePadding{
+    background-color: var(--c-accent4);
+    --dimension: calc((20 /16 * 1rem) + ((75 - 20) * ((100vw - 320px) / (1920 - 320))));
+    height: var(--dimension);
+    width: var(--dimension);
+    object-fit: fill;
+    padding: 3%;
+    border-radius: 1000px;
 }

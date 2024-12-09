@@ -1,0 +1,30 @@
+{
+    "list": [
+      {
+        "id": "faq1",
+        "question": "Do you offer free quotes?",
+        "answer": "Yes, we are always wanting to ensure we meet your requirements and offer free quotes."
+      },
+      {
+        "id": "faq2",
+        "question": "Can I get current references?",
+        "answer": "Hughes Home Services Ottawa has many happy customers, we are happy to connect you to our clients."
+      },
+      {
+        "id": "faq3",
+        "question": "Is the owner involved in the work?",
+        "answer": "Yes, Wendall Hughes is always on site helping the staff and communicating with the customers."
+      },
+      {
+        "id": "faq4",
+        "question": "Can you work around pets and customers working from home?",
+        "answer": "Yes, helping you around your home no matter the situation is possible."
+      },
+      {
+        "id": "faq5",
+        "question": "Do you have insurance?",
+        "answer": "Of course, any reputable service will have insurance, including Hughes Home Services Ottawa."
+      }
+    ]
+  }
+  
