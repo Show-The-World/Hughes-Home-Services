@@ -495,11 +495,6 @@ img{
 }
 
 
-.-flare-textSub{
-
-}
-
-
 .-u-imgCrop-circle {
     border-top-left-radius: 50% 50%;
     border-top-right-radius: 50% 50%;
@@ -516,4 +511,11 @@ img{
     object-fit: fill;
     padding: 3%;
     border-radius: 1000px;
+}
+
+
+
+.dropshadow1{
+    -webkit-box-shadow: 0px 1px 11px 1px rgba(0,0,0,0.02); 
+    box-shadow: 0px 1px 11px 1px rgba(0,0,0,0.02);
 }
