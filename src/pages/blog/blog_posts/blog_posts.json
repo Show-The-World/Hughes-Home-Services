@@ -1,0 +1,5 @@
+{
+    "layout": "boilerplate/blog_base.njk",
+    "permalink": "/blog/{{ slug }}/",
+    "hasCTA": false
+}

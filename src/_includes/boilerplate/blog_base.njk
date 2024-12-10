@@ -1,0 +1,15 @@
+{% extends "boilerplate/boilerplate.njk" %}
+
+{% block links %}
+    {{ super() }}
+{% endblock %}
+
+{% block head %}
+    {{ super() }}
+{% endblock %}
+
+{% block content %}
+<section class="section">
+    {{content | safe}}
+</section>
+{% endblock %}
