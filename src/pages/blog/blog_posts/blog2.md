@@ -1,7 +1,7 @@
 ---
 title: Hello World
 date: "2024-11-05"
-slug: hello-world-slug
+slug: new-world-slug
 author: Person name
 description: in this project we took apart a blah blah blah
 imagePrimary: test1.jpg

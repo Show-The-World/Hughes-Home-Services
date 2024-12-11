@@ -1,0 +1,90 @@
+body{
+    --mainWidth: 68%;
+}
+body > main {
+    width: var(--mainWidth);
+    padding-right: calc(var(--s-sideMargin) / 2);
+}
+
+
+body > aside{
+    width: calc(100% - var(--mainWidth));
+    position: absolute;
+    right: 0px;
+
+    padding-top: calc(var(--s-sectionSpace) / 2);
+    padding-right: var(--s-sideMargin);
+}
+
+@media screen and (max-width:1000px){
+    body > aside{
+        position: relative;
+        padding: 0 var(--s-sideMargin);
+        padding-top: var(--s-spacing1);
+        width: auto;
+    }
+    body > main {
+        width: auto;
+    }
+}
+
+
+main > *:not(:last-child){
+    margin-bottom: var(--s-spacing1);
+}
+
+.-card-blogCard > .imgWrapper{
+    height: 44vh;
+}
+
+
+.-card-blogCard .container{
+    --padding: var(--s-spacing4);
+    padding: var(--padding);
+}
+
+.-card-blogCard .container > *:not(:last-child){
+    margin-bottom: var(--s-spacing4);
+}
+
+
+.-card-blogCard .subContainer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.-card-blogCard .subContainer > .group2{
+    min-width: 40%;
+    padding: 0.6em;
+    padding-left: 2em;
+    transform: translateY(-50%) translateX(2%);
+    margin-right: calc(-1 * var(--s-spacing4));
+    margin-top: calc(-1 * var(--s-spacing4));
+}
+
+
+.-card-featured{
+    display: flex;
+    width: 100%;
+    height: min-content;
+    justify-content: stretch;
+}
+.-card-featured > .imgWrapper{
+    height: calc((80 /16 * 1rem) + ((120 - 80) * ((100vw - 320px) / (1920 - 320))));
+    flex: 1;
+    min-width: 0;
+}
+.-card-featured > .container{
+    flex: 2;
+    min-width: 0;
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.-card-featured > .container *:not(.icon) {
+    text-wrap: nowrap;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    
+}

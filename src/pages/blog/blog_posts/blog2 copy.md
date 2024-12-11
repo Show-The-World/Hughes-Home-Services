@@ -1,11 +1,10 @@
 ---
-title: Hello World
+title: should not be here
 date: "2024-11-05"
-slug: hello-world-slug
+slug: not feautreasdasd
 author: Person name
 description: in this project we took apart a blah blah blah
 imagePrimary: test1.jpg
-isFeatured: true
 ---
 
 ## Welcome to my first blog post! This is a sample post.

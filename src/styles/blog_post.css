@@ -1,0 +1,41 @@
+h2{
+    font-size: calc((24 /16 * 1rem) + ((48 - 24) * ((100vw - 320px) / (1920 - 320))));
+    font-family: titillium web;
+    font-weight: 600;
+}
+
+
+.group1{
+    margin-bottom: var(--s-spacing2);
+}
+
+.group1 > img{
+    width: 90%;
+    height: 50vh;
+}
+
+.group1 > .-card-blogInfo{    
+    position: absolute;
+    bottom: 5%;
+    right: 0;
+}
+.group1 > .-card-blogInfo > li > *:first-child{    
+    width: 6em;
+}
+
+@media screen and (max-width:450px){
+    .group1 > .-card-blogInfo{
+        position: relative;
+    }
+    .group1 > img{
+        width: 100%;
+    }
+}
+
+
+
+
+
+.-t-blogInfo *{
+    font-family: titillium web;
+}

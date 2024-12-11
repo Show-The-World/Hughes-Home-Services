@@ -1,6 +1,7 @@
 {% extends "boilerplate/boilerplate.njk" %}
 
 {% block links %}
+    <link rel="stylesheet" href="/styles/blog_post.css">
     {{ super() }}
 {% endblock %}
 
@@ -9,7 +10,19 @@
 {% endblock %}
 
 {% block content %}
-<section class="section">
-    {{content | safe}}
-</section>
+<main class="narrowSection2">
+    <section class="group1">
+        <img src="/assets/blog/{{imagePrimary}}" alt="">
+        <ul class="card -card-blogInfo blockedSection4 dropshadow1 spread">
+            <li class="-t-blogInfo"><img src="/assets/date.svg" alt="" class="icon"><span>{{date}}</span></li>
+            <li class="-t-blogInfo"><span><b>Author: </b></span><span>{{author}}</span></li>
+            <li class="-t-blogInfo"><span><b>Other info: </b></span><span>asda asdasdfdsasd</span></li>
+        </ul>
+    </section>
+
+    <section class="group2 spread">
+        {{content | safe}}
+    </section>
+    
+</main>
 {% endblock %}
