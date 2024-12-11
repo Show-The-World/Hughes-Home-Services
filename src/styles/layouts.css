@@ -135,6 +135,10 @@ header > .container > .cta{
         opacity: 0;
         animation: slideRight 0.2s;
     }
+    header .invCheckbox:not(:checked) ~ .container *{
+        width: 0;
+        
+    }
 
     header .navMenuToggle svg{
         height: calc(var(--s-headerHeight) / 3);
@@ -148,25 +152,25 @@ header > .container > .cta{
     }
     
     header .invCheckbox:checked ~ .navMenuToggle .top-line  {
-        animation: down-rotate 0.6s ease-out both;
+        animation: down-rotate 0.2s ease-out both;
     }
     header .invCheckbox:checked ~ .navMenuToggle .bottom-line  {
-        animation: up-rotate 0.6s ease-out both;
+        animation: up-rotate 0.2s ease-out both;
     }
     
     header .invCheckbox:checked ~ .navMenuToggle .middle-line  {
-        animation: hide 0.6s ease-out forwards;
+        animation: hide 0.2s ease-out forwards;
     }
 
     /* When toggled OFF */
     header .invCheckbox:not(:checked) ~ .navMenuToggle .top-line {
-        animation: down-rotate-reverse 0.6s ease-out both;
+        animation: down-rotate-reverse 0.2s ease-out both;
     }
     header .invCheckbox:not(:checked) ~ .navMenuToggle .bottom-line {
-        animation: up-rotate-reverse 0.6s ease-out both;
+        animation: up-rotate-reverse 0.2s ease-out both;
     }
     header .invCheckbox:not(:checked) ~ .navMenuToggle .middle-line {
-        animation: show 0.6s ease-out forwards;
+        animation: show 0.2s ease-out forwards;
     }
 
     header .navMenuToggle{

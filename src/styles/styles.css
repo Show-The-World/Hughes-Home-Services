@@ -27,6 +27,9 @@ body{
     min-height: 100vh;
     overflow-x: hidden;
 }
+span{
+    display: inline-block;
+}
 a, button, label{
     cursor: pointer;
     user-select: none;
@@ -155,6 +158,12 @@ header .info li *, header .info{
 /******************************************************************************/
 
 
+b{
+    font-weight: 700;
+    display: inline;
+}
+
+
 h1{
     font-size: calc((36 /16 * 1rem) + ((64 - 36) * ((100vw - 320px) / (1920 - 320))));
     font-family: roboto, sans-serif;
@@ -172,10 +181,23 @@ h2{
     padding-bottom: 0.2em;
     border-bottom: solid var(--s-border2) var(--c-accent);
 }
+.-t-h2-2{
+    font-size: calc((24 /16 * 1rem) + ((48 - 24) * ((100vw - 320px) / (1920 - 320))));
+    font-family: titillium web;
+    font-weight: 600;
+}
+.-t-h2-3{
+    font-size: calc((18 /16 * 1rem) + ((28 - 18) * ((100vw - 320px) / (1920 - 320))));
+    font-family: titillium web;
+    font-weight: 700;
+}
 h3{
     font-size: calc((18 /16 * 1rem) + ((20 - 18) * ((100vw - 320px) / (1920 - 320))));
     font-weight: 700;
     font-family: roboto, sans-serif;
+}
+.-t-h3Small{
+    font-size: 16px;
 }
 
 p{
@@ -188,7 +210,7 @@ p{
 .-t-pSmall{
     font-size: calc((15 /16 * 1rem) + ((16 - 15) * ((100vw - 320px) / (1920 - 320))));
     line-height: 1.6em;
-    color: var(--c-FG2);
+    color: var(--c-FG3);
 }
 a, button, label{
     font-size: calc((16 /16 * 1rem) + ((20 - 16) * ((100vw - 320px) / (1920 - 320))));
@@ -213,9 +235,11 @@ a, button, label{
     height: auto;
 }
 
-.section{
+body > section, body > main{
     padding: calc(var(--s-sectionSpace) / 2) var(--s-sideMargin);
-    overflow-x: hidden; 
+    overflow-x: hidden;
+    margin-top: -1px;
+    margin-bottom: -1px;
 }
 header{
     padding-left: var(--s-sideMargin);
@@ -240,15 +264,15 @@ img{
 
 
 
-.section > h1:not(:last-child),
-.section > h2:not(:last-child),
-.section > h3:not(:last-child),
-.section > h4:not(:last-child){
+body > section > h1:not(:last-child),
+body > section > h2:not(:last-child),
+body > section > h3:not(:last-child),
+body > section > h4:not(:last-child){
     margin-bottom: var(--s-spacing3);
 }
 
-.section > a:last-child,
-.section > button:last-child{
+body > section > a:last-child,
+body > section > button:last-child{
     margin-top: var(--s-spacing3);
 }
 
@@ -276,11 +300,6 @@ img{
 }
 
 
-.section{
-    margin-top: -1px;
-    margin-bottom: -1px;
-}
-
 
 /* --------------- Img overflow utility classes --------------- */
 
@@ -297,9 +316,9 @@ img{
         padding-right: 0;
     }
     
-    .-u-sideMarginImgOverflow-left>*:not(.section > .imgWrapper),
-    .-u-sideMarginImgOverflow-right>*:not(.section > .imgWrapper),
-    .-u-sideMarginImgOverflow-mobile>*:not(.section > .imgWrapper){
+    .-u-sideMarginImgOverflow-left>*:not(body > section > .imgWrapper),
+    .-u-sideMarginImgOverflow-right>*:not(body > section > .imgWrapper),
+    .-u-sideMarginImgOverflow-mobile>*:not(body > section > .imgWrapper){
         padding-left: var(--s-sideMargin);
         padding-right: var(--s-sideMargin);
     }
@@ -326,10 +345,12 @@ img{
 .blockedSection2{
     padding: var(--s-spacing2);
 }
+.blockedSection4{
+    padding: var(--s-spacing4);
+}
 
 .blockedSection5{
     padding: var(--s-spacing5);
-    background-color: var(--c-BG2);
 }
 
 
@@ -377,6 +398,10 @@ img{
     margin-bottom: 0.2em;
 }
 
+
+.spread-even4 > *:not(:last-child){
+    margin-bottom: var(--s-spacing4);
+}
 
 
 
@@ -475,8 +500,12 @@ img{
 
 .-flare-btnIcon-inline1 img.icon {
     height: 1em;
+    margin-top: auto;
+    margin-bottom: auto;
     object-fit: contain;
+    object-position: center;
     width: auto;
+
 }
 .-flare-btnIcon-inline1{
     display: flex;
@@ -516,6 +545,6 @@ img{
 
 
 .dropshadow1{
-    -webkit-box-shadow: 0px 1px 11px 1px rgba(0,0,0,0.02); 
-    box-shadow: 0px 1px 11px 1px rgba(0,0,0,0.02);
+    -webkit-box-shadow: 0px 1px 11px 1px rgba(0,0,0,0.06); 
+    box-shadow: 0px 1px 11px 1px rgba(0,0,0,0.06);
 }
