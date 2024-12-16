@@ -597,13 +597,13 @@ footer{
     flex: 0.45;
 }
 
-@media screen and (min-width:900px){
+@media screen and (min-width:1100px){
     .-l-3col_spread_card_card  >.spread > .imgWrapper{
         margin-top: auto;
     }
 }
 
-@media screen and (max-width: 899px){
+@media screen and (max-width: 1099px){
     .-l-3col_spread_card_card > .cardContainer{
         grid-template-columns: 1fr;
         flex: 0.6;
