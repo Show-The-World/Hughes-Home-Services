@@ -16,10 +16,11 @@ h2{
 
 .group1 > .-card-blogInfo{    
     position: absolute;
+    width: 25%;
     bottom: 5%;
     right: 0;
 }
-.group1 > .-card-blogInfo > li > *:first-child{    
+.group1 > .-card-blogInfo > li:not(:first-child) > *:first-child{    
     width: 6em;
 }
 
@@ -33,6 +34,12 @@ h2{
 }
 
 
+
+
+.group2 li{
+    margin: 1.4em 3em;
+
+}
 
 
 
