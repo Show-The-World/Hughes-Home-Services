@@ -1,5 +1,5 @@
 ---
-title: Hello World
+title: main
 date: "2024-11-05"
 slug: hello-world-slug
 author: Person name

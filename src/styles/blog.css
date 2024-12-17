@@ -74,6 +74,10 @@ main > *:not(:last-child){
     flex: 1;
     min-width: 0;
 }
+.-card-featured  h3{
+    text-overflow: ellipsis;
+    width: auto;
+}
 .-card-featured > .container{
     flex: 2;
     min-width: 0;
