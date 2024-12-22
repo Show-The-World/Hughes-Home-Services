@@ -6,6 +6,10 @@
 {% block links %}
 {% endblock %}
 
+{% block head %}
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+{% endblock head %}
+
 
 {% block content %}
 <section class="section -l-hero">
@@ -244,21 +248,5 @@
         </li>
     </ul>
 </section>
-
-
-
-<script>
-  if (window.netlifyIdentity) {
-    window.netlifyIdentity.on("init", (user) => {
-      if (!user) {
-        window.netlifyIdentity.on("login", () => {
-          document.location.href = "/admin/#/";
-        });
-      }
-    });
-  }
-</script>
-
-
 
 {% endblock %}
