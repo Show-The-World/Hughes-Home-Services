@@ -36,11 +36,11 @@ h2{
 
 
 
-.group2 li{
+.group2 ul li{
     margin: 1.4em 3em;
-
+    list-style-type:disc;
+    display: list-item;
 }
-
 
 
 .-t-blogInfo *{

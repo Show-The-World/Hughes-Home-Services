@@ -38,7 +38,7 @@
     {% for blogPost in collections.blogPost %}
     {% set post = blogPost.data %}
     <section class="card -card-blogCard">
-        <div class="imgWrapper"><img src="/assets/blog/{{post.imagePrimary}}" alt=""> </div>
+        <div class="imgWrapper"><img src="{{post.imagePrimary}}" alt="{{imageAlt}}"> </div>
         <div class="container dropshadow1">
             <div class="subContainer">
                 <p class="group1 -flare-btnIcon-inline1 -t-pSmall"><img src="/assets/icon_date.svg" alt="" class="icon">{{post.date}}</p>
