@@ -1,11 +1,12 @@
 ---
-title: "5 Essential Handyman Services Every Homeowner Needs"
-date: "2024-11-05"
+title: 5 Essential Handyman Services Every Homeowner Needs
 slug: essential-handyman-services
-author: AI
-imagePrimary: test.jpg
-imageAlth: insert description
+author: AI and will
+date: 2024-11-05
+imagePrimary: /assets/blog/test1.jpg
+imageAlt: test caption
 isFeatured: true
+imageAlth: insert description
 ---
 
 ## 5 Essential Handyman Services Every Homeowner Needs
