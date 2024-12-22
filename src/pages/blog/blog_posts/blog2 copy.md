@@ -3,8 +3,8 @@ title: "5 Essential Handyman Services Every Homeowner Needs"
 date: "2024-11-05"
 slug: essential-handyman-services
 author: AI
-description: Learn about the top five handyman services that can help keep your home in perfect condition, from general repairs to safety upgrades.
 imagePrimary: test.jpg
+imageAlth: insert description
 isFeatured: true
 ---
 
