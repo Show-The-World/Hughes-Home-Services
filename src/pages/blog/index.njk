@@ -20,7 +20,7 @@
             {% if post.isFeatured %}
             <li class="bgContrast2">
                 <a href="/blog/{{post.slug}}" class="-card-featured">
-                    <div class="imgWrapper"><img src="/assets/blog/{{post.imagePrimary}}" alt=""></div>
+                    <div class="imgWrapper"><img src="{{post.imagePrimary}}" alt="{{imageAlt}}"></div>
                     <div class="container blockedSection5">
                         <h3 class="-t-h3Small">{{post.title}}</h3>
                         <div class="subContainer">
