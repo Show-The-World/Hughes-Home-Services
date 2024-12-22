@@ -20,7 +20,7 @@
             {% if post.isFeatured %}
             <li class="bgContrast2">
                 <a href="/blog/{{post.slug}}" class="-card-featured">
-                    <div class="imgWrapper"><img src="{{post.imagePrimary}}" alt="{{imageAlt}}"></div>
+                    <div class="imgWrapper"><img src="{{post.imagePrimary}}" alt="{{post.imageAlt}}"></div>
                     <div class="container blockedSection5">
                         <h3 class="-t-h3Small">{{post.title}}</h3>
                         <div class="subContainer">
@@ -38,10 +38,10 @@
     {% for blogPost in collections.blogPost %}
     {% set post = blogPost.data %}
     <section class="card -card-blogCard">
-        <div class="imgWrapper"><img src="{{post.imagePrimary}}" alt="{{imageAlt}}"> </div>
+        <div class="imgWrapper"><img src="{{post.imagePrimary}}" alt="{{post.imageAlt}}"> </div>
         <div class="container dropshadow1">
             <div class="subContainer">
-                <p class="group1 -flare-btnIcon-inline1 -t-pSmall"><img src="/assets/icon_date.svg" alt="" class="icon">{{post.date}}</p>
+                <p class="group1 -flare-btnIcon-inline1 -t-pSmall"><img src="/assets/icon_date.svg" alt="" class="icon">{{post.date | postDate}}</p>
                 <p class="group2 dropshadow1 invertColor bgContrast1 -flare-btnIcon-inline1 -t-pSmall"><img src="/assets/icon_profile_accent.svg" alt="" class="icon">By {{post.author}}</p>
             </div>
             <h2 class="-t-h2-2">{{post.title}}</h2>
