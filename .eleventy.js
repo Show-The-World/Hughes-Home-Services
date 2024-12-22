@@ -4,6 +4,8 @@ module.exports = function(eleventyConfig) {
   	eleventyConfig.addPassthroughCopy({"src/assets/": "assets/"})
   
 	eleventyConfig.addPassthroughCopy({"src/other/robot.txt": "/robot.txt"})
+	
+	eleventyConfig.addPassthroughCopy({"src/pages/admin/config.yml": "admin/config.yml"})
 
   
 	return {
