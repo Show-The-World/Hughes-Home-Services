@@ -1,5 +1,5 @@
 backend:
-  name: git-gateway
+  name: git
   branch: main
 
 media_folder: "src/assets/blog"
