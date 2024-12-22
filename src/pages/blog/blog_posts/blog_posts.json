@@ -1,6 +1,6 @@
 {
     "layout": "boilerplate/blog_base.njk",
-    "permalink": "/blog/{{ pageSlug }}/",
+    "permalink": "/blog/{{ slug }}/",
     "hasCTA": false,
     "tags" : ["blogPost"]
 }
