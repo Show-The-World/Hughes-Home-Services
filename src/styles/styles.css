@@ -148,7 +148,7 @@ header nav li, header nav{
 }
 
 header .info li *, header .info{
-    font-size: calc((14 /16 * 1rem) + ((16 - 14) * ((100vw - 320px) / (1920 - 320))));
+    font-size: calc((4 /16 * 1rem) + ((16 - 4) * ((100vw - 320px) / (1920 - 320))));
     font-family: archivo;
     font-weight: 400;
     color: var(--c-accentLight2);

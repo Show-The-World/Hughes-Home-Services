@@ -68,12 +68,6 @@ header ul *{
     overflow-x: hidden;
 }
 
-header > .container > .cta{
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: auto;
-}
-
 
 @media screen and (min-width: 1081px){
     header::before{
