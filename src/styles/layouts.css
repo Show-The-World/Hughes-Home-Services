@@ -335,10 +335,105 @@ header > .container > .cta{
 
 /* Default Footer Styling */
 footer{
-    padding: calc(var(--s-sectionMargin) /4) var(--s-gutterSpace);
+    padding: var(--s-spacing3);
+
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--s-spacing2);
 }
 
 
+
+
+footer > .infoContainer{
+    display: flex;
+    justify-content: space-between;
+    --gapSize: calc((8 /16 * 1rem) + ((48 - 8) * ((100vw - 320px) / (1920 - 320))));
+    gap: var(--gapSize);
+}
+footer > .infoContainer > *{
+    flex: 1;
+    padding-right: var(--gapSize);
+
+    display: flex;
+    gap: var(--s-spacing4);
+    align-items: center;
+}
+footer > .infoContainer > *:not(:last-child){
+    --border: solid rgba(56, 54, 54, 0.103) var(--s-border1_5);
+    border-right: var(--border);
+}
+
+footer > .infoContainer > * img.icon{
+    object-fit: contain;
+    width: 10%;
+}
+
+footer .info-content{
+    font-size: 16px;
+}
+
+@media screen and (max-width:1450px){
+    footer .infoContainer > *{
+        padding-right: 0;
+        padding-bottom: var(--gapSize);
+    }
+
+    footer .infoContainer{
+        flex-direction: column;
+    }
+    footer .infoContainer > *:not(:last-child){
+        border-right: none;
+        border-bottom: var(--border);
+    }
+
+    footer .infoContainer > * img.icon{
+        height: 60%;
+    }
+}
+
+
+
+footer > .container{
+    display: flex;
+    justify-content: space-evenly;
+    gap: var(--s-spacing2);
+}
+footer > .container > *{
+    max-width: 340px;
+}
+
+@media screen and (max-width:450px){
+    footer > .container{
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+}
+
+
+footer h3[class]{
+    font-size: 18px;
+    margin-bottom: 0.5em;
+}
+
+
+
+.footer-band{
+    width: 100%;
+    text-align: center;
+}
+.footer-band, .footer-band *{
+    display: inline;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+}
+.footer-band a{
+    text-decoration: underline;
+}
+.footer-band a:hover{
+    transition: 0.2s ease-in;
+    font-weight: 600;
+}
 
 
 /*******************************************************************************/

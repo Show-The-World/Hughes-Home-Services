@@ -201,6 +201,8 @@ h3{
 }
 .-t-h3Small{
     font-size: 16px;
+    font-weight: 700;
+    font-family: roboto, sans-serif;
 }
 
 p{
@@ -228,6 +230,14 @@ a, button, label{
     font-weight: 700;
 }
 
+
+footer .info-content {
+    font-family: titillium web;
+}
+
+footer .text-content{
+    font-family: titillium web;
+}
 
 strong {
     font-weight: 800;
