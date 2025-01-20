@@ -64,8 +64,6 @@ header ul *{
     height: min-content;
     width: auto;
     text-wrap: nowrap;
-    text-overflow: ellipsis;
-    overflow-x: hidden;
 }
 
 
