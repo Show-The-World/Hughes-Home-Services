@@ -554,9 +554,9 @@ body > section > button:last-child{
     --dimension: calc((20 /16 * 1rem) + ((75 - 20) * ((100vw - 320px) / (1920 - 320))));
     height: var(--dimension);
     width: var(--dimension);
-    object-fit: fill;
+    object-fit: contain;
     padding: 3%;
-    border-radius: 1000px;
+    clip-path: circle(50%);
 }
 
 
