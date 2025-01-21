@@ -16,12 +16,8 @@ collections:
           label: "Slug (page name on the Url)", 
           name: "slug", 
           widget: "string", 
-          required: false, 
-          hint: "This will be automatically generated from the title but can be edited manually.", 
-          generate: {
-            type: "string_template", 
-            template: "{{title}}"
-          },
+          required: true, 
+          hint: "This will be automatically generated from the title but can be edited manually.",
           pattern: [
             "^[a-z0-9]+(?:-[a-z0-9]+)*$", 
             "Slug should contain only lowercase letters, numbers, and hyphens."
@@ -35,3 +31,4 @@ collections:
       - {label: "Is This A Featured Post", name: "isFeatured", widget: "boolean", default: false, required: true}
       - {label: "Description", name: "description", widget: "string", required: true}
       - {label: "Body", name: "body", widget: "markdown", required: true}
+
