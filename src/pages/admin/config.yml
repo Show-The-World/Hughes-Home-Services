@@ -16,7 +16,6 @@ collections:
           label: "Slug (page name on the Url)", 
           name: "slug", 
           widget: "string", 
-          required: true, 
           hint: "This will be automatically generated from the title but can be edited manually.", 
           generate: {
             type: "string_template", 
