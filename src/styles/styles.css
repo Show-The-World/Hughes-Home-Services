@@ -238,6 +238,13 @@ footer .text-content{
     font-family: titillium web;
 }
 
+
+.-card-info .subContainer * {
+    font-weight:300;
+    font-size: calc((16 /16 * 1rem) + ((20 - 16) * ((100vw - 320px) / (1920 - 320))));
+    font-family: archivo, sans-serif;
+}
+
 strong {
     font-weight: 800;
 }
@@ -550,7 +557,7 @@ body > section > button:last-child{
 
 .-icon-circlePadding{
     background-color: var(--c-accent4);
-    --dimension: calc((20 /16 * 1rem) + ((75 - 20) * ((100vw - 320px) / (1920 - 320))));
+    --dimension: calc((40 /16 * 1rem) + ((75 - 40) * ((100vw - 320px) / (1920 - 320))));
     height: var(--dimension);
     width: var(--dimension);
     object-fit: contain;
