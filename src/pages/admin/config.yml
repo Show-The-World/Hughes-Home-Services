@@ -10,10 +10,24 @@ collections:
     label: "Blog"
     folder: "/src/pages/blog/blog_posts"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{title}}"
     fields:
       - {label: "Title", name: "title", widget: "string", required: true}
-      - {label: "Slug (page name on the Url)", name: "slug", widget: "string", default: "", required: true}
+      - { 
+          label: "Slug (page name on the Url)", 
+          name: "slug", 
+          widget: "slug", 
+          required: true, 
+          hint: "This will be automatically generated from the title but can be edited manually.", 
+          generate: {
+            type: "string_template", 
+            template: "{{title}}"
+          },
+          pattern: [
+            "^[a-z0-9]+(?:-[a-z0-9]+)*$", 
+            "Slug should contain only lowercase letters, numbers, and hyphens."
+          ],
+          allow_override: true
+        }
       - {label: "Author", name: "author", widget: "string", required: true}
       - {label: "Publish Date", name: "date", widget: "datetime", required: true}
       - {label: "Featured Image", name: "imagePrimary", widget: "image" , required: true}
