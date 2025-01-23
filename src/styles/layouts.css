@@ -1401,3 +1401,31 @@ footer h3[class]{
     width: 1.2em;
 }
 
+
+
+.slimSection{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+
+
+.-img-bAnda-1{
+    display: flex;
+    position: relative;
+}
+.-img-bAnda-1::before{
+    z-index: 10;
+    content: "";
+    position: absolute;
+    top: 0;    
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--c-accent);
+    width: 0.5%;
+}
+.-img-bAnda-1 *{
+    height: 65vh;
+    width: 50%;
+}
