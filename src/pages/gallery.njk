@@ -12,7 +12,12 @@
 
 <main class="-l-gallery section">
     {% for image in collections.galleryImages %}
-    <img loading=lazy src="{{ image.path | url }}" alt="{{ image.name }}">
+    <img 
+        src="{{ image.path | url }}" 
+        alt="{{ image.name }}" 
+        width="{{ image.width }}" 
+        height="{{ image.height }}" 
+        {% if loop.index > 3 %} loading="lazy" {% endif %}>
     {% endfor %}
 </main>
 

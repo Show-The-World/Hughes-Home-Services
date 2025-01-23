@@ -1,6 +1,7 @@
 const {DateTime} = require('luxon');
 const path = require('path');
 const fs = require('fs');
+const sizeOf = require("image-size")
 
 module.exports = function(eleventyConfig) {
 
@@ -16,15 +17,21 @@ module.exports = function(eleventyConfig) {
 	})
 	
 
-	eleventyConfig.addCollection("galleryImages", function() {
+	eleventyConfig.addCollection("galleryImages", function () {
 		const assetsGallerySrc = "/assets/gallery/"
 		const galleryDir = path.join("./src/", assetsGallerySrc);
 		return fs.readdirSync(galleryDir)
-		  .filter(file => /\.(jpe?g|png|gif|webp)$/i.test(file)) // Include only image files
-		  .map(file => ({
-			name: file,
-			path: path.join(assetsGallerySrc, file)
-		}));
+		  .filter(file => /\.(jpe?g|png|gif|webp)$/i.test(file)) // Filter image files
+		  .map(file => {
+			const filePath = path.join(galleryDir, file);
+			const dimensions = sizeOf(filePath); // Get dimensions of the image
+			return {
+				name: file,
+				path: path.join(assetsGallerySrc, file),
+				width: dimensions.width,
+				height: dimensions.height,
+			};
+		});
 	});
 	
   
