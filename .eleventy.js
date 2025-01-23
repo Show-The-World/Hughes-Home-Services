@@ -1,4 +1,6 @@
 const {DateTime} = require('luxon');
+const path = require('path');
+const fs = require('fs');
 
 module.exports = function(eleventyConfig) {
 
@@ -12,6 +14,18 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addFilter("postDate", (dateObj) =>{
 		return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED)
 	})
+	
+
+	eleventyConfig.addCollection("galleryImages", function() {
+		const assetsGallerySrc = "/assets/gallery/"
+		const galleryDir = path.join("./src/", assetsGallerySrc);
+		return fs.readdirSync(galleryDir)
+		  .filter(file => /\.(jpe?g|png|gif|webp)$/i.test(file)) // Include only image files
+		  .map(file => ({
+			name: file,
+			path: path.join(assetsGallerySrc, file)
+		}));
+	});
 	
   
 	return {

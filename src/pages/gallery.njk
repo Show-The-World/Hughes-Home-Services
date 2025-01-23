@@ -11,24 +11,9 @@
 {% block content %}
 
 <main class="-l-gallery section">
-    <img src="/assets/demo1.jpg" alt="">
-    <img src="/assets/demo6.png" alt="">
-    <img src="/assets/demo2.jpg" alt="">
-    <img src="/assets/demo2.jpg" alt="">
-    <img src="/assets/demo2.jpg" alt="">
-    <img src="/assets/demo2.jpg" alt="">
-    <img src="/assets/demo3.jpg" alt="">
-    <img src="/assets/demo4.jpg" alt="">
-    <img src="/assets/demo5.jpg" alt="">
-    <img src="/assets/demo6.png" alt=""> 
-    <img src="/assets/demo6.png" alt="">
-    <img src="/assets/demo4.jpg" alt="">
-    <img src="/assets/demo6.png" alt="">
-    <img src="/assets/demo6.png" alt="">
-    <img src="/assets/demo6.png" alt="">
-    <img src="/assets/demo6.png" alt="">
-    <img src="/assets/demo7.jpg" alt="">
-    <img src="/assets/demo8.jpg" alt="">
+    {% for image in collections.galleryImages %}
+    <img loading=lazy src="{{ image.path | url }}" alt="{{ image.name }}">
+    {% endfor %}
 </main>
 
 
