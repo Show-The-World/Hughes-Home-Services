@@ -912,8 +912,13 @@ footer h3[class]{
 .-l-2ColSplit-even{
     display: grid;
     grid-template-columns: 1fr 1fr;
-
     gap: var(--s-spacing3);
+}
+
+@media screen and (max-width:560px){
+    .-l-2ColSplit-even{
+        grid-template-columns: 1fr;
+    }
 }
 
 
