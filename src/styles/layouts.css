@@ -820,7 +820,6 @@ footer h3[class]{
 }
 .-card-team .imgWrapper img{
     margin: auto;
-    object-fit: contain;
 }
 
 
