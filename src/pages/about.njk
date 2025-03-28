@@ -11,9 +11,9 @@
 {% block content %}
 <script>
 function setSquareImages() {
-  document.querySelectorAll('.-u-aspectRatio-square').forEach(img => {
+    document.querySelectorAll('.-u-aspectRatio-square').forEach(img => {
     img.style.height = `${img.offsetWidth}px`;
-  });
+    });
 }
 
 window.addEventListener('load', setSquareImages);
@@ -64,13 +64,19 @@ window.addEventListener('resize', setSquareImages);
             <div class="imgWrapper"><img class="-u-imgCrop-circle -u-aspectRatio-square" src="/assets/team-andrew.jpg" alt=""></div>
             <h3>Andrew</h3>
             <p class="-t-smallHighlight">-</p>
-            <p class="-t-pSmall">Over 20 years of experience as a roofer</p>
+            <p class="-t-pSmall">Over 20 years of experience as a roofer.</p>
         </div>
         <div class="card -card-team blockedSection5 bgContrast1">
             <div class="imgWrapper"><img class="-u-imgCrop-circle -u-aspectRatio-square" src="/assets/team-gavin.jpg" alt=""></div>
             <h3>Gavin</h3>
             <p class="-t-smallHighlight">-</p>
-            <p class="-t-pSmall"> Our youngest helper of 18 who has been with me for 3 years part-time</p>
+            <p class="-t-pSmall"> Our youngest helper of 18 who has been with me for 3 years part-time.</p>
+        </div>
+        <div class="card -card-team blockedSection5 bgContrast1">
+            <div class="imgWrapper"><img class="-u-imgCrop-circle -u-aspectRatio-square" src="/assets/team-juan.jpg" alt=""></div>
+            <h3>Juan</h3>
+            <p class="-t-smallHighlight">-</p>
+            <p class="-t-pSmall"> The newest Member of our team. Juan speaks English, French, and Spanish. Eager to help us take care of any of our customer's needs!</p>
         </div>
     </div>
 </section>
