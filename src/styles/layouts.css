@@ -784,7 +784,7 @@ footer h3[class]{
 }
 .-l-4Col_card-2 > *{
     height: fit-content;
-    width: 100%;
+    width: fit-content;
 }
 
 @media screen and (max-width:1650px){
@@ -1375,7 +1375,10 @@ footer h3[class]{
     height: 100%;
     width: 1.2em;
 }
-
+.-b-spec-1:hover {
+    background-color: var(--c-accent2);
+    color: var(--c-BG);
+}
 
 .-b-spec-2{
     font-size: 15px;
@@ -1397,7 +1400,9 @@ footer h3[class]{
     width: 1em;
 }
 
-
+.-b-spec-2:hover {
+    color: var(--c-accent2);
+}
 
 .-b-spec-3{
     font-size: calc((14 /16 * 1rem) + ((15 - 14) * ((100vw - 320px) / (1920 - 320))));
@@ -1422,7 +1427,10 @@ footer h3[class]{
     height: 100%;
     width: 1.2em;
 }
-
+.-b-spec-3:hover {
+    background-color: var(--c-accent2);
+    transform: scale(1.05);
+}
 
 
 .slimSection{

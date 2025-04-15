@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    
+    <link rel="icon" type="image/png" href="/assets/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/assets/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="MyWebSite" />
+    <link rel="manifest" href="/assets/favicon/site.webmanifest" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="/styles/landing1.css">
+    {% block links %}{% endblock %}
+
+    {% block head %}{% endblock %}
+</head>
+
+
+
+<body>
+    <header class="narrowSection1_5">
+       <div class="logoContainer">
+           <img src="/assets/logo.svg" alt="" class="icon logo">
+           <img src="/assets/promo1/homedepot_pros.png" alt="" class="icon logo">
+       </div>
+       <div class="offerContainer">
+            <div class="offer">Call Now For $100 Off Your First Project</div>
+            <a href="" class="-b-spec-1">(613) 422-1991</a>
+       </div>
+    </header>     
+
+
+
+
+    {% block content %}{% endblock %}
+
+
+
+
+    <footer class="bgContrast2 narrowSection">
+        <div class="infoContainer bgContrast1 blockedSection4">
+            <div class="card">
+                <img src="/assets/icon_location_accent.svg" alt="" class="icon">
+                <div class="container spread">
+                    <h3 class="info-title -t-h3Small">Address</h3>
+                    <address class="info-content">12 Winterburn Terrace, Nepean, ON K2G 5W9</address>
+                </div>
+            </div>
+            <div class="card">
+                <img src="/assets/icon_email_accent.svg" alt="" class="icon">
+                <div class="container spread">
+                    <h3 class="info-title -t-h3Small">Email</h3>
+                    <a class="info-content" href="mailto:wendallhughes58@gmail.com">wendallhughes58@gmail.com</a>
+                </div>
+
+            </div>
+            <div class="card">
+                <img src="/assets/icon_phone_accent.svg" alt="" class="icon">
+                <div class="container spread">
+                    <h3 class="info-title -t-h3Small">Phone</h3>
+                    <a class="info-content" href="tel:+6134221991">(613) 422-1991</a>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="description">
+                <h3 class="-t-h3Small">Our Business</h3>
+                <p>
+                    Trusted Ottawa handyman services and home repairs by Hughes Home Services. With 30+ years of experience, we specialize in general repairs, painting, renovations, and outdoor projects. Reliable, detail-focused, and on budget.
+                </p>
+            </div>
+            <nav>
+                <h3 class="-t-h3Small">Navigation</h3>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/testimonials">Testimonials</a></li>
+                    <li><a href="/gallery">Gallery</a></li>
+                    {# <li><a href="/blog">Our Blog</a></li> #}
+                    <li><a href="/contact">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+        <br>
+        <div class="footer-band">Copyright 2024 <a href="https://showtheworld.digital">Show The World</a>. All rights reserved.</div>
+    </footer>
+</body>
+</html>

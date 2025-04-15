@@ -356,6 +356,13 @@ body > section > button:last-child{
         padding-right: var(--smallSidePadding);
     }
 
+    .narrowSection1_5{
+        --smallSidePadding: calc(var(--s-sideMargin) * 1.7);
+        padding-left: var(--smallSidePadding);
+        padding-right: var(--smallSidePadding);
+
+    }
+
     .narrowSection2{
         --smallSidePadding: calc(var(--s-sideMargin) * 2);
         padding-left: var(--smallSidePadding);
