@@ -1,134 +1,34 @@
 ---
-    title: Kitchen
+title: Kitchen
+
+baseContent:
+    heroHeading: "Ottawa’s Reliable Kitchen Renovation Experts"
+    heroDescription: "Looking to transform your kitchen? Hughes Home Services specializes in kitchen renovations and remodeling across Ottawa. Whether it’s a modern update or a functional refresh, we deliver quality craftsmanship and attention to detail—on time and on budget."
+    heroImage: "/assets/IMG_132.jpg"
+
+    serviceAreasTitle: "Kitchen Remodeling Services Across Nepean, Kanata and the Greater Ottawa Area"
+    servicesList:
+        - "Custom Kitchen Renovations"
+        - "Cabinetry, Countertops & Backsplashes"
+        - "Flooring & Lighting Upgrades"
+        - "Full-Service Planning & Installation"
+
+    quoteFormHeading: "Get Your Kitchen Renovation Quote"
+    quoteFormMessage: "What would you like to do with your deck? Inquire about your project and get a quote..."
+
+    aboutImg1: "/assets/IMG_6623.jpg"
+    aboutImg2: "/assets/IMG_6765.jpg"
+
+    aboutWhyHeading: "Why Homeowners Call Us First"
+    aboutWhyText: "We specialize in the projects larger contractors won’t take on and single handymen can’t handle. Whether it’s upgrading outdated kitchen features, replacing surfaces, or creating functional layouts for busy families, Ottawa homeowners call us first for thoughtful design and quality execution."
+
+    contactFormHeading: "Partner with Ottawa’s Trusted Home Service Experts"
+    contactFormMessage: "What would you like to do with your kitchen? Inquire about your project and get a quote..."
+
 ---
 {% extends "boilerplate/landing_base.njk" %}
 
 
 
 {% block content %}
-<section class="section hero narrowSection1_5 invertColor">
-    <h1>Ottawa’s Reliable Kitchen Renovation Experts</h1>
-
-    <div class="container">
-        <div class="container">
-            <p>Looking to transform your kitchen? Hughes Home Services specializes in kitchen renovations and remodeling across Ottawa. Whether it’s a modern update or a functional refresh, we deliver quality craftsmanship and attention to detail—on time and on budget.</p>
-            <img src="/assets/IMG_132.jpg" alt="" class="mainImg">
-        </div>
-        <div class="container spread">
-            <span class="ratings">
-                <img src="/assets/review_stars.svg" alt="" class="stars">
-                <span>Rated 5/5 Star Service</span>
-            </span>
-            <h2 class="h2-promo1">Kitchen Remodeling Services Across Nepean, Kanata and the Greater Ottawa Area</h2>
-            <ul class="-spr-list-1">
-                <li class="p-promoBig">Custom Kitchen Renovations</li>
-                <li class="p-promoBig">Cabinetry, Countertops & Backsplashes</li>
-                <li class="p-promoBig">Flooring & Lighting Upgrades</li>
-                <li class="p-promoBig">Full-Service Planning & Installation</li>
-            </ul>
-            <a class="-b-spec-3Big" href="tel:6134221991">Call Today</a>
-        </div>
-    </div>
-    <div class="bg"></div>
-</section>
-
-<section class="section bgContrast1 invertColor narrowSection1_5">
-    <ul class="-l-4Col_card-1">
-        <li class="-card-spec-card3">
-            <img src="/assets/stats_experience.svg" alt="" class="icon">
-            <h3>30+</h3>
-            <p class="-t-pSmall">Years of Experience</p>
-        </li>
-        <li class="-card-spec-card3">
-            <img src="/assets/stats_customers.svg" alt="" class="icon">
-            <h3>20+</h3>
-            <p class="-t-pSmall">Years of Loyal Customers</p>
-        </li>
-        <li class="-card-spec-card3">
-            <img src="/assets/stats_projects.svg" alt="" class="icon">
-            <h3>100+</h3>
-            <p class="-t-pSmall">Annual Projects</p>
-        </li>
-        <li class="-card-spec-card3">
-            <img src="/assets/stats_homedepot.svg" alt="" class="icon">
-            <h3>Home Depot</h3>
-            <p class="-t-pSmall">Part of the Pros Team At Home Depot</p>
-        </li>
-    </ul>
-</section>
-
-<section class="section -l-2Col-offerForm narrowSection1_5">
-    <div class="offerContainer">
-        <img src="/assets/promo1/offer_quote.png" alt="">
-    </div>
-    <div class="formContainer dropshadow1 spread">
-        <h2>Get Your Kitchen Renovation Quote</h2>
-        <form class="-form-1" name="contact" netlify>
-            <div class="inputContainer -inputContainer-1">
-                <label for="name">Name</label>
-                <input required type="text" name="name" id="name">
-            </div>
-            <div class="inputContainer -inputContainer-1">
-                <label for="email">Email</label>
-                <input required type="email" name="email" id="email">
-            </div>
-            <div class="inputContainer -inputContainer-1">
-                <label for="phone">Phone Number</label>
-                <input required type="tel" name="phone" id="phone">
-            </div>
-            <div class="inputContainer -inputContainer-1">
-                <label for="message">Message</label>
-                <textarea required name="message" id="message"></textarea>
-            </div>
-            <input class="-b-spec-3" type="submit" value="Send Message">
-        </form>
-    </div>
-</section>
-
-<section class="section -l-about bgContrast1 invertColor narrowSection1_5">
-    <div class="imagesContainer">
-        <img src="/assets/IMG_6623.jpg" alt="" class="mainImg">
-        <img src="/assets/IMG_6765.jpg" alt="" class="mainImg">
-    </div>
-    <div class="">
-        <h2 class="h2-promo1">A little About Wendall And Hughes Home Services</h2>
-        <br>
-        <p>Hughes Home Services was founded by Wendall Hughes, who started working in his family’s general contracting business at a young age. With over 30 years of experience in Ottawa, Wendall leads a team focused on honest, skilled work and personalized service for every home project—especially kitchen upgrades that transform the heart of the home.</p>
-        <br><br><br>
-        <h2 class="h2-promo1">Part of the Home Depot's Pros Team</h2>
-        <br>
-        <p>We’re proud to be part of Home Depot’s trusted Pros Team—recognized for our consistent quality, reliability, and professionalism in Ottawa’s home improvement industry. Our reputation for detailed kitchen renovations has helped us earn the trust of homeowners citywide.</p>
-        <br><br><br>
-        <h2 class="h2-promo1">Why Homeowners Call Us First</h2>
-        <br>
-        <p>We specialize in the projects larger contractors won’t take on and single handymen can’t handle. Whether it’s upgrading outdated kitchen features, replacing surfaces, or creating functional layouts for busy families, Ottawa homeowners call us first for thoughtful design and quality execution.</p>
-    </div>
-</section>
-
-<section class="section -l-2coloverlap_container_image-left-1 bgHalfContrast1 invertColor narrowSection1_5">
-    <div class="container spread bgContrast1 invertColor">
-        <h2><div class="-t-smallHighlight">Contact</div>Partner with Ottawa’s Trusted Home Service Experts</h2>
-        <form class="-form-1" name="contact" netlify>
-            <div class="inputContainer -inputContainer-1">
-                <label for="name">Name</label>
-                <input required type="text" name="name" id="name">
-            </div>
-            <div class="inputContainer -inputContainer-1">
-                <label for="email">Email</label>
-                <input required type="email" name="email" id="email">
-            </div>
-            <div class="inputContainer -inputContainer-1">
-                <label for="phone">Phone Number</label>
-                <input required type="tel" name="phone" id="phone">
-            </div>
-            <div class="inputContainer -inputContainer-1">
-                <label for="message">Message</label>
-                <textarea required name="message" id="message"></textarea>
-            </div>
-            <input class="-b-spec-3" type="submit" value="Send Message">
-        </form>
-        <div class="imgWrapper"><img src="/assets/IMG_6764.jpg" alt=""></div>
-    </div>
-</section>
-
 {% endblock %}

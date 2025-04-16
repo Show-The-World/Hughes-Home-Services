@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+
     <title>{{ title }}</title>
     
     <link rel="icon" type="image/png" href="/assets/favicon/favicon-96x96.png" sizes="96x96" />
@@ -25,23 +27,151 @@
 </head>
 
 
-
 <body>
-    <header class="narrowSection1_5">
-       <div class="logoContainer">
-           <img src="/assets/logo.svg" alt="" class="icon logo">
-           <img src="/assets/promo1/homedepot_pros.png" alt="" class="icon logo">
-       </div>
-       <div class="offerContainer">
-            <div class="offer">Call Now For $100 Off Your First Project</div>
-            <a href="" class="-b-spec-1">(613) 422-1991</a>
-       </div>
-    </header>     
+<header class="narrowSection1_5">
+   <div class="logoContainer">
+       <img src="/assets/logo.svg" alt="" class="icon logo">
+       <img src="/assets/promo1/homedepot_pros.png" alt="" class="icon logo">
+   </div>
+   <div class="offerContainer">
+        <div class="offer">Call Now For $100 Off Your First Project over $1000</div>
+        <a href="" class="-b-spec-1">(613) 422-1991</a>
+   </div>
+</header> 
+
+<section class="section hero narrowSection1_5 invertColor">
+    <h1>{{ baseContent.heroHeading }}</h1>
+
+    <div class="container">
+        <div class="container">
+            <p>{{ baseContent.heroDescription }}</p>
+            <img src="{{ baseContent.heroImage }}" alt="" class="mainImg">
+        </div>
+        <div class="container spread">
+            <span class="ratings">
+                <img src="/assets/review_stars.svg" alt="" class="stars">
+                <span>Rated 5/5 Star Service</span>
+            </span>
+            <h2 class="h2-promo1">{{ baseContent.serviceAreasTitle }}</h2>
+            <ul class="-spr-list-1">
+                {% for service in baseContent.servicesList %}
+                <li class="p-promoBig">{{ service }}</li>
+                {% endfor %}
+            </ul>
+            <a class="-b-spec-3Big" href="tel:6134221991">(613) 422-1991</a>
+        </div>
+    </div>
+    <div class="bg"></div>
+</section>
+
+<section class="section bgContrast1 invertColor narrowSection1_5">
+    <ul class="-l-4Col_card-1">
+        <li class="-card-spec-card3">
+            <img src="/assets/stats_experience.svg" alt="" class="icon">
+            <h3>30+</h3>
+            <p class="-t-pSmall">Years of Experience</p>
+        </li>
+        <li class="-card-spec-card3">
+            <img src="/assets/stats_customers.svg" alt="" class="icon">
+            <h3>20+</h3>
+            <p class="-t-pSmall">Years of Loyal Customers</p>
+        </li>
+        <li class="-card-spec-card3">
+            <img src="/assets/stats_projects.svg" alt="" class="icon">
+            <h3>100+</h3>
+            <p class="-t-pSmall">Annual Projects</p>
+        </li>
+        <li class="-card-spec-card3">
+            <img src="/assets/stats_homedepot.svg" alt="" class="icon">
+            <h3>Home Depot</h3>
+            <p class="-t-pSmall">Part of the Pros Team At Home Depot</p>
+        </li>
+    </ul>
+</section>
 
 
+<section class="section -l-2Col-offerForm narrowSection1_5">
+    <div class="offerContainer">
+        <div class="offerBox">
+            <div class="container">
+                <img class="offer-arrow hor" src="/assets/promo1/offer_arrow_horizontal.svg">
+                <img class="offer-arrow ver" src="/assets/promo1/offer_arrow_vertical.svg" alt="">
+                <div class="-t-offerFigure">$ 100 OFF</div>
+                <div class="p-promoMedium">On First Projects Over $1000</div>
+            </div>
+        </div>
+        <img draggable="false" class="offerImage" src="/assets/promo1/offer_quote.png" alt="">
+    </div>
+    <div class="formContainer dropshadow1 spread">
+        <h2>{{ baseContent.quoteFormHeading }}</h2>
+        <form class="-form-1" name="campaign" netlify>
+            <div class="inputContainer -inputContainer-1">
+                <label for="name">Name</label>
+                <input required type="text" name="name" id="name">
+            </div>
+            <div class="inputContainer -inputContainer-1">
+                <label for="email">Email</label>
+                <input required type="email" name="email" id="email">
+            </div>
+            <div class="inputContainer -inputContainer-1">
+                <label for="phone">Phone Number</label>
+                <input required type="tel" name="phone" id="phone">
+            </div>
+            <div class="inputContainer -inputContainer-1">
+                <label for="message">Message</label>
+                <textarea required name="message" id="message" placeholder="{{ baseContent.quoteFormMessage }}"></textarea>
+            </div>
+            <input class="-b-spec-3" type="submit" value="Send Message">
+        </form>
+    </div>
+</section>
 
+<section class="section -l-about bgContrast1 invertColor narrowSection1_5">
+    <div class="imagesContainer">
+        <img src="{{ baseContent.aboutImg1 or '/assets/IMG_6765.jpg' }}" alt="" class="mainImg">
+        <img src="{{ baseContent.aboutImg2 or '/assets/IMG_6765.jpg' }}" alt="" class="mainImg">
+    </div>
+    <div class="">
+        <h2 class="h2-promo1">A little About Wendall And Hughes Home Services</h2>
+        <br>
+        <p>Hughes Home Services was founded by Wendall Hughes, who started working in his family’s general contracting business at a young age. With over 30 years of experience in Ottawa, Wendall leads a team focused on honest, skilled work and personalized service for every home project.</p>
+        <br><br><br>
+        <h2 class="h2-promo1">Part of the Home Depot's Pros Team</h2>
+        <br>
+        <p>We’re proud to be part of Home Depot’s trusted Pros Team—recognized for our consistent quality, reliability, and professionalism in Ottawa’s home services industry.</p>
+        <br><br><br>
+        <h2 class="h2-promo1">{{ baseContent.aboutWhyHeading }}</h2>
+        <br>
+        <p>{{ baseContent.aboutWhyText }}</p>
+    </div>
+</section>
 
-    {% block content %}{% endblock %}
+<section class="section -l-2coloverlap_container_image-left-1 bgHalfContrast1 invertColor narrowSection1_5">
+    <div class="container spread bgContrast1 invertColor">
+        <h2><div class="-t-smallHighlight">Contact</div>{{ baseContent.contactFormHeading }}</h2>
+        <form class="-form-1" name="contact" netlify>
+            <div class="inputContainer -inputContainer-1">
+                <label for="name">Name</label>
+                <input required type="text" name="name" id="name">
+            </div>
+            <div class="inputContainer -inputContainer-1">
+                <label for="email">Email</label>
+                <input required type="email" name="email" id="email">
+            </div>
+            <div class="inputContainer -inputContainer-1">
+                <label for="phone">Phone Number</label>
+                <input required type="tel" name="phone" id="phone">
+            </div>
+            <div class="inputContainer -inputContainer-1">
+                <label for="message">Message</label>
+                <textarea required name="message" id="message" placeholder="{{ baseContent.contactFormMessage }}"></textarea>
+            </div>
+            <input class="-b-spec-3" type="submit" value="Send Message">
+        </form>
+        <div class="imgWrapper"><img src="/assets/IMG_6764.jpg" alt=""></div>
+    </div>
+</section>
+
 
 
 
