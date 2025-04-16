@@ -335,8 +335,8 @@ header .offerContainer > *{
 }
 
 .-l-about .imagesContainer > *{
-    object-fit: contain;
-    height: auto;
+    object-fit: cover;
+    max-height: 30vh;
 }
 @media screen and (min-width:1001px){
     .-l-about .imagesContainer > *:not(:last-child){
