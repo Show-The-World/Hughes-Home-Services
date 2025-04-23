@@ -1,0 +1,65 @@
+---
+    title: Testimonials
+    hasSubHero: false
+    hasCTA: false
+    hasFooter: false
+    hasHeader: false
+---
+
+{% extends "boilerplate/base.njk" %}
+{% block links %}{% endblock %}
+{% block head %}<meta name="robots" content="noindex">{% endblock %}
+{% block content %}
+    <style>
+        *{
+            text-align: center;
+        }
+        p {
+            font-size: calc((20 /16 * 1rem) + ((28 - 20) * ((100vw - 320px) / (1920 - 320))));
+        }
+        .-b-spec-1 {
+            font-size: calc((20 /16 * 1rem) + ((40 - 20) * ((100vw - 320px) / (1920 - 320))));
+            font-weight: 700;
+            padding: 0.25em 2.8em 0.25em 0.6em;
+            border: solid var(--s-border2) var(--c-accent2);
+            position: relative;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .-b-spec-1:hover {
+            background-color: var(--c-accent2);
+            color: var(--c-BG);
+        }
+        .-b-spec-1::after {
+            content: "";
+            position: absolute;
+            background-image: url("/assets/icon_phone.svg");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 1em;
+            height: 100%;
+            width: 1em;
+        }
+        .callNow {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .callNow >*:not(:last-child) {
+            margin-bottom: var(--s-spacing5);
+        }
+        .callNow .logo {
+            width: calc((125 /16 * 1rem) + ((300 - 125) * ((100vw - 320px) / (1920 - 320))));
+        }
+    </style>
+    <section class="section callNow">
+        <img src="/assets/logo.svg" alt="" class="logo">
+        <h1>Thank you, we will contact you ASAP!</h1>
+        <p>For Faster Service Please Call The Number Below</p>
+        <a href="tel:+16134221991" class="-b-spec-1">(613) 422-1991</a>
+    </section>
+{% endblock %}

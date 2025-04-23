@@ -461,7 +461,7 @@ header .offerContainer > *{
 
 
 .-b-spec-1 {
-    font-size: calc((14 /16 * 1rem) + ((26 - 18) * ((100vw - 320px) / (1920 - 320))));
+    font-size: calc((16 /16 * 1rem) + ((26 - 16) * ((100vw - 320px) / (1920 - 320))));
     font-weight: 700;
     padding: 0.25em 0.6em;
     border: solid var(--s-border2) var(--c-accent2);

@@ -147,7 +147,7 @@
     </section>
     {% endif %}
 
-
+    {% if hasFooter | default(true) %}
     <footer class="bgContrast2 narrowSection">
         <div class="infoContainer bgContrast1 blockedSection4">
             <div class="card">
@@ -195,7 +195,7 @@
         <br>
         <div class="footer-band">Copyright 2024 <a href="https://showtheworld.digital">Show The World</a>. All rights reserved.</div>
     </footer>
-
+    {% endif %}
 
     <script>
     if (window.netlifyIdentity) {
