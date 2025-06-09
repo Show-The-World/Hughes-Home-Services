@@ -1,0 +1,27 @@
+{% macro cta() %}
+<section class="section narrowSection -l-2coloverlap_container_image-left-1 bgHalfContrast1 invertColor">
+    <div class="container spread bgContrast1 invertColor">
+        <h2><div class="-t-smallHighlight">Contact</div>Partner with Ottawa’s Trusted Home Service Experts</h2>
+        <form class="-form-1" name="contact" netlify>
+            <div class="inputContainer -inputContainer-1">
+                <label for="name">Name</label>
+                <input required type="text" name="name" id="name">
+            </div>
+            <div class="inputContainer -inputContainer-1">
+                <label for="email">Email</label>
+                <input required type="email" name="email" id="email">
+            </div>
+            <div class="inputContainer -inputContainer-1">
+                <label for="phone">Phone Number</label>
+                <input required type="tel" name="phone" id="phone">
+            </div>
+            <div class="inputContainer -inputContainer-1">
+                <label for="message">Message</label>
+                <textarea required name="message" id="message"></textarea>
+            </div>
+            <input class="-b-spec-3" type="submit" value="Send Message">
+        </form>
+        <div class="imgWrapper"><img src="/assets/IMG_6764.jpg" alt=""></div>
+    </div>
+</section>
+{% endmacro %}

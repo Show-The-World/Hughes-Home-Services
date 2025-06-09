@@ -1,3 +1,8 @@
+{% import 'templates/header.njk' as header %}
+{% import 'templates/footer.njk' as footer %}
+{% import 'templates/sub-hero.njk' as subHero %}
+{% import 'templates/cta.njk' as cta %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,76 +47,13 @@
 
     
     {% if hasHeader | default(true) %}
-    <header>
-        <a class="logoWrapper" href="/"><img src="/assets/logo.svg" alt="" class="icon logo"></a>
-        <input type="checkbox" name="navMenuToggle" id="navMenuToggle" class="invCheckbox">
-        <div class="container">
-            <ul class="info">
-                <li>
-                    <a class="-flare-btnIcon-inline1" href="mailto:wendallhughes58@gmail.com">
-                        <img src="/assets/icon_email.svg" alt="" class="icon">
-                        <span>wendallhughes58@gmail.com</span>
-                    </a>
-                </li>
-                <li>
-                    
-                    <a class="-flare-btnIcon-inline1" href="tel:+6134221991">
-                        <img src="/assets/icon_phone.svg" alt="" class="icon">
-                        <span>(613) 422-1991</span>
-                    </a>
-                </li>
-                <li>
-                    <div class="-flare-btnIcon-inline1">
-                        <img src="/assets/icon_location.svg" alt="" class="icon">
-                        <span>12 Winterburn Terrace, Nepean, ON K2G 5W9</span>
-                    </div>
-                </li>
-                <li>
-                    <time class="-flare-btnIcon-inline1" datetime="Mo-Fr 09:00-18:00">
-                        <img src="/assets/icon_time.svg" alt="" class="icon">
-                        <span>Mon-Sat: 9:00 AM - 5:00 PM</span>
-                    </time>
-                </li>
-            </ul>
-            <nav>
-                <ul>
-                    <li><a class="-b-small" href="/">Home</a></li>
-                    <li><a class="-b-small" href="/about">About Us</a></li>
-                    <li><a class="-b-small" href="/#services">Services</a></li>
-                    <li><a class="-b-small" href="/testimonials">Testimonials</a></li>
-                    <li><a class="-b-small" href="/gallery">Gallery</a></li>
-                    {# <li><a class="-b-small" href="/blog">Blog</a></li> #}
-                    <li><a class="-b-small" href="/contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-        <label class="navMenuToggle" for="navMenuToggle">
-            <svg class="icon" class="Header__toggle-svg" viewbox="0 0 60 40">
-				<g stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
-					<path class="top-line" d="M10,10 L50,10 Z"></path>
-					<path class="middle-line" d="M10,20 L50,20 Z"></path>
-					<path class="bottom-line" d="M10,30 L50,30 Z"></path>
-				</g>
-			</svg>
-        </label>
-    </header>     
+        {{ header.header() }}
     {% endif %}
 
 
 
     {% if hasSubHero | default(false) %}
-    <section class="section -l-subHero invertColor bgContrast3 -u-sideMarginImgOverflow-right">
-        <div class="container">
-            <h1>{{ h1Val or title }}</h1>
-            <nav>
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="{{page.url}}">{{ subHeroTitle or title }}</a></li>
-                </ul>
-            </nav>
-        </div>
-        {# <div class="imgWrapper"><img src="/assets/demo3.jpg" alt=""></div> #}
-    </section>
+        {{ subHero.subHero(h1Val or title, page.url, subHeroTitle or title) }}
     {% endif %}
 
     {% block content %}{% endblock %}
@@ -120,81 +62,11 @@
 
 
     {% if hasCTA | default(true) %}
-    <section class="section narrowSection -l-2coloverlap_container_image-left-1 bgHalfContrast1 invertColor">
-        <div class="container spread bgContrast1 invertColor">
-            <h2><div class="-t-smallHighlight">Contact</div>Partner with Ottawa’s Trusted Home Service Experts</h2>
-            <form class="-form-1" name="contact" netlify>
-                <div class="inputContainer -inputContainer-1">
-                    <label for="name">Name</label>
-                    <input required type="text" name="name" id="name">
-                </div>
-                <div class="inputContainer -inputContainer-1">
-                    <label for="email">Email</label>
-                    <input required type="email" name="email" id="email">
-                </div>
-                <div class="inputContainer -inputContainer-1">
-                    <label for="phone">Phone Number</label>
-                    <input required type="tel" name="phone" id="phone">
-                </div>
-                <div class="inputContainer -inputContainer-1">
-                    <label for="message">Message</label>
-                    <textarea required name="message" id="message"></textarea>
-                </div>
-                <input class="-b-spec-3" type="submit" value="Send Message">
-            </form>
-            <div class="imgWrapper"><img src="/assets/IMG_6764.jpg" alt=""></div>
-        </div>
-    </section>
+        {{ cta.cta() }}
     {% endif %}
 
     {% if hasFooter | default(true) %}
-    <footer class="bgContrast2 narrowSection">
-        <div class="infoContainer bgContrast1 blockedSection4">
-            <div class="card">
-                <img src="/assets/icon_location_accent.svg" alt="" class="icon">
-                <div class="container spread">
-                    <h3 class="info-title -t-h3Small">Address</h3>
-                    <address class="info-content">12 Winterburn Terrace, Nepean, ON K2G 5W9</address>
-                </div>
-            </div>
-            <div class="card">
-                <img src="/assets/icon_email_accent.svg" alt="" class="icon">
-                <div class="container spread">
-                    <h3 class="info-title -t-h3Small">Email</h3>
-                    <a class="info-content" href="mailto:wendallhughes58@gmail.com">wendallhughes58@gmail.com</a>
-                </div>
-
-            </div>
-            <div class="card">
-                <img src="/assets/icon_phone_accent.svg" alt="" class="icon">
-                <div class="container spread">
-                    <h3 class="info-title -t-h3Small">Phone</h3>
-                    <a class="info-content" href="tel:+6134221991">(613) 422-1991</a>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="description">
-                <h3 class="-t-h3Small">Our Business</h3>
-                <p>
-                    Trusted Ottawa handyman services and home repairs by Hughes Home Services. With 30+ years of experience, we specialize in general repairs, painting, renovations, and outdoor projects. Reliable, detail-focused, and on budget.
-                </p>
-            </div>
-            <nav>
-                <h3 class="-t-h3Small">Navigation</h3>
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/about">About Us</a></li>
-                    <li><a href="/testimonials">Testimonials</a></li>
-                    <li><a href="/gallery">Gallery</a></li>
-                    {# <li><a href="/blog">Our Blog</a></li> #}
-                    <li><a href="/contact">Contact Us</a></li>
-                </ul>
-            </nav>
-        </div>
-        <br>
-        <div class="footer-band">Copyright 2024 <a href="https://showtheworld.digital">Show The World</a>. All rights reserved.</div>
-    </footer>
+        {{ footer.footer() }}
     {% endif %}
 
     <script>
