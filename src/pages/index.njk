@@ -1,5 +1,7 @@
 ---
     title: Home
+
+    content:
 ---
 {% extends "boilerplate/base.njk" %}
 
@@ -12,23 +14,27 @@
 
 
 {% block content %}
-<section class="section -l-hero">
-    <div class="container spread">
-        <h1>Trusted Ottawa Home Repairs & Handyman Services</h1>
-        <h2 class="-t-h2Small">Friendly, Reliable: Hughes Home Services Ottawa</h2>
-        <p>Welcome to Hughes Home Services Ottawa, where dependable Ottawa handyman services and home repairs meet a friendly, neighborhood approach. If you need a small fix or a full home renovation in Ottawa, our customized services can help. We handle small to medium projects—too big for a single handyman, but just right for us.</p>
-        <a href="/contact#form" class="-b-spec-3">Request a Free Quote</a>
-    </div>
-    <div class="imgWrapper -f-imgBacksplash"><img src="/assets/Wendall_Hughes.png" alt=""></div>
-</section>
+{% import "templates/layout_2.njk" as layout_2 %}
+{% import "templates/hero.njk" as hero%}
 
-<section class="section -l-layout2 bgContrast2">
-    <div class="imgWrapper -f-imageBox-1"><img src="/assets/IMG_6765.jpg" alt=""></div>
-    <div class="container spread">
-        <h2>Helping The People Of Ottawa Around The House! </h2>
-        <p>Hughes Home Services began with Wendall Hughes’ early experience working alongside his father in the family’s contracting business. With over 30 years of experience, Wendall and his team provide trusted Ottawa home repair and handyman services. We approach each project with care and focus on delivering results that make our clients happy.</p>
-    </div>
-</section>
+{{ hero.hero(
+    id="hero",
+    title="Trusted Ottawa Home Repairs & Handyman Services",
+    subtitle="Friendly, Reliable: Hughes Home Services Ottawa",
+    description="Welcome to Hughes Home Services Ottawa, where dependable Ottawa handyman services and home repairs meet a friendly, neighborhood approach. If you need a small fix or a full home renovation in Ottawa, our customized services can help. We handle small to medium projects—too big for a single handyman, but just right for us.",
+    buttonText= "Request a Free Quote",
+    buttonLink= "/contact#form",
+    imgSrc= "/assets/Wendall_Hughes.png",
+    imgAlt= "Wendall Hughes, Owner of Hughes Home Services Ottawa"
+) }}
+
+
+{{ layout_2.layout_2(
+    imgSrc="/assets/IMG_6765.jpg",
+    imgAlt="",
+    heading="Helping The People Of Ottawa Around The House!",
+    paragraph="Hughes Home Services began with Wendall Hughes’ early experience working alongside his father in the family’s contracting business. With over 30 years of experience, Wendall and his team provide trusted Ottawa home repair and handyman services. We approach each project with care and focus on delivering results that make our clients happy."
+) }}
 
 <section class="section -l-layout2 " id="services">
     <div class="imgWrapper -img-blocks-1">

@@ -1,0 +1,11 @@
+{% macro layout_2(imgSrc, imgAlt, heading, paragraph) %}
+<section class="section -l-layout2 bgContrast2">
+    <div class="imgWrapper -f-imageBox-1">
+        <img src="{{ imgSrc }}" alt="{{ imgAlt}}">
+    </div>
+    <div class="container spread">
+        <h2>{{ heading }}</h2>
+        <p>{{ paragraph }}</p>
+    </div>
+</section>
+{% endmacro %}

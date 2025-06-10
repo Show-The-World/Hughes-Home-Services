@@ -1,0 +1,13 @@
+{% macro hero(id, title, subtitle, description, buttonText, buttonLink, imgSrc, imgAlt) %}
+<section {% if id %}id="{{id}}"{% endif %} class="section -l-hero">
+    <div class="container spread">
+        <h1>{{ title }}</h1>
+        <h2 class="-t-h2Small">{{ subtitle }}</h2>
+        <p>{{ description }}</p>
+        <a href="{{ buttonLink }}" class="-b-spec-3">{{ buttonText }}</a>
+    </div>
+    <div class="imgWrapper -f-imgBacksplash">
+        <img src="{{ imgSrc }}" alt="{{ imgAlt }}">
+    </div>
+</section>
+{% endmacro %}

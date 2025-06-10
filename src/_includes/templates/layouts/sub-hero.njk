@@ -1,5 +1,5 @@
-{% macro subHero(title, pageUrl, subHeroTitle) %}
-<section class="section -l-subHero invertColor bgContrast3 -u-sideMarginImgOverflow-right">
+{% macro subHero(id, title, pageUrl, subHeroTitle) %}
+<section id="{{id}}" class="section -l-subHero invertColor bgContrast3 -u-sideMarginImgOverflow-right">
     <div class="container">
         <h1>{{ title }}</h1>
         <nav>
@@ -9,6 +9,6 @@
             </ul>
         </nav>
     </div>
-    {# <div class="imgWrapper"><img src="/assets/demo3.jpg" alt=""></div> #}
+    <div class="imgWrapper">{# <img src="/assets/demo3.jpg" alt=""> #}</div>
 </section>
 {% endmacro %}
