@@ -436,8 +436,7 @@ footer h3[class]{
 .-l-hero{
     display: flex;
     gap: var(--s-sideMargin);
-    padding-top: calc(var(--s-headerHeight) + (var(--s-sectionSpace) / 3.5));
-    padding-bottom: 0;
+    /* padding-top: calc(var(--s-headerHeight) + (var(--s-sectionSpace) / 3.5)); */
 }
 .-l-hero .container{
     flex: 1;

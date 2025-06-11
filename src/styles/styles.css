@@ -258,12 +258,18 @@ strong {
     height: auto;
 }
 
-body > section, body > main{
+
+body > section, body > main {
     padding: calc(var(--s-sectionSpace) / 2) var(--s-sideMargin);
     overflow-x: hidden;
     margin-top: -1px;
     margin-bottom: -1px;
 }
+
+body > section:first-of-type, body > main:first-of-type {
+    padding-top: calc(var(--s-sectionSpace) / 1.5);
+}
+
 header{
     padding-left: var(--s-sideMargin);
     padding-right: var(--s-sideMargin);
@@ -321,6 +327,7 @@ body > section > button:last-child{
     margin-left: auto;
     text-align: right;
 }
+
 
 
 
@@ -382,6 +389,12 @@ body > section > button:last-child{
 .blockedSection5{
     padding: var(--s-spacing5);
 }
+
+
+.noBottomPaddingSection{
+    padding-bottom: 0;
+}
+
 
 
 .bgContrast1{
