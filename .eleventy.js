@@ -16,6 +16,13 @@ module.exports = function(eleventyConfig) {
 		return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED)
 	})
 	
+	// Custom slice filter
+	eleventyConfig.addFilter('slice', (array, start, end) => {
+		if (!Array.isArray(array)) {
+			throw new Error('The input to the slice filter must be an array.');
+		}
+		return array.slice(start, end);
+	});
 
 	eleventyConfig.addCollection("galleryImages", function () {
 		const assetsGallerySrc = "/assets/gallery/"
