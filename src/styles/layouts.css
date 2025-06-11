@@ -978,16 +978,32 @@ footer h3[class]{
     margin-top: 1em;
     margin-bottom: 1em;
 }
-.-spr-3Col_card .-spr-card{
-    flex: 1;
-    min-width: 160px;
-}
 
 @media screen and (max-width:550px){
     .-spr-3Col_card{
         flex-direction: column;
     }
 }
+
+.-spr-3Col_card > li{
+    flex: 1;
+    min-width: 160px;
+    
+    padding-left: 0.8em;
+    padding-right: 0.5em;
+    border-left: solid var(--s-border2) var(--c-accent);
+    padding-bottom: var(--s-spacing5);
+    padding-top: var(--s-spacing5);
+}
+
+.-spr-3Col_card > li > *:not(:last-child){
+    margin-bottom: var(--s-spacing5);
+}
+
+.-spr-3Col_card > li .icon{
+    width: calc((20 /16 * 1rem) + ((30 - 20) * ((100vw - 320px) / (1920 - 320))));
+}
+
 
 
 /*******************************************************************************/
@@ -1229,21 +1245,6 @@ footer h3[class]{
 
 
 
-.-spr-card-spec-1{
-    padding-left: 0.8em;
-    padding-right: 0.5em;
-    border-left: solid var(--s-border2) var(--c-accent);
-    padding-bottom: var(--s-spacing5);
-    padding-top: var(--s-spacing5);
-}
-
-.-spr-card-spec-1 > *:not(:last-child){
-    margin-bottom: var(--s-spacing5);
-}
-
-.-spr-card-spec-1 .icon{
-    width: calc((20 /16 * 1rem) + ((30 - 20) * ((100vw - 320px) / (1920 - 320))));
-}
 
 
 

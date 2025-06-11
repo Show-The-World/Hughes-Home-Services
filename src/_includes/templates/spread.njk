@@ -16,21 +16,14 @@
     {% elif item.type == 'a' %}
         <a href="{{ item.href }}" class="{{ item.class if item.class }}">{{ item.text }}</a>
 
-    {% elif item.type == 'ul' %}
-        <ul class="{{ item.class if item.class }}">
-            {% if item.itemsType == 'li' %}
-                {% for li in item.items %}
-                    <li class="{{ item.itemClass if item.itemsClass }}">{{li}}</li>
-                {% endfor %}
-            
-            {% elif item.itemsType !== undefined %}
-            {% for li in item.items %}
-                {% import ("templates/spreads/listItems/" + item.itemsType + ".njk") as listItem %}
-                {{ listItem.listItem(li) }}
-            {% endfor %}
+    {% elif item.type == 'list' %}
 
-            {% endif%}
-        </ul>
+        {% if item.listType == 'ul' %}
+
+        {% elif item.listType !== undefined %}
+            {% import 'templates/spreads/lists/' + item.listType + '.njk' as spreadList %}
+            {{ spreadList.spreadList(item.items) }}
+        {% endif%}
     {% endif %}
     {% endfor%}
 </div>

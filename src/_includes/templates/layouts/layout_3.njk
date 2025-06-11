@@ -1,0 +1,11 @@
+{% import 'templates/image.njk' as image %}
+{% import 'templates/spread.njk' as spread %}
+
+{% macro layout(fields) %}
+<section class="section -l-layout3">
+  {{ image.image(fields.img) }}
+  <div class="container">
+    {{ spread.spread(fields.spread) }}
+  </div>
+</section>
+{% endmacro %}

@@ -1,8 +1,10 @@
 {% import 'templates/spread.njk' as spread %}
 
 
-{% macro listItem(item) %}
-<li class="-spr-card -spr-card-spec-1 -c-spread-1">
+{% macro spreadList(items) %}
+<ul class="-spr-3Col_card">
+{% for item in items %}
+<li>
     {{spread.spread({
         fields: [
             {
@@ -18,6 +20,8 @@
     }
     )}}
 </li>
+{% endfor %}
+</ul>
 {% endmacro %}
 
 {# 
