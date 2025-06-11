@@ -1,0 +1,6 @@
+{% macro cards(cards) %}
+{% import 'templates/cards/' + cards.cardId + '.njk' as card %}
+{% for cardFields in cards.cardsList %}
+{{card.card(cardFields)}}
+{% endfor %}
+{% endmacro %}

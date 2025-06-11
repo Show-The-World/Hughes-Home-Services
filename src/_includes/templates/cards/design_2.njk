@@ -1,0 +1,10 @@
+{% import 'templates/image.njk' as image %}
+
+{% macro card(cardFields) %}
+<div class="card -c-design2">
+    {{image.image({imgType: "icon", src: cardFields.img.src, alt: cardFields.img.alt, imgClass: cardFields.img.imgClass})}}
+    <h3>{{cardFields.h3Text}}</h3>
+    <p>{{cardFields.pText}}</p>
+    <a href="{{cardFields.aHref}}" class="-b-spec-2">{{cardFields.aText}}</a>
+</div>
+{% endmacro %}

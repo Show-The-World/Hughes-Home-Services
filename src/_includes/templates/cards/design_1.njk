@@ -1,0 +1,11 @@
+{% import 'templates/spread.njk' as spread %}
+{% import 'templates/image.njk' as image %}
+
+{% macro card(cardFields) %}
+<div class="card -c-design1">
+    
+    {{spread.spread(cardFields.spread)}}
+
+    {{image.image(cardFields.img)}}
+</div>
+{% endmacro %}

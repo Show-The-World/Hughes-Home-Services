@@ -1,0 +1,8 @@
+{% import 'templates/cards.njk' as cards %}
+
+{% macro layout(fields) %}
+<div class="-l-layout4">
+    {{cards.cards(fields.cards)}}
+</div>
+
+{% endmacro %}

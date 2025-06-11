@@ -1,0 +1,22 @@
+{% macro image(fields) %}
+    {% if fields.imgType === "imgWrapper"%}
+    <div class="imgWrapper {% if fields.wrapperClass %}{{fields.wrapperClass}}{% endif %}">
+        <img src="{{ fields.src }}" alt="{{fields.alt}}" class="{% if fields.imgClass %}{{fields.imgClass}}{% endif %}">
+    </div>
+
+    {% elif fields.imgType === "icon" %}
+        <img src="{{ fields.src }}" alt="{{fields.alt}}" class="icon {% if fields.imgClass %}{{fields.imgClass}}{% endif %}">
+
+
+    {% elif fields.imgType !==undefined %}
+        {% import ("templates/images/" + fields.imgType + ".njk") as image %}
+        {{image.image(
+            fields
+        )}}
+    
+
+    {% elif fields.imgType === undefined %}
+        <img src="{{ fields.src }}" alt="{{fields.alt}}" class="{% if fields.imgClass %}{{fields.imgClass}}{% endif %}">
+    {% endif%}
+
+{% endmacro %}

@@ -1,0 +1,8 @@
+{% import 'templates/images/bANDa_1.njk' as bANDa_1 %}
+
+{% macro layout(fields) %}
+<div class="-l-2ColSplit-even">
+    {{bANDa_1.bANDa_1(fields.setOne)}}
+    {{bANDa_1.bANDa_1(fields.setTwo)}}
+</div>
+{% endmacro %}

@@ -1,0 +1,30 @@
+{% import 'templates/spread.njk' as spread %}
+
+
+{% macro listItem(item) %}
+<li class="-spr-card -spr-card-spec-1 -c-spread-1">
+    {{spread.spread({
+        fields: [
+            {
+                type: 'h3',
+                text: item.h3Text
+            },
+            {
+                type: 'p',
+                text: item.pText,
+                class: '-t-pSmall'
+            }
+        ]
+    }
+    )}}
+</li>
+{% endmacro %}
+
+{# 
+            {
+                type: 'img',
+                imgType: 'icon',
+                src: item.imgSrc,
+                alt: item.h3Text + " Icon"
+            },
+ #}

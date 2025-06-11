@@ -1,0 +1,37 @@
+{% import 'templates/image.njk' as image %}
+
+{% macro spread(spread) %}
+<div class="spread {% if spread.class %}{{ spread.class }}{% endif %}">
+    {% for item in spread.fields%}
+    {% if item.type == 'h1' %}
+        <h1 class="{{ item.class | default('') }}">{{ item.text }}</h1>
+    {% elif item.type == 'h2' %}
+        <h2 class="{{ item.class | default('') }}">{{ item.text }}</h2>
+    {% elif item.type == 'h3' %}
+        <h3 class="{{ item.class | default('') }}">{{ item.text }}</h3>
+    {% elif item.type == 'p' %}
+        <p class="{{ item.class | default('') }}">{{ item.text }}</p>
+    {% elif item.type == 'img' %}
+        {{ image.image(item)}}
+    {% elif item.type == 'a' %}
+        <a href="{{ item.href }}" class="{{ item.class if item.class }}">{{ item.text }}</a>
+
+    {% elif item.type == 'ul' %}
+        <ul class="{{ item.class if item.class }}">
+            {% if item.itemsType == 'li' %}
+                {% for li in item.items %}
+                    <li class="{{ item.itemClass if item.itemsClass }}">{{li}}</li>
+                {% endfor %}
+            
+            {% elif item.itemsType !== undefined %}
+            {% for li in item.items %}
+                {% import ("templates/spreads/listItems/" + item.itemsType + ".njk") as listItem %}
+                {{ listItem.listItem(li) }}
+            {% endfor %}
+
+            {% endif%}
+        </ul>
+    {% endif %}
+    {% endfor%}
+</div>
+{% endmacro %}

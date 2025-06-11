@@ -1,277 +1,415 @@
 ---
-    title: Home
+title: Home
+sections:
+  - id: "hero"
+    class: "noBottomPaddingSection"
+    sectionItems:
+    - type: "layout"
+      layoutId: "hero"
+      fields:
+        spread:
+          fields:
+          - type: "h1"
+            text: "Trusted Ottawa Home Repairs & Handyman Services"
+          - type: "h2"
+            class: "-t-h2Small"
+            text: "Friendly, Reliable: Hughes Home Services Ottawa"
+          - type: "p"
+            text: "Welcome to Hughes Home Services Ottawa, where dependable Ottawa handyman services and home repairs meet a friendly, neighborhood approach. If you need a small fix or a full home renovation in Ottawa, our customized services can help. We handle small to medium projects—too big for a single handyman, but just right for us."
+          - type: "a"
+            class: "-b-spec-3"
+            text: "Request a Free Quote"
+            href: "/contact#form"
+        img:
+          imgType: "imgWrapper"
+          src: "/assets/Wendall_Hughes.png"
+          alt: "Wendall Hughes, Owner of Hughes Home Services Ottawa"
+          wrapperClass: "-f-imgBacksplash"
+  - id: "about"
+    class: "bgContrast2"
+    sectionItems:
+    - type: "layout"
+      layoutId: "layout_2"
+      fields:
+        img:
+          imgType: "imgWrapper"
+          src: "/assets/IMG_6765.jpg"
+          wrapperClass: "-f-imageBox-1"
+        spread:
+          fields:
+            - type: "h2"
+              text: "Helping The People Of Ottawa Around The House!"
+            - type: "p"
+              text: "Hughes Home Services began with Wendall Hughes’ early experience working alongside his father in the family’s contracting business. With over 30 years of experience, Wendall and his team provide trusted Ottawa home repair and handyman services. We approach each project with care and focus on delivering results that make our clients happy."
+  - id: "handyman-services"
+    sectionItems:
+    - type: "layout"
+      layoutId: "layout_2"
+      fields:
+        img:
+          imgType: "blocks_1"
+          img1:
+            src: "/assets/IMG_06.jpg"
+            alt: ""
+          img2:
+            src: "/assets/IMG_6700.jpg"
+            alt: ""
+          img3:
+            src: "/assets/IMG_6888.jpg"
+            alt: ""
+        spread:
+          fields:
+            - type: "h2"
+              text: "Handyman Services in Ottawa"
+            - type: "p"
+              text: "Count on us for essential home repairs and handyman services."
+            - type: "ul"
+              class: "-spr-3Col_card"
+              itemsType: "spr_spec_1"
+              items:
+              - iconSrc: "/assets/demo_icon2.svg"
+                h3Text: "General Repairs"
+                pText: "We handle everything from fixing doors to renewing caulking and assembling furniture."
+              - iconSrc: "/assets/demo_icon2.svg"
+                h3Text: "Safety Enhancements"
+                pText: "Install grab bars, railings, and floor transitions to make homes safer for the elderly."
+              - iconSrc: "/assets/demo_icon2.svg"
+                h3Text: "Home Organization"
+                pText: "Custom setups for basements or garages."
+            - type: "p"
+              text: "Ottawa homeowners trust our detail-focused and reliable service."
+            - type: "a"
+              class: "-b-spec-2"
+              text: "Book a Service Consultation"
+              href: "/contact#form"
+  - id: "painting"
+    class: "bgContrast2"
+    sectionItems:
+    - type: "layout"
+      layoutId: "layout_1"
+      fields:
+        img:
+          imgType: "imgWrapper"
+          src: "/assets/IMG_6915.jpg"
+          alt: ""
+        spread:
+          fields:
+            - type: "h2"
+              class: "-f-textSideLine-left"
+              text: "Painting Services"
+            - type: "p"
+              text: "We offer full interior and exterior painting services for everything from a single room to an entire house, including exteriors up to two levels. Whether you’re looking to freshen up a space, prepare a home for sale, or repair areas after construction or water damage, we’ve got you covered."
+            - type: "p"
+              text: "We work with trusted local suppliers to provide each client with the best value and top-quality products. Our team uses dustless, sandless equipment, along with fans, tarps, and tape, for a smooth, clean finish. Upon request, we carefully move and return all furniture and wall decor, making sure everything is just as you left it."
+            - type: "p"
+              text: "Known for our on-time, on-budget service, we pride ourselves on leaving each job as clean as we found it."
+            - type: "a"
+              class: "-b-spec-1"
+              text: "Get a Painting Estimate"
+              href: "/contact#form"
+  - id: "roofing"
+    class: "sectionItemCenter"
+    sectionItems:
+    - type: "h2"
+      text: "Roofing and Eaves Services"
+      class: "-f-topLine-center"
+    - type: "layout"
+      layoutId: "layout_4"
+      fields:
+        cards: 
+          cardId: "design_1"
+          cardsList:
+          - spread:
+              fields:
+              - type: "h3"
+                text: "Roof Repair and Replacement"
+              - type: "p"
+                class: "-t-pSmall"
+                text: "With over 20 years of expertise, our roofing team ensures every job is done right."
+            img:
+              imgType: "imgWrapper"
+              src: "/assets/hor_test.jpg"
+              alt: "Roof repair in progress"
+          - spread:
+              fields:
+              - type: "h3"
+                text: "Weatherproofing"
+              - type: "p"
+                class: "-t-pSmall"
+                text: "Protect your home from Ottawa’s harsh weather with our reliable weatherproofing solutions."
+            img:
+              imgType: "imgWrapper"
+              src: "/assets/hor_test.jpg"
+              alt: "Weatherproofing materials"
+          - spread:
+              fields:
+              - type: "h3"
+                text: "Eavestrough Cleaning and Maintenance"
+              - type: "p"
+                class: "-t-pSmall"
+                text: "Comprehensive cleaning, repairs, and before-and-after photos, with thorough clean-up and disposal included."
+            img:
+              imgType: "imgWrapper"
+              src: "/assets/vert_test.jpg"
+              alt: "Cleaned eavestrough"
+  - id: "construction"
+    sectionItems:
+    - type: "layout"
+      layoutId: "3col_spread_card_card"
+      fields:
+        spread:
+          fields:
+          - type: "h2"
+            text: "Small and Medium Construction Projects"
+          - type: "p"
+            text: "Hughes Home Services Ottawa is here for those manageable upgrades often overlooked by big companies."
+          - type: "a"
+            class: "-b-spec-1"
+            text: "Discuss Your Project"
+            href: "/contact#form"
+          - type: "img"
+            imgType: "imgWrapper"
+            src: "/assets/IMG_6623.jpg"
+            alt: ""
+        cards:
+          cardId: "design_2"
+          cardsList:
+          - img:
+              imgType: "icon"
+              src: "/assets/icon_construction_home_addition_accent.svg"
+              alt: ""
+              imgClass: "-icon-circlePadding"
+            h3Text: "Room Additions and Basement Conversions"
+            pText: "Extra space for growing families."
+            aHref: "/contact#form"
+            aText: "Learn About Room Additions"
+          - img:
+              imgType: "icon"
+              src: "/assets/icon_construction_kitchen_accent.svg"
+              alt: ""
+              imgClass: "-icon-circlePadding"
+            h3Text: "Bathroom and Kitchen Upgrades"
+            pText: "New vanities, backsplashes, and more."
+            aHref: "/contact#form"
+            aText: "Start Your Bathroom/Kitchen Upgrade"
+          - img:
+              imgType: "icon"
+              src: "/assets/icon_construction_flooring_accent.svg"
+              alt: ""
+              imgClass: "-icon-circlePadding"
+            h3Text: "Flooring Replacement and Installations"
+            pText: "Update any room's look."
+            aHref: "/contact#form"
+            aText: "Explore Flooring Options"
+          - img:
+              imgType: "icon"
+              src: "/assets/icon_construction_office_accent.svg"
+              alt: ""
+              imgClass: "-icon-circlePadding"
+            h3Text: "Home Office Alterations"
+            pText: "Soundproofing and privacy solutions for home offices."
+            aHref: "/contact#form"
+            aText: "Plan Your Home Office Upgrade"
+  - id: "deck_bANDa"
+    sectionItems:
+    - type: "layout"
+      class: "narrowSection slimSection"
+      layoutId: "colSplit_even"
+      fields:
+        setOne:
+          imgBefore:
+            imgType: "imgWrapper"
+            src: "/assets/IMG_04.jpg"
+            alt: ""
+          imgAfter:
+            imgType: "imgWrapper"
+            src: "/assets/IMG_132.jpg"
+            alt: ""
+        setTwo:
+          imgBefore:
+            imgType: "imgWrapper"
+            src: "/assets/IMG_4314.jpg"
+            alt: ""
+          imgAfter:
+            imgType: "imgWrapper"
+            src: "/assets/IMG_4315.jpg"
+            alt: ""
 
-    content:
+        
+
+
 ---
+
 {% extends "boilerplate/base.njk" %}
-
-{% block links %}
-{% endblock %}
-
+{% block links %}{% endblock %}
 {% block head %}
-<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 {% endblock head %}
-
-
 {% block content %}
-{% import "templates/layout_2.njk" as layout_2 %}
-{% import "templates/hero.njk" as hero%}
 
-{{ hero.hero(
-    id="hero",
-    title="Trusted Ottawa Home Repairs & Handyman Services",
-    subtitle="Friendly, Reliable: Hughes Home Services Ottawa",
-    description="Welcome to Hughes Home Services Ottawa, where dependable Ottawa handyman services and home repairs meet a friendly, neighborhood approach. If you need a small fix or a full home renovation in Ottawa, our customized services can help. We handle small to medium projects—too big for a single handyman, but just right for us.",
-    buttonText= "Request a Free Quote",
-    buttonLink= "/contact#form",
-    imgSrc= "/assets/Wendall_Hughes.png",
-    imgAlt= "Wendall Hughes, Owner of Hughes Home Services Ottawa"
-) }}
+{% for section in sections %}
+<section id="{{section.id}}" class="section {{ section.class | default('') }}">
+  {% for sectionItem in section.sectionItems %}
+    {% if sectionItem.type == 'layout' %}
+      {% import ("templates/layouts/" + sectionItem.layoutId + ".njk") as layout %}
+      {{layout.layout(
+        fields=sectionItem.fields
+      )}}
 
+    {% elif sectionItem.type == 'h1 '%}
+      <h1 class="{{ sectionItem.class | default('') }}">{{ sectionItem.text }}</h1>
 
-{{ layout_2.layout_2(
-    imgSrc="/assets/IMG_6765.jpg",
-    imgAlt="",
-    heading="Helping The People Of Ottawa Around The House!",
-    paragraph="Hughes Home Services began with Wendall Hughes’ early experience working alongside his father in the family’s contracting business. With over 30 years of experience, Wendall and his team provide trusted Ottawa home repair and handyman services. We approach each project with care and focus on delivering results that make our clients happy."
-) }}
+    {% elif sectionItem.type == 'h2' %}
+      <h2 class="{{ sectionItem.class | default('') }}">{{ sectionItem.text }}</h2>
+    
+    {% elif sectionItem.type == 'a' %}
+      <a href="{{ sectionItem.href }}" class="{{ sectionItem.class | default('') }}">{{ sectionItem.text }}</a>
 
-<section class="section -l-layout2 " id="services">
-    <div class="imgWrapper -img-blocks-1">
-        <img class="img1" src="/assets/IMG_06.jpg" alt="">
-        <img class="img2" src="/assets/IMG_6700.jpg" alt="">
-        <img class="img3" src="/assets/IMG_6888.jpg" alt="">
-    </div>
-    <div class="container spread">
-        <h2>Handyman Services in Ottawa</h2>
-        <p>Count on us for essential home repairs and handyman services.</p>
-        <ul class="-spr-3Col_card">
-            <li class="-spr-card -spr-card-spec-1 -c-spread-1">
-                <img src="/assets/demo_icon2.svg" alt="" class="icon">
-                <h3>General Repairs</h3>
-                <p class="-t-pSmall">We handle everything from fixing doors to renewing caulking and assembling furniture.</p>
-            </li>
-            <li class="-spr-card -spr-card-spec-1 -c-spread-1">
-                <img src="/assets/demo_icon2.svg" alt="" class="icon">
-                <h3>Safety Enhancements</h3>
-                <p class="-t-pSmall">Install grab bars, railings, and floor transitions to make homes safer for the elderly.</p>
-            </li>
-            <li class="-spr-card -spr-card-spec-1 -c-spread-1">
-                <img src="/assets/demo_icon2.svg" alt="" class="icon">
-                <h3>Home Organization</h3>
-                <p class="-t-pSmall">Custom setups for basements or garages.</p>
-            </li>
-        </ul>
-        <p>Ottawa homeowners trust our detail-focused and reliable service.</p>
-        <a href="/contact#form" class="-b-spec-2">Book a Service Consultation</a>
-    </div>
+    {% elif sectionItem.type == 'p' %}
+      <p class="{{ sectionItem.class | default('') }}">{{ sectionItem.text }}</p>
+
+    {% elif sectionItem.type == 'img' %}
+      {% import "templates/image.njk" as image %}
+      {{ image.image(sectionItem) }}
+
+    {% endif %}
+  {% endfor %}
+
 </section>
-
-<section class="section -l-layout1">
-    <div class="imgWrapper"><img src="/assets/IMG_6915.jpg" alt=""> </div>
-    <div class="container spread">
-        <h2 class="-f-textSideLine-left">Painting Services</h2>
-        <p>We offer full interior and exterior painting services for everything from a single room to an entire house, including exteriors up to two levels. Whether you’re looking to freshen up a space, prepare a home for sale, or repair areas after construction or water damage, we’ve got you covered.
-            <br><br>We work with trusted local suppliers to provide each client with the best value and top-quality products. Our team uses dustless, sandless equipment, along with fans, tarps, and tape, for a smooth, clean finish. Upon request, we carefully move and return all furniture and wall decor, making sure everything is just as you left it.
-            <br><br>Known for our on-time, on-budget service, we pride ourselves on leaving each job as clean as we found it.</p>
-        <a href="/contact#form" class="-b-spec-1">Get a Painting Estimate</a>
-    </div>
-</section>
-
-<section class="section heading sectionItemCenter">
-    <h2 class="-f-topLine-center">Roofing and Eaves Services</h2>
-    <div class="-l-layout4">
-        <div class="card -c-design1">
-            <div class="spread">
-                <img src="/assets/demo_icon1.svg" alt="" class="icon">
-                <h3>Roof Repair and Replacement</h3>
-                <p class="-t-pSmall">With over 20 years of expertise, our roofing team ensures every job is done right.</p>
-            </div>
-            <div class="imgWrapper"><img src="/assets/hor_test.jpg" alt="Roof repair in progress"> </div>
-        </div>
-        <div class="card -c-design1">
-            <div class="spread">
-                <img src="/assets/demo_icon1.svg" alt="" class="icon">
-                <h3>Weatherproofing</h3>
-                <p class="-t-pSmall">Protect your home from Ottawa’s harsh weather with our reliable weatherproofing solutions.</p>
-            </div>
-            <div class="imgWrapper"><img src="/assets/hor_test.jpg" alt="Weatherproofing materials"> </div>
-        </div>
-        <div class="card -c-design1">
-            <div class="spread">
-                <img src="/assets/demo_icon1.svg" alt="" class="icon">
-                <h3>Eavestrough Cleaning and Maintenance</h3>
-                <p class="-t-pSmall">Comprehensive cleaning, repairs, and before-and-after photos, with thorough clean-up and disposal included.</p>
-            </div>
-            <div class="imgWrapper"><img src="/assets/vert_test.jpg" alt="Cleaned eavestrough"> </div>
-        </div>
-    </div>
-</section>
-    </section>
-
-<section class="section -l-3col_spread_card_card">
-    <div class="spread">
-        <h2>Small and Medium Construction Projects</h2>
-        <p>Hughes Home Services Ottawa is here for those manageable upgrades often overlooked by big companies</p>
-        <a href="/contact#form" class="-b-spec-1">Discuss Your Project</a>
-        <div class="imgWrapper"><img src="/assets/IMG_6623.jpg" alt=""></div>
-    </div>
-    <div class="cardContainer">
-        <div class="-c-design2">
-            <img src="/assets/icon_construction_home_addition_accent.svg" alt="" class="icon -icon-circlePadding">
-            <h3>Room Additions and Basement Conversions</h3>
-            <p>Extra space for growing families.</p>
-            <a href="/contact#form" class="-b-spec-2">Learn About Room Additions</a>
-        </div>
-        <div class="-c-design2">
-            <img src="/assets/icon_construction_kitchen_accent.svg" alt="" class="icon -icon-circlePadding">
-            <h3>Bathroom and Kitchen Upgrades</h3>
-            <p>New vanities, backsplashes, and more.</p>
-            <a href="/contact#form" class="-b-spec-2">Start Your Bathroom/Kitchen Upgrade</a>
-        </div>
-        <div class="-c-design2">
-            <img src="/assets/icon_construction_flooring_accent.svg" alt="" class="icon -icon-circlePadding">
-            <h3>Flooring Replacement and Installations</h3>
-            <p>Update any room's look</p>
-            <a href="/contact#form" class="-b-spec-2">Explore Flooring Options</a>
-        </div>
-        <div class="-c-design2">
-            <img src="/assets/icon_construction_office_accent.svg" alt="" class="icon -icon-circlePadding">
-            <h3>Home Office Alterations</h3>
-            <p>Soundproofing and privacy solutions for home offices.</p>
-            <a href="/contact#form" class="-b-spec-2">Plan Your Home Office Upgrade</a>
-        </div>
-    </div>
-</section>
-
-<section class="section narrowSection slimSection -l-2ColSplit-even">
-    <div class="-img-bAnda-1">
-        <img src="/assets/IMG_04.jpg" alt="">
-        <img src="/assets/IMG_132.jpg" alt="">
-    </div>
-    <div class="-img-bAnda-1">
-        <img src="/assets/IMG_4314.jpg" alt="">
-        <img src="/assets/IMG_4315.jpg" alt="">
-    </div>
-</section>
-
-<section class="section -l-layout3">
-    <div class="imgWrapper"><img src="/assets/IMG_32.jpg" alt=""> </div>
-    <div class="container spread">
-        <h2 class="">Outdoor Services</h2>
-        <ul class="-spr-list-1">
-            <li><h3>Seasonal Yard Maintenance:</h3> <p>Winterizing, raking leaves, and seasonal prep.</p></li>
-            <li><h3>Deck and Driveway Repair:</h3> <p>Keep outdoor areas in great condition.</p></li>
-            <li><h3>Specialty Outdoor Projects:</h3> <p>Retaining walls, pest-proofing, and custom requests like cat tree guards. We even open and close cottages.</p></li>
-        </ul>
-        <p>We offer reliable outdoor services that customers appreciate. </p>
-        <a href="/contact#form" class="-b-spec-1">Get Outdoor Services Now</a>
-    </div>
-</section>
-
-<section class="section -l-layout2 bgContrast2">
-    <div class="imgWrapper"><img src="/assets/IMG_6604.jpg" alt=""></div>
-    <div class="container spread">
-        <h2>Why Choose Hughes Home Services?</h2>
-        <p>Here’s why Ottawa homeowners chose us to be their go to handyman:</p>
-        <ol class="-spr-numList">
-            <li>
-                <h3>Experienced Team</h3>
-                <p>30+ years in Ottawa home services and repair services.</p>
-            </li>
-            <li>
-                <h3>Reliability</h3>
-                <p>We’re on time, on budget, and value your time.</p>
-            </li>
-            <li>
-                <h3>Attention to Detail</h3>
-                <p>From start to finish, we make sure you’re happy with the result.</p>
-            </li>
-            <li>
-                <h3>Flexibility</h3>
-                <p>We handle projects that larger contractors often don’t, or that a single handyman can’t.</p>
-            </li>
-        </ol>
-        <a href="/contact#form" class="-b-spec-1">Contact Our Experienced Team</a>
-    </div>
-</section>
-
-
-<section class="section sectionItemCenter">
-<h2><div class="-t-smallHighlight">FAQs</div>Frequently Asked Questions</h2>
-    <div class="-l-2colCard-2">
-        <ul class="container">
-            <li class="-card-spec-faq ">
-                <input type="checkbox" class="faqInp invCheckbox" id="faq1">
-                <label for="faq1">
-                    <h3>Do you offer free quotes?</h3>
-                    <img src="/assets/icon_arrow_down.svg" alt="" class="icon">
-                </label>
-                <p>Yes,  are always wanting to ensure we meet your requirements and offer free quotes.</p>
-            </li>
-            <li class="-card-spec-faq ">
-                <input type="checkbox" class="faqInp invCheckbox" id="faq2">
-                <label for="faq2">
-                    <h3>Can I get current references?</h3>
-                    <img src="/assets/icon_arrow_down.svg" alt="" class="icon">
-                </label>
-                <p>Hughes Home Services Ottawa has many happy customers , we are happy to connect  you to our clients.</p>
-            </li>
-                <li class="-card-spec-faq ">
-                <input type="checkbox" class="faqInp invCheckbox" id="faq3">
-                <label for="faq3">
-                    <h3>Is the owner involved in the work?</h3>
-                    <img src="/assets/icon_arrow_down.svg" alt="" class="icon">
-                </label>
-                <p>Yes, Wendall Hughes is always on site helping the staff and communicating with the customers.</p>
-            </li>
-        </ul>
-        <ul class="container">
-            <li class="-card-spec-faq ">
-                <input type="checkbox" class="faqInp invCheckbox" id="faq4">
-                <label for="faq4">
-                    <h3>Can you work around pets and customers working from home?</h3>
-                    <img src="/assets/icon_arrow_down.svg" alt="" class="icon">
-                </label>
-                <p>Yes helping you around your home no matter the situation is possible.</p>
-            </li>
-            <li class="-card-spec-faq ">
-                <input type="checkbox" class="faqInp invCheckbox" id="faq5">
-                <label for="faq5">
-                    <h3>Do you have insurance?</h3>
-                    <img src="/assets/icon_arrow_down.svg" alt="" class="icon">
-                </label>
-                <p>Of course, any reputable will have insurance Including Hughes Home Services Ottawa.</p>
-            </li>
-        </ul>
-    </div>
-</section>
+{% endfor %}
 
 
 
-<section class="section bgContrast1 invertColor narrowSection">
-    <ul class="-l-4Col_card-1">
-        <li class="-card-spec-card3">
-            <img src="/assets/stats_experience.svg" alt="" class="icon">
-            <h3>30+</h3>
-            <p class="-t-pSmall">Years of Experience</p>
-        </li>
-        <li class="-card-spec-card3">
-            <img src="/assets/stats_customers.svg" alt="" class="icon">
-            <h3>20+</h3>
-            <p class="-t-pSmall">Years of Loyal Customers</p>
-        </li>
-        <li class="-card-spec-card3">
-            <img src="/assets/stats_projects.svg" alt="" class="icon">
-            <h3>100+</h3>
-            <p class="-t-pSmall">Annual Projects</p>
-        </li>
-        <li class="-card-spec-card3">
-            <img src="/assets/stats_homedepot.svg" alt="" class="icon">
-            <h3>Home Depot</h3>
-            <p class="-t-pSmall">Part of the Pros Team At Home Depot</p>
-        </li>
-    </ul>
-</section>
-
+  {#
+  
+  
+  <section class="section narrowSection slimSection -l-2ColSplit-even">
+      <div class="-img-bAnda-1">
+          <img src="/assets/IMG_04.jpg" alt="">
+          <img src="/assets/IMG_132.jpg" alt="">
+      </div>
+      <div class="-img-bAnda-1">
+          <img src="/assets/IMG_4314.jpg" alt="">
+          <img src="/assets/IMG_4315.jpg" alt="">
+      </div>
+  </section>
+  
+  <section class="section -l-layout3">
+      <div class="imgWrapper"><img src="/assets/IMG_32.jpg" alt=""> </div>
+      <div class="container spread">
+          <h2 class="">Outdoor Services</h2>
+          <ul class="-spr-list-1">
+              <li><h3>Seasonal Yard Maintenance:</h3> <p>Winterizing, raking leaves, and seasonal prep.</p></li>
+              <li><h3>Deck and Driveway Repair:</h3> <p>Keep outdoor areas in great condition.</p></li>
+              <li><h3>Specialty Outdoor Projects:</h3> <p>Retaining walls, pest-proofing, and custom requests like cat tree guards. We even open and close cottages.</p></li>
+          </ul>
+          <p>We offer reliable outdoor services that customers appreciate. </p>
+          <a href="/contact#form" class="-b-spec-1">Get Outdoor Services Now</a>
+      </div>
+  </section>
+  
+  <section class="section -l-layout2 bgContrast2">
+      <div class="imgWrapper"><img src="/assets/IMG_6604.jpg" alt=""></div>
+      <div class="container spread">
+          <h2>Why Choose Hughes Home Services?</h2>
+          <p>Here’s why Ottawa homeowners chose us to be their go to handyman:</p>
+          <ol class="-spr-numList">
+              <li>
+                  <h3>Experienced Team</h3>
+                  <p>30+ years in Ottawa home services and repair services.</p>
+              </li>
+              <li>
+                  <h3>Reliability</h3>
+                  <p>We’re on time, on budget, and value your time.</p>
+              </li>
+              <li>
+                  <h3>Attention to Detail</h3>
+                  <p>From start to finish, we make sure you’re happy with the result.</p>
+              </li>
+              <li>
+                  <h3>Flexibility</h3>
+                  <p>We handle projects that larger contractors often don’t, or that a single handyman can’t.</p>
+              </li>
+          </ol>
+          <a href="/contact#form" class="-b-spec-1">Contact Our Experienced Team</a>
+      </div>
+  </section>
+  
+  
+  <section class="section sectionItemCenter">
+  <h2><div class="-t-smallHighlight">FAQs</div>Frequently Asked Questions</h2>
+      <div class="-l-2colCard-2">
+          <ul class="container">
+              <li class="-card-spec-faq ">
+                  <input type="checkbox" class="faqInp invCheckbox" id="faq1">
+                  <label for="faq1">
+                      <h3>Do you offer free quotes?</h3>
+                      <img src="/assets/icon_arrow_down.svg" alt="" class="icon">
+                  </label>
+                  <p>Yes,  are always wanting to ensure we meet your requirements and offer free quotes.</p>
+              </li>
+              <li class="-card-spec-faq ">
+                  <input type="checkbox" class="faqInp invCheckbox" id="faq2">
+                  <label for="faq2">
+                      <h3>Can I get current references?</h3>
+                      <img src="/assets/icon_arrow_down.svg" alt="" class="icon">
+                  </label>
+                  <p>Hughes Home Services Ottawa has many happy customers , we are happy to connect  you to our clients.</p>
+              </li>
+                  <li class="-card-spec-faq ">
+                  <input type="checkbox" class="faqInp invCheckbox" id="faq3">
+                  <label for="faq3">
+                      <h3>Is the owner involved in the work?</h3>
+                      <img src="/assets/icon_arrow_down.svg" alt="" class="icon">
+                  </label>
+                  <p>Yes, Wendall Hughes is always on site helping the staff and communicating with the customers.</p>
+              </li>
+          </ul>
+          <ul class="container">
+              <li class="-card-spec-faq ">
+                  <input type="checkbox" class="faqInp invCheckbox" id="faq4">
+                  <label for="faq4">
+                      <h3>Can you work around pets and customers working from home?</h3>
+                      <img src="/assets/icon_arrow_down.svg" alt="" class="icon">
+                  </label>
+                  <p>Yes helping you around your home no matter the situation is possible.</p>
+              </li>
+              <li class="-card-spec-faq ">
+                  <input type="checkbox" class="faqInp invCheckbox" id="faq5">
+                  <label for="faq5">
+                      <h3>Do you have insurance?</h3>
+                      <img src="/assets/icon_arrow_down.svg" alt="" class="icon">
+                  </label>
+                  <p>Of course, any reputable will have insurance Including Hughes Home Services Ottawa.</p>
+              </li>
+          </ul>
+      </div>
+  </section>
+  
+  
+  
+  <section class="section bgContrast1 invertColor narrowSection">
+      <ul class="-l-4Col_card-1">
+          <li class="-card-spec-card3">
+              <img src="/assets/stats_experience.svg" alt="" class="icon">
+              <h3>30+</h3>
+              <p class="-t-pSmall">Years of Experience</p>
+          </li>
+          <li class="-card-spec-card3">
+              <img src="/assets/stats_customers.svg" alt="" class="icon">
+              <h3>20+</h3>
+              <p class="-t-pSmall">Years of Loyal Customers</p>
+          </li>
+          <li class="-card-spec-card3">
+              <img src="/assets/stats_projects.svg" alt="" class="icon">
+              <h3>100+</h3>
+              <p class="-t-pSmall">Annual Projects</p>
+          </li>
+          <li class="-card-spec-card3">
+              <img src="/assets/stats_homedepot.svg" alt="" class="icon">
+              <h3>Home Depot</h3>
+              <p class="-t-pSmall">Part of the Pros Team At Home Depot</p>
+          </li>
+      </ul>
+  </section> #}
 {% endblock %}

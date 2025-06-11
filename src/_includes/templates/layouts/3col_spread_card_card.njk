@@ -1,0 +1,14 @@
+{% import 'templates/spread.njk' as spread %}
+{% import 'templates/cards.njk' as cards %}
+
+{% macro layout(fields) %}
+<div class="-l-3col_spread_card_card">
+    <div class="spread">
+        {{spread.spread(fields.spread)}}
+    </div>
+    <div class="cardContainer">
+        {{cards.cards(fields.cards)}}
+    </div>
+</div>
+
+{% endmacro %}
