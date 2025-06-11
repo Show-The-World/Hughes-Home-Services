@@ -1,0 +1,10 @@
+{% macro spreadList(items) %}
+<ol class="-spr-numList">
+  {% for item in items %}
+  <li>
+    <h3>{{ item.h3Text }}</h3>
+    <p>{{ item.pText }}</p>
+  </li>
+  {% endfor %}
+</ol>
+{% endmacro %}

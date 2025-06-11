@@ -635,28 +635,10 @@ footer h3[class]{
 
 
 
-.-l-2colCard-2{
-    display: flex;
-    justify-content: space-between;
-    --spacingVal: var(--s-spacing3);
-    gap: var(--spacingVal);
+.-l-2colCard-2 > li:not(:last-child){
+    margin-bottom: var(--s-spacing4);
 }
-.-l-2colCard-2 > .container{
-    flex: 1 1 40%;
-    width: calc(50% - (var(--spacingVal) / 2));
 
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacingVal);
-}
-@media screen and (max-width:1200px){
-    .-l-2colCard-2{
-        flex-direction: column;
-    }
-    .-l-2colCard-2 > .container{
-        width: 100%;
-    }
-}
 
 
 

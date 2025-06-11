@@ -4,13 +4,13 @@
 <div class="spread {% if spread.class %}{{ spread.class }}{% endif %}">
     {% for item in spread.fields%}
     {% if item.type == 'h1' %}
-        <h1 class="{{ item.class | default('') }}">{{ item.text }}</h1>
+        <h1 class="{{ item.class | default('') }}">{{ item.text | safe }}</h1>
     {% elif item.type == 'h2' %}
-        <h2 class="{{ item.class | default('') }}">{{ item.text }}</h2>
+        <h2 class="{{ item.class | default('') }}">{{ item.text | safe }}</h2>
     {% elif item.type == 'h3' %}
-        <h3 class="{{ item.class | default('') }}">{{ item.text }}</h3>
+        <h3 class="{{ item.class | default('') }}">{{ item.text | safe }}</h3>
     {% elif item.type == 'p' %}
-        <p class="{{ item.class | default('') }}">{{ item.text }}</p>
+        <p class="{{ item.class | default('') }}">{{ item.text | safe }}</p>
     {% elif item.type == 'img' %}
         {{ image.image(item)}}
     {% elif item.type == 'a' %}
