@@ -1,0 +1,29 @@
+{% macro section(section) %}
+<section id="{{section.id}}" class="section {{ section.class | default('') }}">
+  {% for sectionItem in section.sectionItems %}
+    {% if sectionItem.type == 'layout' %}
+      {% import ("templates/layouts/" + sectionItem.layoutId + ".njk") as layout %}
+      {{layout.layout(
+        fields=sectionItem.fields
+      )}}
+
+    {% elif sectionItem.type == 'h1 '%}
+      <h1 class="{{ sectionItem.class | default('') }}">{{ sectionItem.text  | safe }}</h1>
+
+    {% elif sectionItem.type == 'h2' %}
+      <h2 class="{{ sectionItem.class | default('') }}">{{ sectionItem.text  | safe }}</h2>
+    
+    {% elif sectionItem.type == 'a' %}
+      <a href="{{ sectionItem.href }}" class="{{ sectionItem.class | default('') }}">{{ sectionItem.text  | safe }}</a>
+
+    {% elif sectionItem.type == 'p' %}
+      <p class="{{ sectionItem.class | default('') }}">{{ sectionItem.text  | safe }}</p>
+
+    {% elif sectionItem.type == 'img' %}
+      {% import "templates/image.njk" as image %}
+      {{ image.image(sectionItem) }}
+
+    {% endif %}
+  {% endfor %}
+</section>
+{% endmacro %}

@@ -261,8 +261,88 @@ sections:
               text: "Get Outdoor Services Now"
               class: "-b-spec-1"
               href: "/contact#form"
-
-        
+  - id: "why_choose_us"
+    class: "bgContrast2"
+    sectionItems:
+    - type: "layout"
+      layoutId: "layout_2"
+      fields:
+        img:
+          imgType: "imgWrapper"
+          src: "/assets/IMG_6604.jpg"
+          alt: ""
+        spread:
+          fields:
+            - type: "h2"
+              text: "Why Choose Hughes Home Services?"
+            - type: "p"
+              text: "Here’s why Ottawa homeowners chose us to be their go to handyman:"
+            - type: "list"
+              listType: "spr_list_3"
+              items:
+                - h3Text: "Experienced Team"
+                  pText: "30+ years in Ottawa home services and repair services."
+                - h3Text: "Reliability"
+                  pText: "We’re on time, on budget, and value your time."
+                - h3Text: "Attention to Detail"
+                  pText: "From start to finish, we make sure you’re happy with the result."
+                - h3Text: "Flexibility"
+                  pText: "We handle projects that larger contractors often don’t, or that a single handyman can’t."
+            - type: "a"
+              class: "-b-spec-1"
+              text: "Contact Our Experienced Team"
+              href: "/contact#form"
+  - id: "faq"
+    class: "sectionItemCenter narrowSection2"
+    sectionItems:
+    - type: "h2"
+      text: "<div class='-t-smallHighlight'>FAQs</div>Frequently Asked Questions"
+    - type: "layout"
+      layoutId: "2col_card_2"
+      fields:
+        cards:
+          cardId: "dropdown_1"
+          cardsList:
+          - h3Text: "Do you offer free quotes?"
+            pText: "Yes, we always want to ensure we meet your requirements and offer free quotes."
+          - h3Text: "Can I get current references?"
+            pText: "Hughes Home Services Ottawa has many happy customers, and we are happy to connect you to our clients."
+          - h3Text: "Is the owner involved in the work?"
+            pText: "Yes, Wendall Hughes is always on site helping the staff and communicating with the customers."
+          - h3Text: "Can you work around pets and customers working from home?"
+            pText: "Yes, helping you around your home no matter the situation is possible."
+          - h3Text: "Do you have insurance?"
+            pText: "Of course, any reputable company will have insurance, including Hughes Home Services Ottawa."
+  - id: stats
+    class: "bgContrast1 invertColor narrowSection"
+    sectionItems:
+    - type: "layout"
+      layoutId: "4col_card"
+      fields:
+        cards:
+          cardId: "design_3"
+          cardsList:
+          - img:
+              src: "/assets/stats_experience.svg"
+              alt: ""
+            h3Text: "30+"
+            pText: "Years of Experience"
+          - img:
+              src: "/assets/stats_customers.svg"
+              alt: ""
+            h3Text: "20+"
+            pText: "Years of Loyal Customers"
+          - img:
+              src: "/assets/stats_projects.svg"
+              alt: ""
+            h3Text: "100+"
+            pText: "Annual Projects"
+          - img:
+              src: "/assets/stats_homedepot.svg"
+              alt: ""
+            h3Text: "Home Depot"
+            pText: "Part of the Pros Team At Home Depot"
+      
 
 
 ---
@@ -273,161 +353,9 @@ sections:
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 {% endblock head %}
 {% block content %}
+{% import 'templates/section.njk' as sectionTemplate %}
 
 {% for section in sections %}
-<section id="{{section.id}}" class="section {{ section.class | default('') }}">
-  {% for sectionItem in section.sectionItems %}
-    {% if sectionItem.type == 'layout' %}
-      {% import ("templates/layouts/" + sectionItem.layoutId + ".njk") as layout %}
-      {{layout.layout(
-        fields=sectionItem.fields
-      )}}
-
-    {% elif sectionItem.type == 'h1 '%}
-      <h1 class="{{ sectionItem.class | default('') }}">{{ sectionItem.text }}</h1>
-
-    {% elif sectionItem.type == 'h2' %}
-      <h2 class="{{ sectionItem.class | default('') }}">{{ sectionItem.text }}</h2>
-    
-    {% elif sectionItem.type == 'a' %}
-      <a href="{{ sectionItem.href }}" class="{{ sectionItem.class | default('') }}">{{ sectionItem.text }}</a>
-
-    {% elif sectionItem.type == 'p' %}
-      <p class="{{ sectionItem.class | default('') }}">{{ sectionItem.text }}</p>
-
-    {% elif sectionItem.type == 'img' %}
-      {% import "templates/image.njk" as image %}
-      {{ image.image(sectionItem) }}
-
-    {% endif %}
-  {% endfor %}
-
-</section>
+{{sectionTemplate.section(section)}}
 {% endfor %}
-
-
-
-  {#
-  
-  
-
-  
-  <section class="section -l-layout3">
-      <div class="imgWrapper"><img src="/assets/IMG_32.jpg" alt=""> </div>
-      <div class="container spread">
-          <h2 class="">Outdoor Services</h2>
-          <ul class="-spr-list-1">
-              <li><h3>Seasonal Yard Maintenance:</h3> <p>Winterizing, raking leaves, and seasonal prep.</p></li>
-              <li><h3>Deck and Driveway Repair:</h3> <p>Keep outdoor areas in great condition.</p></li>
-              <li><h3>Specialty Outdoor Projects:</h3> <p>Retaining walls, pest-proofing, and custom requests like cat tree guards. We even open and close cottages.</p></li>
-          </ul>
-          <p>We offer reliable outdoor services that customers appreciate. </p>
-          <a href="/contact#form" class="-b-spec-1">Get Outdoor Services Now</a>
-      </div>
-  </section>
-  
-  <section class="section -l-layout2 bgContrast2">
-      <div class="imgWrapper"><img src="/assets/IMG_6604.jpg" alt=""></div>
-      <div class="container spread">
-          <h2>Why Choose Hughes Home Services?</h2>
-          <p>Here’s why Ottawa homeowners chose us to be their go to handyman:</p>
-          <ol class="-spr-numList">
-              <li>
-                  <h3>Experienced Team</h3>
-                  <p>30+ years in Ottawa home services and repair services.</p>
-              </li>
-              <li>
-                  <h3>Reliability</h3>
-                  <p>We’re on time, on budget, and value your time.</p>
-              </li>
-              <li>
-                  <h3>Attention to Detail</h3>
-                  <p>From start to finish, we make sure you’re happy with the result.</p>
-              </li>
-              <li>
-                  <h3>Flexibility</h3>
-                  <p>We handle projects that larger contractors often don’t, or that a single handyman can’t.</p>
-              </li>
-          </ol>
-          <a href="/contact#form" class="-b-spec-1">Contact Our Experienced Team</a>
-      </div>
-  </section>
-  
-  
-  <section class="section sectionItemCenter">
-  <h2><div class="-t-smallHighlight">FAQs</div>Frequently Asked Questions</h2>
-      <div class="-l-2colCard-2">
-          <ul class="container">
-              <li class="-card-spec-faq ">
-                  <input type="checkbox" class="faqInp invCheckbox" id="faq1">
-                  <label for="faq1">
-                      <h3>Do you offer free quotes?</h3>
-                      <img src="/assets/icon_arrow_down.svg" alt="" class="icon">
-                  </label>
-                  <p>Yes,  are always wanting to ensure we meet your requirements and offer free quotes.</p>
-              </li>
-              <li class="-card-spec-faq ">
-                  <input type="checkbox" class="faqInp invCheckbox" id="faq2">
-                  <label for="faq2">
-                      <h3>Can I get current references?</h3>
-                      <img src="/assets/icon_arrow_down.svg" alt="" class="icon">
-                  </label>
-                  <p>Hughes Home Services Ottawa has many happy customers , we are happy to connect  you to our clients.</p>
-              </li>
-                  <li class="-card-spec-faq ">
-                  <input type="checkbox" class="faqInp invCheckbox" id="faq3">
-                  <label for="faq3">
-                      <h3>Is the owner involved in the work?</h3>
-                      <img src="/assets/icon_arrow_down.svg" alt="" class="icon">
-                  </label>
-                  <p>Yes, Wendall Hughes is always on site helping the staff and communicating with the customers.</p>
-              </li>
-          </ul>
-          <ul class="container">
-              <li class="-card-spec-faq ">
-                  <input type="checkbox" class="faqInp invCheckbox" id="faq4">
-                  <label for="faq4">
-                      <h3>Can you work around pets and customers working from home?</h3>
-                      <img src="/assets/icon_arrow_down.svg" alt="" class="icon">
-                  </label>
-                  <p>Yes helping you around your home no matter the situation is possible.</p>
-              </li>
-              <li class="-card-spec-faq ">
-                  <input type="checkbox" class="faqInp invCheckbox" id="faq5">
-                  <label for="faq5">
-                      <h3>Do you have insurance?</h3>
-                      <img src="/assets/icon_arrow_down.svg" alt="" class="icon">
-                  </label>
-                  <p>Of course, any reputable will have insurance Including Hughes Home Services Ottawa.</p>
-              </li>
-          </ul>
-      </div>
-  </section>
-  
-  
-  
-  <section class="section bgContrast1 invertColor narrowSection">
-      <ul class="-l-4Col_card-1">
-          <li class="-card-spec-card3">
-              <img src="/assets/stats_experience.svg" alt="" class="icon">
-              <h3>30+</h3>
-              <p class="-t-pSmall">Years of Experience</p>
-          </li>
-          <li class="-card-spec-card3">
-              <img src="/assets/stats_customers.svg" alt="" class="icon">
-              <h3>20+</h3>
-              <p class="-t-pSmall">Years of Loyal Customers</p>
-          </li>
-          <li class="-card-spec-card3">
-              <img src="/assets/stats_projects.svg" alt="" class="icon">
-              <h3>100+</h3>
-              <p class="-t-pSmall">Annual Projects</p>
-          </li>
-          <li class="-card-spec-card3">
-              <img src="/assets/stats_homedepot.svg" alt="" class="icon">
-              <h3>Home Depot</h3>
-              <p class="-t-pSmall">Part of the Pros Team At Home Depot</p>
-          </li>
-      </ul>
-  </section> #}
 {% endblock %}
