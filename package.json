@@ -19,6 +19,7 @@
   "homepage": "https://github.com/Show-The-World/Hughes-Home-Services#readme",
   "dependencies": {
     "@11ty/eleventy": "^3.0.0",
+    "@11ty/eleventy-img": "^6.0.4",
     "image-size": "^1.2.0"
   }
 }
