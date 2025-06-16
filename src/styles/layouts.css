@@ -1248,7 +1248,7 @@ footer h3[class]{
 }
 .-spr-list-1 li::before {
     content: '';
-    background-image: url("/assets/icon_checkmark.svg");
+    background-image: url("/graphics/icon_checkmark.svg");
     background-repeat: no-repeat;
     background-size: contain; 
     left: 0;
@@ -1347,7 +1347,7 @@ footer h3[class]{
 .-b-spec-1::after{
     content: "";
     position: absolute;
-    background-image: url("/assets/icon_arrow_right_black.svg");
+    background-image: url("/graphics/icon_arrow_right_black.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -1371,7 +1371,7 @@ footer h3[class]{
 .-b-spec-2::after{
     content: "";
     position: absolute;
-    background-image: url("/assets/icon_arrow_right_black.svg");
+    background-image: url("/graphics/icon_arrow_right_black.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -1399,7 +1399,7 @@ footer h3[class]{
 .-b-spec-3::after{
     content: "";
     position: absolute;
-    background-image: url("/assets/icon_arrow_right_white.svg");
+    background-image: url("/graphics/icon_arrow_right_white.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
