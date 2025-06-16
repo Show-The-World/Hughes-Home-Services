@@ -28,7 +28,7 @@ module.exports = function(eleventyConfig) {
 
 	eleventyConfig.addCollection("galleryImages", function () {
 		const assetsGallerySrc = "/assets/gallery/"
-		const galleryDir = path.join("./src/", assetsGallerySrc);
+		const galleryDir = path.join("./src/pages/", assetsGallerySrc);
 		return fs.readdirSync(galleryDir)
 		  .filter(file => /\.(jpe?g|png|gif|webp)$/i.test(file)) // Filter image files
 		  .map(file => {
