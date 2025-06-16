@@ -8,7 +8,7 @@ const sizeOf = require("image-size")
 module.exports = function(eleventyConfig) {
 
 	eleventyConfig.addPassthroughCopy({"src/styles/": "styles/"})
-  	eleventyConfig.addPassthroughCopy({"src/assets/": "assets/"})
+  	eleventyConfig.addPassthroughCopy({"src/pages/assets/graphics/": "graphics/"})
   
 	eleventyConfig.addPassthroughCopy({"src/other/robot.txt": "/robot.txt"})
  
@@ -51,6 +51,20 @@ module.exports = function(eleventyConfig) {
 		formats: ['auto']
 	})
 	
+
+	// eleventyConfig.addTransform("ignore-icons", async (content, outputPath) => {
+	// 	if (outputPath && outputPath.endsWith(".html")) {
+	// 	return content.replace(
+	// 		/<img([^>]*\sclass\s*=\s*["'][^"']*\bicon\b[^"']*["'][^>]*)>/g,
+	// 		(match, attrs) => {
+	// 		if (attrs.includes('eleventy:ignore')) return match; // already ignored
+	// 		return `<img${attrs} eleventy:ignore>`;
+	// 		}
+	// 	);
+	// 	}
+	// 	return content;
+	// });
+
   
 	return {
 		markdownTemplateEngine: 'njk',
