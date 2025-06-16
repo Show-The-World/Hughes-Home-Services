@@ -10,6 +10,7 @@
 
 
 {% block content %}
+{% import 'templates/image.njk' as image %}
     <section class="section">
         <div class="container blockedSection2 bgContrast2 spread">
             <h2><div class="-t-smallHighlight">Contact</div> How Can We Help You?</h2>
@@ -38,7 +39,7 @@
 
                 <address class="container -layout-1Col_card_1">
                     <div class="-card-info blockedSection5 bgContrast1 dropshadow1">
-                        <img src="/graphics/icon_phone_accent.svg" alt="" class="icon -icon-circlePadding">
+                        <img eleventy:ignore src="/graphics/icon_phone_accent.svg" alt="" class="icon -icon-circlePadding">
                         <div class="container spread">
                             <h3>Call Us</h3>
                             <div class="subContainer">
@@ -47,7 +48,7 @@
                         </div>
                     </div>
                     <div class="-card-info blockedSection5 bgContrast1 dropshadow1">
-                        <img src="/graphics/icon_email_accent.svg" alt="" class="icon -icon-circlePadding">
+                        <img eleventy:ignore src="/graphics/icon_email_accent.svg" alt="" class="icon -icon-circlePadding">
                         <div class="container spread">
                             <h3>Email</h3>
                             <div class="subContainer">
@@ -56,7 +57,7 @@
                         </div>
                     </div>
                     <div class="-card-info blockedSection5 bgContrast1 dropshadow1">
-                        <img src="/graphics/icon_location_accent.svg" alt="" class="icon -icon-circlePadding">
+                        <img eleventy:ignore src="/graphics/icon_location_accent.svg" alt="" class="icon -icon-circlePadding">
                         <div class="container spread">
                             <h3>Location</h3>
                             <div class="subContainer">

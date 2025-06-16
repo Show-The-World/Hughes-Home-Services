@@ -5,7 +5,7 @@
     </div>
 
     {% elif fields.imgType === "icon" %}
-        <img src="{{ fields.src }}" alt="{{fields.alt}}" class="icon {% if fields.imgClass %}{{fields.imgClass}}{% endif %}">
+        <img eleventy:ignore src="{{ fields.src }}" alt="{{fields.alt}}" class="icon {% if fields.imgClass %}{{fields.imgClass}}{% endif %}">
 
 
     {% elif fields.imgType !==undefined %}

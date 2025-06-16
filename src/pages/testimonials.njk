@@ -18,14 +18,15 @@
                     <h3>{{ testimonial.name }}</h3>
                     <div class="title">{{ testimonial.title }}</div>
                 </div>
-                <img 
+                <img
+                    eleventy:ignore
                     style="--starCount: {{ testimonial.stars * 20 }}%;" 
                     src="/graphics/review_stars.svg" 
                     alt="{{ testimonial.stars }} stars" 
                     class="icon star">
         </div>
         <p>{{ testimonial.content }}</p>
-        <img src="/graphics/review_quote.svg" alt="quote icon" class="icon quote">
+        <img  eleventy:ignore src="/graphics/review_quote.svg" alt="quote icon" class="icon quote">
         </div>
     {% endfor %}
 </div>

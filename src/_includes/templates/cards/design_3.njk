@@ -1,6 +1,8 @@
+{% import 'templates/image.njk' as image %}
+
 {% macro card(fields) %}
 <li class="-card-spec-card3">
-  <img src="{{ fields.img.src }}" alt="{{ fields.img.alt }}" class="icon">
+  {{image.image(fields.img)}}
   <h3>{{ fields.h3Text }}</h3>
   <p class="-t-pSmall">{{ fields.pText }}</p>
 </li>
