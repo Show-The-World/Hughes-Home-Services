@@ -1,3 +1,5 @@
+const {eleventyImageTransformPlugin} = require('@11ty/eleventy-img');
+
 const {DateTime} = require('luxon');
 const path = require('path');
 const fs = require('fs');
