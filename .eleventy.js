@@ -47,7 +47,8 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
 		filenameFormat : function(id, src, width, format, options) {
 			return `${path.basename(src).split('.')[0]}-${width}w.${format}`
-		}
+		},
+		formats: ['auto']
 	})
 	
   
