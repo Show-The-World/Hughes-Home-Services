@@ -52,19 +52,6 @@ module.exports = function(eleventyConfig) {
 	})
 	
 
-	// eleventyConfig.addTransform("ignore-icons", async (content, outputPath) => {
-	// 	if (outputPath && outputPath.endsWith(".html")) {
-	// 	return content.replace(
-	// 		/<img([^>]*\sclass\s*=\s*["'][^"']*\bicon\b[^"']*["'][^>]*)>/g,
-	// 		(match, attrs) => {
-	// 		if (attrs.includes('eleventy:ignore')) return match; // already ignored
-	// 		return `<img${attrs} eleventy:ignore>`;
-	// 		}
-	// 	);
-	// 	}
-	// 	return content;
-	// });
-
   
 	return {
 		markdownTemplateEngine: 'njk',
