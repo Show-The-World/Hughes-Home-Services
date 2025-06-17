@@ -9,6 +9,7 @@ module.exports = function(eleventyConfig) {
 
 	eleventyConfig.addPassthroughCopy({"src/styles/": "styles/"})
   	eleventyConfig.addPassthroughCopy({"src/pages/assets/graphics/": "graphics/"})
+  	eleventyConfig.addPassthroughCopy({"src/pages/assets/fonts/": "fonts/"})
   
 	eleventyConfig.addPassthroughCopy({"src/other/robot.txt": "/robot.txt"})
  
