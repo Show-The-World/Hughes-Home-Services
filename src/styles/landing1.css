@@ -335,14 +335,23 @@ header .offerContainer > *{
     padding-bottom: 0;
 }
 
+.-l-about .imagesContainer{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+}
 .-l-about .imagesContainer > *{
-    object-fit: cover;
-    max-height: 30vh;
+    flex: 1;
+    
 }
 @media screen and (min-width:1001px){
     .-l-about .imagesContainer > *:not(:last-child){
         margin-bottom: var(--s-spacing4);
-    } 
+    }
+    .-l-about .imagesContainer > *{
+        max-height: 20vw;
+    }
 }
 
 @media screen and (max-width:1000px){
@@ -350,8 +359,8 @@ header .offerContainer > *{
         grid-template-columns: 1fr;
     }
     .-l-about .imagesContainer{
-        display: flex;
         justify-content: space-between;
+        flex-direction: row;
     }
     .-l-about .imagesContainer *{
         width: 48%;
