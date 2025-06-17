@@ -5,6 +5,7 @@
 <div class="-l-hero">
     <div class="container">{{spread.spread( fields.spread )}}</div>
 
-    {{image.image(fields.img)}}
+    
+    {{image.image(fields.img, { loading: 'eager' })}}
 </div>
 {% endmacro %}
