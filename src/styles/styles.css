@@ -274,7 +274,7 @@ body > section, body > main {
 }
 
 body > section:first-of-type, body > main:first-of-type {
-    padding-top: calc(var(--s-sectionSpace) / 1.5);
+    padding-top: calc(var(--s-headerHeight) + calc(var(--s-sectionSpace) / 4));
 }
 
 header{
@@ -287,16 +287,6 @@ input.invCheckbox{
     display: none;
 }
 
-
-/* --------------- Sets the default image height across vp widths --------------- */
-img{
-    max-height: 85vh;
-}
-@media screen and (max-width:700px){
-    img{
-        max-height: 45vh;
-    }
-}
 
 
 

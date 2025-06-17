@@ -48,7 +48,14 @@ module.exports = function(eleventyConfig) {
 		filenameFormat : function(id, src, width, format, options) {
 			return `${path.basename(src).split('.')[0]}-${width}w.${format}`
 		},
-		formats: ['auto']
+		formats: ['auto'],
+		// widths: ['auto'],
+		htmlOptions: {
+			imgAttributes: {
+				loading: "lazy",
+				decoding: "async",
+			},
+		},
 	})
 	
 

@@ -98,9 +98,6 @@ header .offerContainer > *{
 
 .hero{
     position: relative;
-    padding-top: calc(var(--s-headerHeight) + (var(--s-sectionSpace) / 4));
-    padding-bottom: 0;
-    padding-bottom: var(--s-spacing1);
 }
 
 .hero > .container{
@@ -123,19 +120,19 @@ header .offerContainer > *{
     height:30vh;
 }
 
-.hero .bg{
+.hero img.bg {
     position: absolute;
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
+    width: 100%;
+    height: 100%;
     z-index: -10;
-    background-image: url("/assets/promo1/hero_bg.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     filter: brightness(0.1) contrast(0.9) blur(1px);
     box-shadow: none;
+
+    object-fit: cover;
 }
 
 @media screen and (max-width:1250px){
