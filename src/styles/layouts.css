@@ -522,24 +522,26 @@ footer h3[class]{
 .-l-layout1{
     display: flex;
     gap: var(--s-spacing1) /* Factor */;
-    flex-direction: column;
+    flex-direction: row;
 }
-.-l-layout1 .imgWrapper{
-    height: 55vw;
+.-l-layout1 .container{
+    flex: 1;
+}
+.-l-layout1 > .imgWrapper{
+    flex: 0.7; /* Factor */
+    align-self: stretch;
+    max-height: max(40vw, 100%);
 }
 
 
-@media screen and (min-width: 700px ){
+@media screen and (max-width: 700px ){
     .-l-layout1{
-        flex-direction: row;
+        flex-direction: column;
+
     }
-    .-l-layout1 .container{
-        flex: 1;
-    }
-    .-l-layout1 .imgWrapper{
-        flex: 0.7; /* Factor */
-        align-self: stretch;
-        height: max(40vw, 100%);
+
+    .-l-layout1 > .imgWrapper >img{
+        height: 60vw;
     }
 }
 
@@ -548,48 +550,52 @@ footer h3[class]{
 .-l-layout2{
     display: flex;
     gap: var(--s-spacing1) /* Factor */;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
 }
-.-l-layout2 > .imgWrapper {
-    align-self: stretch;
-    height: 55vw;
+.-l-layout2 .container{
+    flex: 1;
 }
 
-@media screen and (min-width: 700px ){
+.-l-layout2 .imgWrapper{
+    flex: 0.85; /* Factor */
+    max-height: max(40vw, 100%);
+    align-self: stretch;
+}
+
+@media screen and (max-width: 700px ){
     .-l-layout2{
-        flex-direction: row;
+        flex-direction: column;
     }
-    .-l-layout2 .container{
-        flex: 1;
-    }
-    .-l-layout2 .imgWrapper{
-        flex: 0.85; /* Factor */
-        max-height: max(40vw, 100%);
+    .-l-layout2 > .imgWrapper > img{
+        max-height: 60vw;
     }
 }
+
+
 
 
 .-l-layout3{
     display: flex;
     gap: var(--s-spacing1) /* Factor */;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+}
+.-l-layout3 .container{
+    flex: 1;
 }
 .-l-layout3 > .imgWrapper {
     align-self: stretch;
-    height: 55vw;
+    max-height: max(40vw, 100%);
+    flex: 0.5; /* Factor */
 }
 
-@media screen and (min-width: 700px ){
+@media screen and (max-width: 700px ){
     .-l-layout3{
-        flex-direction: row;
+        flex-direction: column;
     }
-    .-l-layout3 .container{
-        flex: 1;
-    }
-    .-l-layout3 .imgWrapper{
-        flex: 0.5; /* Factor */
+    .-l-layout3 > .imgWrapper img{
+        max-height: 60vw;
     }
 }
 
