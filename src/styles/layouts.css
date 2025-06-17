@@ -524,6 +524,10 @@ footer h3[class]{
     gap: var(--s-spacing1) /* Factor */;
     flex-direction: column;
 }
+.-l-layout1 .imgWrapper{
+    height: 55vw;
+}
+
 
 @media screen and (min-width: 700px ){
     .-l-layout1{
@@ -534,15 +538,8 @@ footer h3[class]{
     }
     .-l-layout1 .imgWrapper{
         flex: 0.7; /* Factor */
-    }
-}
-
-.-l-layout1 img{
-    max-height: 80vh;
-}
-@media screen and (max-width:700px){
-    .-l-layout3 img{
-        max-height: 50vh;
+        align-self: stretch;
+        height: max(40vw, 100%);
     }
 }
 
@@ -556,6 +553,7 @@ footer h3[class]{
 }
 .-l-layout2 > .imgWrapper {
     align-self: stretch;
+    height: 55vw;
 }
 
 @media screen and (min-width: 700px ){
@@ -567,17 +565,9 @@ footer h3[class]{
     }
     .-l-layout2 .imgWrapper{
         flex: 0.85; /* Factor */
+        max-height: max(40vw, 100%);
     }
 }
-.-l-layout2 img{
-    max-height: 80vh;
-}
-@media screen and (max-width:700px){
-    .-l-layout2 img{
-        max-height: 45vh;
-    }
-}
-
 
 
 .-l-layout3{
@@ -588,6 +578,7 @@ footer h3[class]{
 }
 .-l-layout3 > .imgWrapper {
     align-self: stretch;
+    height: 55vw;
 }
 
 @media screen and (min-width: 700px ){
@@ -599,14 +590,6 @@ footer h3[class]{
     }
     .-l-layout3 .imgWrapper{
         flex: 0.5; /* Factor */
-    }
-}
-.-l-layout3 img{
-    max-height: 80vh;
-}
-@media screen and (max-width:700px){
-    .-l-layout3 img{
-        max-height: 45vh;
     }
 }
 
