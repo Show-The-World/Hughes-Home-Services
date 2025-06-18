@@ -22,15 +22,12 @@
     <meta name="apple-mobile-web-app-title" content="MyWebSite" />
     <link rel="manifest" href="/graphics/favicon/site.webmanifest" />
 
-    <!-- Preload CSS and apply when loaded -->
-    <link rel="preload" href="/styles/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="/styles/landing1.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-      <link rel="stylesheet" href="/styles/styles.css">
-      <link rel="stylesheet" href="/styles/landing1.css">
-    </noscript>
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="/styles/landing1.css">
     
     {% block links %}{% endblock %}
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="/styles/landing1.css">
 
     {% block head %}{% endblock %}
 </head>
