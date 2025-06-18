@@ -303,11 +303,11 @@ header .offerContainer > *{
 
 }
 
-.-card-spec-card3 .icon {
-    width: auto;
+.-card-spec-card3 .icon{
+    object-fit: contain;
+    width: 30%;
     height: calc((24 /16 * 1rem) + ((60 - 24) * ((100vw - 320px) / (1920 - 320))));
 }
-
 .-card-spec-card3 h3 {
     font-weight: 500;
     font-size: calc((10 /16 * 1rem) + ((50 - 10) * ((100vw - 320px) / (1920 - 320))));
