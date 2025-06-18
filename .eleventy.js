@@ -57,6 +57,16 @@ module.exports = function(eleventyConfig) {
 				decoding: "async",
 			},
 		},
+		sharpJpegOptions: {
+			quality: 65, // lower = smaller file
+			mozjpeg: true // better compression
+		},
+		sharpPngOptions: {
+			compressionLevel: 8, // 0–9 (higher = more compression)
+			quality: 70,         // 0–100 (only affects palette-based PNGs)
+			palette: true        // enables 8-bit palette for smaller file size (can cause banding)
+		},
+		
 	})
 	
 
