@@ -102,7 +102,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </li>
     </ul>
 </section>
-
+{% import "templates/images/bANDa_1.njk" as mac %}
+{% if baseContent.beforeAfter %}
+<section class="narrowSection slimSection">
+    {{ mac.bANDa_1(baseContent.beforeAfter) }}
+</section>
+{% endif %}
 
 <section id="offer" class="section -l-2Col-offerForm narrowSection1_5">
     <div class="offerContainer">

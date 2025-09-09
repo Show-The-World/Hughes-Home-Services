@@ -580,6 +580,29 @@ header .offerContainer > *{
 
 
 
+.-img-bAnda-1{
+    display: flex;
+    position: relative;
+}
+.-img-bAnda-1::before{
+    z-index: 10;
+    content: "";
+    position: absolute;
+    top: 0;    
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--c-accent);
+    width: 0.5%;
+}
+.-img-bAnda-1 *{
+    height: auto;
+    width: 50%;
+}
+
+
+
+
 /******************************************************************************/
 /*********************************** FOOTER ***********************************/
 /******************************************************************************/
