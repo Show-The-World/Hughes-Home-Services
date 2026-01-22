@@ -280,7 +280,11 @@ h2{
     font-size: 18px;
     font-weight: 400;
     padding-bottom: 0.2em;
-    border-bottom: solid var(--s-border2) var(--c-accent);
+
+    text-decoration-line: underline;
+    text-decoration-thickness: var(--s-border2);
+    text-decoration-color: var(--c-accent);
+    text-underline-offset: 0.2em;
 }
 .-t-h2-2{
     font-size: calc((24 /16 * 1rem) + ((48 - 24) * ((100vw - 320px) / (1920 - 320))));
