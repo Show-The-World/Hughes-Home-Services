@@ -3,9 +3,7 @@
 
 {% macro layout(fields) %}
 <div class="-l-3col_spread_card_card">
-    <div class="spread">
-        {{spread.spread(fields.spread)}}
-    </div>
+    {{spread.spread(fields.spread)}}
     <div class="cardContainer">
         {{cards.cards(fields.cards)}}
     </div>
