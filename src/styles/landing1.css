@@ -415,11 +415,6 @@ header .offerContainer > *{
     }
 }
 
-@media screen and (max-width:500px) {
-    .-l-2coloverlap_container_image-left-1 .imgWrapper {
-        display: none;
-    }
-}
 
 
 
